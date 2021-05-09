@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Contact Page for the Inventors Council of Central Florida - ICCF
+      Contact Page - Inventors Council of Central Florida - ICCF
     </title>
 
     <!-- Template Main CSS File -->
@@ -21,7 +21,7 @@
 
 
       <div class="logo">
-        <h1><a href="index.html"><img src="assets/img/logowhite.png" alt="" class="img-fluid"></a></h1>
+        <h1 font-size: 32px><a href="index.html"><img src="assets/img/logowhite.png" alt="" class="img-fluid"></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -50,31 +50,39 @@
       <div class="row">
         <div class="col-10 col-md-9">
             <form class="contactCentered" id="contactPageForm">
-              <h1>CONTACT</h1>
-              <input type="text" name="contactFormFirstName" placeholder="First Name"></input> 
+              <h1 style="font-size: 60px; font-weight: bold;">CONTACT</h1>
+              <input type="text" name="contactFormFirstName" placeholder="First Name" ></input> 
               <br><br>
-              <input type="test" name="contactFormLastName" placeholder="Last Name"></input>
+              <input type="text" name="contactFormLastName" placeholder="Last Name"></input>
               <br><br>
               <input type="text" name="contactFormSubject" placeholder="Subject"></input>
               <br><br>
-              <input type="test" name="contactFormEmail" placeholder="Email"></input>
+              <input type="text" name="contactFormEmail" placeholder="Email"></input>
               <br><br>
               <input type="text" name="contactFormMessage" placeholder="Message"></input>
               <br><br>
               <button type="submit">Submit</button>
             </form>
-          <br><br>
+            <br>
         </div> 
 
     <div class="verticalSplitLineContact"></div>
 
       <div class="col-10 col-md-9 contactBottom">
-        <Button>JOIN OUR SLACK GROUP <i class="icofont-slack"></i></Button>
+        <Button type="button" onclick="window.open('https://join.slack.com/t/inventcf/shared_invite/zt-4koe6vde-fCm1p2VDC6NQAGUPuGj1eQ')">JOIN OUR SLACK GROUP <i class="icofont-slack" style="font-size: 30px;"></i></Button>
         <br><br>
-        <Button>DONATE</Button>
+        <Button type="donate" onclick="window.open('https://www.paypal.com/donate/?token=8M0n3Khspqj-P9YUcIifFAyhcb96ypa8si7ito3oQxQr_4CfhBv5-2weo1ECN5MwYq_PpkTZcGZ--g91')">DONATE</Button>
+
+<!--         <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="hosted_button_id" value="RTG2QJ87GR22W">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+          <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div> -->
+
       </div>
     </div>
-    </div>
+
 
 
     <script src="vendor/jquery/jquery.min.js"></script>
