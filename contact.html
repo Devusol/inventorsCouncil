@@ -11,60 +11,70 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--     CSS to be moved -->
-    <style>
-      .verticalSplitLineContact {
-          border-left: 6px solid #735929;
-          height: 50%;
-          position:fixed;
-          left: 50%;
-          z-index: 1;
-          overflow-x: hidden;
-      }
-
-      @media (max-width: 768px) {   
-       .verticalSplitLineContact {
-          border-left: 0px;
-          height: 0%;
-          position:absolute;
-          left: 0%;
-          overflow-x: hidden;
-      }
-
-      .verticalSplitLeft {
-        left: 0;
-      }
-
-      .verticalSplitRight {
-        right: 0;
-      }
-
-    }
-
-    </style>
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet" />
 
   </head>
 
-  <body>
+  <header id="header" class="fixed-top align-items-center header-transparent header-scrolled">
+    <div class="containerHeader d-flex justify-content-between">
+
+
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="assets/img/logowhite.png" alt="" class="img-fluid"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">HOME</a></li>
+          <li><a class="nav-link scrollto" href="#features">ABOUT US</a></li>
+          <li><a class="nav-link scrollto" href="#about">EVENTS</a></li>
+          <li><a class="nav-link scrollto" href="#services">RESOURCES</a></li>
+          <li><a class="nav-link scrollto" href="#members">MEMBERS</a></li>
+          <li><a class="nav-link active" href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <body style="background-image: url('assets/img/contactPageBackground.jpg');">
+    
     <!--       Contact Form -->
-    <form class="verticalSplitLeft" id="contactPageForm">
-      <h1>CONTACT</h1>
-      <input type="text" name="contactFormFirstName" placeholder="First Name"></input> 
-      <br>
-      <input type="test" name="contactFormLastName" placeholder="Last Name"></input>
-      <br>
-      <input type="text" name="contactFormSubject" placeholder="Subject"></input>
-      <br>
-      <input type="test" name="contactFormEmail" placeholder="Email"></input>
-      <br>
-      <input type="text" name="contactFormMessage" placeholder="Message"></input>
-      <br>
-      <button type="submit">Submit</button>
-    </form>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-10 col-md-9">
+            <form class="contactCentered" id="contactPageForm">
+              <h1>CONTACT</h1>
+              <input type="text" name="contactFormFirstName" placeholder="First Name"></input> 
+              <br><br>
+              <input type="test" name="contactFormLastName" placeholder="Last Name"></input>
+              <br><br>
+              <input type="text" name="contactFormSubject" placeholder="Subject"></input>
+              <br><br>
+              <input type="test" name="contactFormEmail" placeholder="Email"></input>
+              <br><br>
+              <input type="text" name="contactFormMessage" placeholder="Message"></input>
+              <br><br>
+              <button type="submit">Submit</button>
+            </form>
+          <br><br>
+        </div> 
 
     <div class="verticalSplitLineContact"></div>
 
+      <div class="col-10 col-md-9 contactBottom">
+        <Button>JOIN OUR SLACK GROUP <i class="icofont-slack"></i></Button>
+        <br><br>
+        <Button>DONATE</Button>
+      </div>
+    </div>
+    </div>
 
 
     <script src="vendor/jquery/jquery.min.js"></script>

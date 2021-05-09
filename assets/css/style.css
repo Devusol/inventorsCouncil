@@ -434,3 +434,63 @@ body {
       padding: 500px 100px 100px 100px;
   
     }
+
+
+/*     Contact Page */
+
+.contactCentered {
+  position: absolute;
+  height: 100%;
+  top: 30vh;
+  left: 5vw;
+  width: auto;
+/*   transform: translate(-10vh, -20vw); */
+  text-align: center;
+} 
+
+.contactBottom {
+  position: absolute;
+  top: 55vh;
+  left: 50vw;
+  transform: translate(-40vh, 0vw);
+  text-align: center;
+} 
+
+.verticalSplitLineContact {
+    border-left: 6px solid #735929;
+    height: 50%;
+    position:fixed;
+    top: 30vh;
+    left: 50vw;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20%;
+}
+
+
+@media (max-width: 1024px) {   
+ .verticalSplitLineContact {
+    border-left: unset;
+    height: 0;
+    position: absolute;
+    transform: translate(0, 15vh);
+    left: unset;
+    overflow-x: hidden;
+  }
+
+  .contactCentered {
+  position: unset;
+  top: unset;
+  left: unset;
+  transform: translate(10vw, 15vh);
+  text-align: center;
+} 
+
+  .contactBottom {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: translate(10vw, 15vh);
+    text-align: center;
+  } 
+}
