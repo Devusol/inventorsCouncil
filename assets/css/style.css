@@ -522,6 +522,10 @@ i {
     transition: 0.3s;
 }
 
+.social-links{
+    color: linear-gradient(red, yellow) !important;
+}
+
 #footer .footer-top .social-links a:hover {
     background: #ffc451;
     color: #151515;
