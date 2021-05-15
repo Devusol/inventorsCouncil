@@ -413,8 +413,19 @@ i {
     padding: 200px 100px 100px 100px;
 }
 
+
 #lightBulb {
     height: 60vh;
+}
+
+@media (max-width: 991px) {
+    #lightBulb {
+        height: 28vh;
+        position: relative;
+        top: -316px;
+        left: 74px;
+    
+    }
 }
 
 #newHero h1 {
@@ -441,6 +452,35 @@ i {
     font-size: 1.0rem;
     font-weight: bolder;
     color: #6c6c6c;
+}
+
+
+@media (max-width: 991px){
+    #newHero h1 {
+        z-index: 20;
+        font-size: 3.0rem;
+        font-weight: bolder;
+    }
+    #wordsHero {
+        padding-right: 25%;
+        z-index: 20;
+    }
+    #newHero {
+        padding: 150px 0px 0px 0px;
+    }
+    #newHero h2 {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: bolder;
+    }
+
+    #newHero i {
+        font-size: 14px;
+        color: white;
+    }
+    #wordsHero i {
+        font-size: 25px !important;
+    }
 }
 
 #wordsHero {
@@ -513,7 +553,7 @@ i {
     background: #292929;
     color: #fff;
     line-height: 1;
-    padding: 8px 0;
+    padding: 24px 0;
     margin-right: 4px;
     border-radius: 4px;
     text-align: center;
@@ -522,8 +562,30 @@ i {
     transition: 0.3s;
 }
 
-.social-links{
-    color: linear-gradient(red, yellow) !important;
+.icofont-facebook, .icofont-twitter, .icofont-instagram, .icofont-slack {
+  font-size: 32px;
+  background: -webkit-linear-gradient(#8457aa, #10aee1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  padding-inline: 22px;
+}
+
+.social-links a:hover {
+
+  text-decoration: none !important;
+
+}
+
+.footerClass{
+    left: 0px;
+
+}
+
+.copyrightClass{
+    right: 0px;
+
+
 }
 
 #footer .footer-top .social-links a:hover {
@@ -613,8 +675,13 @@ i {
 }
 
 #footer .copyright {
-    text-align: center;
+  
     padding-top: 30px;
+}
+
+#footer .social-links {
+  
+    text-align:right;
 }
 
 #footer .credits {
