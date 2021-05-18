@@ -695,12 +695,12 @@ button[type="submit"]:hover {
 }
 
 button[type="button"] {
-  width: 60%;
+  width: 100%;
   background-color: #0cb0e3;
   color: white;
   font-size: 15px;
   font-weight: bold;
-  padding: 14px 20px;
+  padding: 14px 15px;
   text-align: center;
   margin: 8px 0;
   border: none;
@@ -775,25 +775,62 @@ button[type="donate"]:hover {
 /* Resources Page */
 
 #inventionProcessBox {
-  margin:auto;
+  position:relative;
+  margin:2% 5%;
   height: auto;
   color: white;
   border: 3px soild #73AD21;
-  width: 75%;
+  width: 80%;
   padding: 3%;
   background-color: #124361; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #124361 , #141B2F); 
 }
 
-#resourcesBoxes{
-  margin:auto;
+#resourcesBoxes1{
+  margin: 2% 5%;
   height: auto;
   color: white;
+  float: left;
   border: 3px soild #73AD21;
   width: 40%;
   padding: 3%;
   background-color: #124361; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #124361 , #141B2F); 
+}
+
+#resourcesBoxes2{
+  margin: 2% 5%;
+  height: auto;
+  color: white;
+  float: right;
+  border: 3px soild #73AD21;
+  width: 40%;
+  padding: 3%;
+  background-color: #124361; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #124361 , #141B2F); 
+}
+
+@media screen and (max-width: 1000px) { 
+
+  #inventionProcessBox {
+    position: relative;
+    width: 100%;
+    margin: 5%;
+  }
+
+  #resourcesBoxes1 {
+    position: relative;
+    float: unset;
+    width: 100%;
+    margin-top: 5%;
+  }
+  
+  #resourcesBoxes2 {
+    position: relative;
+    float: unset;
+    width: 100%;
+    margin-top: 5%;
+  }
 }
 
 .resourcesLightBulb {
