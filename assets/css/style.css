@@ -4,6 +4,17 @@
 }
 
 
+:root {
+	--midnightExpress: #141B2F;
+	--studio: #8656A0;
+    --irisBlue: #0DB0E3;
+    --darkTangerine: #F2A413;
+    --allports: #12668A;
+    --stormGrey: #848587;
+    --gainsboro: #DFDFDF;
+
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -503,9 +514,12 @@ i {
 }
 
 #homeEvents {
-    padding: 500px 100px 100px 100px;
+    padding: 500px 100px 500px 100px;
 }
 
+#eventsOverall u {
+    text-decoration-color: #f3b212;
+}
 
 /***************************FOOTER***************************/
 
