@@ -9,6 +9,7 @@
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
 <<<<<<< HEAD
+<<<<<<< HEAD
   var scrolltoOffset = $("#header").outerHeight() - 15;
   $(document).on(
     "click",
@@ -51,6 +52,8 @@
           }
           return false;
 =======
+=======
+>>>>>>> buttonTemplates
   //var scrolltoOffset = $('#header').outerHeight() - 15;
 
   /*ON SCROLL*/
@@ -73,6 +76,7 @@
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
+<<<<<<< HEAD
 >>>>>>> navHero
         }
       }
@@ -83,6 +87,13 @@
   }); */
 
 >>>>>>> navHero
+=======
+        }
+      }
+    }
+  }); */
+
+>>>>>>> buttonTemplates
 
  /*ON SCROLL*/
   // Activate smooth scroll on page load with hash links in the url
@@ -154,16 +165,22 @@
    /*ON SCROLL*/
   // Navigation active state on scroll
 <<<<<<< HEAD
+<<<<<<< HEAD
   var nav_sections = $("section");
   var main_nav = $(".nav-menu, .mobile-nav");
 
   $(window).on("scroll", function () {
 =======
+=======
+>>>>>>> buttonTemplates
 /*   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav'); */
 
 /*   $(window).on('scroll', function () {
+<<<<<<< HEAD
 >>>>>>> navHero
+=======
+>>>>>>> buttonTemplates
     var cur_pos = $(this).scrollTop() + 200;
 
     nav_sections.each(function () {
@@ -220,6 +237,7 @@
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Porfolio isotope and filter
   $(window).on("load", function () {
     var portfolioIsotope = $(".portfolio-container").isotope({
@@ -273,6 +291,8 @@ $('.close').click(function() {
 
 
 >>>>>>> navHero
+=======
+>>>>>>> buttonTemplates
 
   //Cookie
   if (localStorage.getItem("cookieSeen") != "shown") {
@@ -286,6 +306,9 @@ $('.close').click(function() {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> buttonTemplates
   //end
 })(jQuery);
 
@@ -318,8 +341,11 @@ theForm.addEventListener("submit", function (e) {
   } 
   console.log(formPairs); */
 });
+<<<<<<< HEAD
 =======
 var demoTrigger = document.querySelector('.demo-trigger');
 var paneContainer = document.querySelector('.detail');
 
 >>>>>>> navHero
+=======
+>>>>>>> buttonTemplates
