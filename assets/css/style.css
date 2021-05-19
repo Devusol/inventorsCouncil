@@ -3,21 +3,18 @@
   margin: 0;
 }
 
-<<<<<<< HEAD
-=======
 
 :root {
 	--midnightExpress: #141B2F;
 	--studio: #8656A0;
-    --irisBlue: #0DB0E3;
-    --darkTangerine: #F2A413;
-    --allports: #12668A;
-    --stormGrey: #848587;
-    --gainsboro: #DFDFDF;
+  --irisBlue: #0DB0E3;
+  --darkTangerine: #F2A413;
+  --allports: #12668A;
+  --stormGrey: #848587;
+  --gainsboro: #DFDFDF;
 
 }
 
->>>>>>> navHero
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -516,11 +513,6 @@ i {
 }
 
 #homeEvents {
-<<<<<<< HEAD
-  padding: 500px 100px 100px 100px;
-}
-
-=======
     padding: 500px 100px 500px 100px;
 }
 
@@ -528,7 +520,6 @@ i {
     text-decoration-color: #f3b212;
 }
 
->>>>>>> navHero
 /***************************FOOTER***************************/
 
 #footer {
@@ -570,20 +561,6 @@ i {
 }
 
 #footer .footer-top .social-links a {
-<<<<<<< HEAD
-  font-size: 18px;
-  display: inline-block;
-  background: #292929;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-=======
     font-size: 18px;
     display: inline-block;
     background: #292929;
@@ -596,7 +573,6 @@ i {
     width: 36px;
     height: 36px;
     transition: 0.3s;
->>>>>>> navHero
 }
 
 .icofont-facebook, .icofont-twitter, .icofont-instagram, .icofont-slack {
@@ -712,13 +688,8 @@ i {
 }
 
 #footer .copyright {
-<<<<<<< HEAD
-  text-align: center;
-  padding-top: 30px;
-=======
   
     padding-top: 30px;
->>>>>>> navHero
 }
 
 #footer .social-links {
@@ -792,24 +763,6 @@ select {
 
 /* Contact Page Buttons */
 
-button[type="submit"] {
-  width: 60%;
-  background-color: #0cb0e3;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #8656a0;
-  box-shadow: 0 5px 15px #8656a0;
-}
-
 button[type="button"] {
   width: 100%;
   background-color: #0cb0e3;
@@ -828,28 +781,6 @@ button[type="button"] {
 
 button[type="button"]:hover {
   background-color: #8656a0;
-  box-shadow: 0 5px 15px #8656a0;
-}
-
-button[type="donate"] {
-  width: 60%;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  color: #0cb0e3;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 2px solid #0cb0e3;
-  box-shadow: 0 5px 15px #0cb0e3;
-}
-
-button[type="donate"]:hover {
-  background-color: #8656a0;
-  color: white;
-  border: 2px solid #8656a0;
   box-shadow: 0 5px 15px #8656a0;
 }
 
@@ -959,4 +890,91 @@ button[type="donate"]:hover {
 
 #resourceBody {
   background-color: #141B2E;
+}
+
+/* Button Templates */
+
+
+
+button[type="buttonNormal"] {
+  background-color: var(--irisBlue);
+  color:  var(--gainsboro);
+  font-family: "Metropolis";
+  font-size: bold;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 40%;
+  max-width: 50%;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  display: inline-block;
+}
+
+button[type="buttonNormal"]:hover {
+  background-color: var(--studio);
+  box-shadow: 0 5px 15px var(--studio);
+  color:  var(--gainsboro);
+  font-family: "Metropolis";
+  font-size: bold;
+  text-transform: uppercase;
+}
+
+button[type="buttonNormal"]:focus {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  color: var(--gainsboro);
+  font-family: "Metropolis";
+  font-size: bold;
+  text-transform: uppercase;
+  min-width: 40%;
+  max-width: 50%;
+  border-radius: 0;
+  cursor: pointer;
+  border: 2px solid var(--irisBlue);
+  box-shadow: 0 5px 15px var(--irisBlue);
+}
+
+button[type="buttonNormal"]:active {
+  font-family: "Metropolis";
+  font-size: bold;
+  text-transform: uppercase;
+  min-width: 40%;
+  max-width: 50%;
+  border: 2px solid var(--irisBlue);
+  color:  var(--gainsboro);
+} 
+
+button[type="buttonNormal"]:disabled {
+  font-family: "Metropolis";
+  font-size: bold;
+  text-transform: uppercase;
+  background-color: var(--stormGrey);
+  color:  var(--gainsboro);
+} 
+
+button[type="buttonDonate"] {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  color: var(--irisBlue);
+  font-family: "Metropolis";
+  font-size: bold;
+  padding: 1%;
+  text-transform: uppercase;
+  min-width: 40%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid var(--irisBlue);
+  box-shadow: 0 5px 15px var(--irisBlue);
+}
+
+button[type="buttonDonate"]:hover {
+  background-color: var(--studio);
+  color: var(--gainsboro);
+  border: 2px solid var(--studio);
+  box-shadow: 0 5px 15px var(--studio);
 }
