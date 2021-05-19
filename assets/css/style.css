@@ -821,9 +821,9 @@ button[type="button"]:hover {
 
 /* Resources Page */
 
-#inventionProcessBox {
+.inventionProcessBox {
   position:relative;
-  margin:2% 5%;
+  margin: 5vh auto;
   height: auto;
   color: white;
   border: 3px soild #73AD21;
@@ -833,25 +833,25 @@ button[type="button"]:hover {
   background-image: linear-gradient(to right, #124361 , #141B2F); 
 }
 
-#resourcesBoxes1{
-  margin: 2% 5%;
+.resourcesBoxesLeft{
+  margin: 2% 5% 2% 10%;
   height: auto;
   color: white;
   float: left;
   border: 3px soild #73AD21;
-  width: 40%;
+  width: 35%;
   padding: 3%;
   background-color: #124361; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #124361 , #141B2F); 
 }
 
-#resourcesBoxes2{
-  margin: 2% 5%;
+.resourcesBoxesRight{
+  margin: 2% 10% 2% 5%;
   height: auto;
   color: white;
   float: right;
   border: 3px soild #73AD21;
-  width: 40%;
+  width: 35%;
   padding: 3%;
   background-color: #124361; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #124361 , #141B2F); 
@@ -859,31 +859,31 @@ button[type="button"]:hover {
 
 @media screen and (max-width: 1000px) { 
 
-  #inventionProcessBox {
+  .inventionProcessBox {
     position: relative;
     width: 100%;
     margin: 5%;
   }
 
-  #resourcesBoxes1 {
+  .resourcesBoxesLeft {
     position: relative;
     float: unset;
     width: 100%;
     margin-top: 5%;
+    margin-left: 5%;
   }
   
-  #resourcesBoxes2 {
+  .resourcesBoxesRight {
     position: relative;
     float: unset;
     width: 100%;
-    margin-top: 5%;
+    margin-right: 5%;
   }
 }
 
 .resourcesLightBulb {
   height: 25vh;
   float: right;
-  
 }
 
 /* Resources Page Mobile */
