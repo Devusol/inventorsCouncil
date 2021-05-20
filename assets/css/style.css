@@ -834,10 +834,10 @@ button[type="button"]:hover {
 }
 
 .resourcesBoxesLeft{
-  margin: 2% 5% 2% 10%;
+  margin: 2% 5% 2% 11%;
   height: auto;
   color: white;
-  float: left;
+/*   float: left; */
   border: 3px soild #73AD21;
   width: 35%;
   padding: 3%;
@@ -849,7 +849,7 @@ button[type="button"]:hover {
   margin: 2% 10% 2% 5%;
   height: auto;
   color: white;
-  float: right;
+/*   float: right; */
   border: 3px soild #73AD21;
   width: 35%;
   padding: 3%;
@@ -870,13 +870,14 @@ button[type="button"]:hover {
     float: unset;
     width: 100%;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 8%;
   }
   
   .resourcesBoxesRight {
     position: relative;
     float: unset;
     width: 100%;
+    margin-left: 8%;
     margin-right: 5%;
   }
 }
