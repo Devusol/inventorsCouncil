@@ -1,0 +1,22 @@
+
+
+
+:root {
+    /*background*/
+	--mirage: #151929;
+    --bigStone: #152133;
+}
+
+#aboutUs{
+    background: var(--mirage);
+    background-image: url(../img/background/backgroundPat.png);
+}
+
+#aboutHeader{
+        padding: 200px 100px 100px 100px;
+}
+
+#aboutHeader h1 {
+    font-size: 5.0rem;
+    font-weight: bolder;
+}
