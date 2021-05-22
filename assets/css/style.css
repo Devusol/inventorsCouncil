@@ -101,8 +101,9 @@ i {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#header.header-transparent {
+.header-transparent {
   backdrop-filter: blur(17px);
+  z-index: 999;
 }
 
 #header.header-scrolled {
@@ -286,13 +287,13 @@ i {
   }
 }
 
-.subnavbar {
+/* .subnavbar {
   height: 70px;
   transition: all 0.5s;
   z-index: 997;
   background-color: #124361
 }
-
+ */
 /**
   * Mobile Navigation 
   */
