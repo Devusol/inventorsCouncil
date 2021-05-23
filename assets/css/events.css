@@ -1,0 +1,14 @@
+#events{
+    background: var(--mirage);
+    background-image: url(../img/background/patternDots.png);
+}
+
+
+#eventsHeader{
+    padding: 200px 100px 100px 100px;
+}
+
+#eventsHeader h1 {
+font-size: 5.0rem;
+font-weight: bolder;
+}
