@@ -1,0 +1,90 @@
+
+#external-events {
+	width: 250px;
+	padding: 0 10px;
+/*	border: 1px solid #ccc;*/
+	text-align: left;
+	float: left;
+}
+
+#external-events .fc-event {
+	margin: 3px 0;
+	cursor: move;
+}
+
+#calendar-wrap {
+	margin-left: 200px;
+}
+
+#calendar {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/******************POPUP FORM*/
+
+/* The popup form - hidden by default */
+.form-popup {
+  cursor: pointer;
+	display: none;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	border: 3px solid grey;
+	z-index: 9;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	/* background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.input-popup {
+  cursor: pointer;
+	display: none;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	border: 3px solid grey;
+	z-index: 9;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	/* background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Add styles to the form container */
+.form-container {
+	color: white;
+	max-width: 400px;
+	padding: 10px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=textarea] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+	background-color: #04aa6d;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover{
+	opacity: 1;
+}
