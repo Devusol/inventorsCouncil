@@ -55,9 +55,11 @@
   }
 
   .stockPic{
-      height: 300px;
-      width: 100px;
-      z-index: -1;
+    height: 300px;
+    width: 100px;
+    z-index: -1;
+    justify-content: flex-end;
+    padding: 0px !important;
   }
 
 
@@ -82,8 +84,8 @@
     margin-left: 10px
   }
 
-  #ourMission .row{
-    margin-right: 55px !important;
+  #aboutRow{
+    margin: 0px !important;
   }
 
   .ourPurpose {

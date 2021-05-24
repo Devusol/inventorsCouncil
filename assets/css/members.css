@@ -39,25 +39,26 @@
     height: auto;
     color: white;
     border: 3px soild #73AD21;
-    background-image: linear-gradient(to left, transparent 14%, var(--luckyPoint) 47%);
+    background-image: linear-gradient(to left, transparent -10%, var(--luckyPoint) 31%);
 }
 
 #ourMissionWords h2 {
     font-size: 2rem;
-    color: #0da8d9;
+    color: white;
     font-weight: bolder;
 
   }
 
-  #ourMissionWords h3 i {
+  #ourMissionWords h3 {
     font-size: 1.5rem;
-    color: #0da8d9;
+    color: var(--stormGrey);
   }
 
   .stockPic{
       height: 300px;
       width: 100px;
       z-index: -1;
+      justify-content: flex-end;
   }
 
 
@@ -82,9 +83,7 @@
     margin-left: 10px
   }
 
-  #ourMission .row{
-    margin-right: 55px !important;
-  }
+  
 
   .ourPurpose {
     padding: 0px 100px 100px 100px;
@@ -122,6 +121,10 @@
     height: 115px !important;
 }
 
-#meetRow {
+#ourMissionSec {
   padding: 0px 100px 100px 100px;
+}
+
+#members #header {
+  height: 115px !important;
 }

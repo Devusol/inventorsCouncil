@@ -12,3 +12,7 @@
 font-size: 5.0rem;
 font-weight: bolder;
 }
+
+#events #header {
+    height: 115px !important;
+}
