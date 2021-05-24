@@ -8,8 +8,7 @@
   "use strict";
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   var scrolltoOffset = $("#header").outerHeight() - 15;
   $(document).on(
     "click",
@@ -51,9 +50,7 @@
             $(".mobile-nav-overly").fadeOut();
           }
           return false;
-=======
-=======
->>>>>>> buttonTemplates
+
   //var scrolltoOffset = $('#header').outerHeight() - 15;
 
   /*ON SCROLL*/
@@ -86,14 +83,10 @@
 =======
   }); */
 
->>>>>>> navHero
-=======
-        }
+        
       }
     }
-  }); */
-
->>>>>>> buttonTemplates
+  }); 
 
  /*ON SCROLL*/
   // Activate smooth scroll on page load with hash links in the url
@@ -164,15 +157,12 @@
 
    /*ON SCROLL*/
   // Navigation active state on scroll
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   var nav_sections = $("section");
   var main_nav = $(".nav-menu, .mobile-nav");
 
   $(window).on("scroll", function () {
-=======
-=======
->>>>>>> buttonTemplates
+ buttonTemplates
 /*   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav'); */
 
@@ -236,8 +226,7 @@
     return false;
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   // Porfolio isotope and filter
   $(window).on("load", function () {
     var portfolioIsotope = $(".portfolio-container").isotope({
@@ -270,7 +259,7 @@
     //transition time in ms
     var duration = 500;
   });
-=======
+
 
 
  //Cookie
@@ -290,9 +279,7 @@ $('.close').click(function() {
 })
 
 
->>>>>>> navHero
-=======
->>>>>>> buttonTemplates
+
 
   //Cookie
   if (localStorage.getItem("cookieSeen") != "shown") {
@@ -305,10 +292,7 @@ $('.close').click(function() {
     $(".cookie-banner").fadeOut();
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> buttonTemplates
+
   //end
 })(jQuery);
 
@@ -341,11 +325,6 @@ theForm.addEventListener("submit", function (e) {
   } 
   console.log(formPairs); */
 });
-<<<<<<< HEAD
-=======
-var demoTrigger = document.querySelector('.demo-trigger');
-var paneContainer = document.querySelector('.detail');
 
->>>>>>> navHero
-=======
->>>>>>> buttonTemplates
+var demoTrigger = document.querySelector('.demo-trigger');
+var paneContainer = document.querySelector('.detail');});
