@@ -121,3 +121,7 @@
 #membersUs #header {
     height: 115px !important;
 }
+
+#meetRow {
+  padding: 0px 100px 100px 100px;
+}
