@@ -1,3 +1,18 @@
+:root {
+    /*background*/
+	--mirage: #151929;
+    --bigStone: #152133;
+    --luckyPoint: #262d48;
+
+    --midnightExpress: #141B2F;
+	--studio: #8656A0;
+  --irisBlue: #0DB0E3;
+  --darkTangerine: #F2A413;
+  --allports: #12668A;
+  --stormGrey: #848587;
+  --gainsboro: #DFDFDF;
+}
+
 
 #external-events {
 	width: 250px;
@@ -12,9 +27,6 @@
 	cursor: move;
 }
 
-#calendar-wrap {
-	margin-left: 200px;
-}
 
 #calendar {
 	max-width: 1100px;
@@ -87,4 +99,36 @@
 /* Add some hover effects to buttons */
 .form-container .btn:hover{
 	opacity: 1;
+}
+
+.fc-daygrid-day-number{
+	font-size: xx-large ;
+	color: white !important;
+}
+
+.fc-col-header-cell-cushion {
+	color: var(--irisBlue) !important;
+}
+
+/*outside border*/
+.fc-theme-standard .fc-scrollgrid {
+
+	border: var(--fc-border-color, transparent);
+}
+
+
+/*inside grid*/
+.fc-theme-standard td, .fc-theme-standard th{
+	border: var(--fc-border-color, transparent);
+}
+
+.fc .fc-daygrid-day-top {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+}
+
+#external-events {
+	display: none;
 }
