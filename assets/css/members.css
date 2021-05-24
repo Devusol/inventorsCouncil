@@ -1,0 +1,123 @@
+
+
+:root {
+    /*background*/
+	--mirage: #151929;
+    --bigStone: #152133;
+    --luckyPoint: #262d48;
+
+    --midnightExpress: #141B2F;
+	--studio: #8656A0;
+  --irisBlue: #0DB0E3;
+  --darkTangerine: #F2A413;
+  --allports: #12668A;
+  --stormGrey: #848587;
+  --gainsboro: #DFDFDF;
+}
+
+#members{
+    background: var(--mirage);
+    background-image: url(../img/background/backgroundPat.png);
+}
+
+#membersHeader{
+        padding: 200px 100px 100px 100px;
+}
+
+#membersHeader h1 {
+    font-size: 5.0rem;
+    font-weight: bolder;
+}
+
+#ourMissionWords {
+    padding: 25px 0px 25px 100px;
+
+  }
+
+.ourMissionBox {
+    position: relative;
+    height: auto;
+    color: white;
+    border: 3px soild #73AD21;
+    background-image: linear-gradient(to left, transparent 14%, var(--luckyPoint) 47%);
+}
+
+#ourMissionWords h2 {
+    font-size: 2rem;
+    color: #0da8d9;
+    font-weight: bolder;
+
+  }
+
+  #ourMissionWords h3 i {
+    font-size: 1.5rem;
+    color: #0da8d9;
+  }
+
+  .stockPic{
+      height: 300px;
+      width: 100px;
+      z-index: -1;
+  }
+
+
+  .sectionLine {
+    padding: 100px 100px 100px 100px;
+}
+  
+
+  .sectionLine h4 {
+    display: flex;
+    flex-direction: row;
+  }
+   .sectionLine h4:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    border-color: var(--darkTangerine);
+    margin: auto;
+  }
+
+  .sectionLine h4:after {
+    margin-left: 10px
+  }
+
+  #ourMission .row{
+    margin-right: 55px !important;
+  }
+
+  .ourPurpose {
+    padding: 0px 100px 100px 100px;
+}
+
+.ourPurpose h4 {
+    color: var(--stormGrey);
+}
+
+#subNavbar{
+     background-color: rgba(18, 102, 138, 0.3); 
+   /*  background: #12668A; */
+    top: 70px;
+    position: absolute;
+ 
+    right: 0px;
+    left: 0px;
+    z-index: 997;
+    transition: all 0.5s;
+    z-index: 997;
+
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0 1rem 0 1rem;
+
+}
+
+#membersUs #header {
+    height: 115px !important;
+}
