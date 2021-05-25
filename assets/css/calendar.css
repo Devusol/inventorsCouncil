@@ -1,0 +1,142 @@
+:root {
+	/*background*/
+	--mirage: #151929;
+	--bigStone: #152133;
+	--luckyPoint: #262d48;
+
+	--midnightExpress: #141b2f;
+	--studio: #8656a0;
+	--irisBlue: #0db0e3;
+	--darkTangerine: #f2a413;
+	--allports: #12668a;
+	--stormGrey: #848587;
+	--gainsboro: #dfdfdf;
+}
+
+#external-events {
+	width: 250px;
+	padding: 0 10px;
+	/*	border: 1px solid #ccc;*/
+	text-align: left;
+	float: left;
+}
+
+#external-events .fc-event {
+	margin: 3px 0;
+	cursor: move;
+}
+
+#calendar {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/******************POPUP FORM*/
+
+/* The popup form - hidden by default */
+.form-popup {
+	cursor: pointer;
+	display: none;
+	/*position: fixed;
+	 top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%); */
+	border: 3px solid grey;
+	z-index: 9;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	/* background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.input-popup {
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	border: 3px solid grey;
+	z-index: 9;
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	/* background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Add styles to the form container */
+.form-container {
+	color: white;
+	max-width: 400px;
+	padding: 10px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=textarea] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+	background-color: #04aa6d;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+	opacity: 1;
+}
+
+.fc-daygrid-day-number {
+	font-size: xx-large;
+	color: white !important;
+}
+
+.fc-col-header-cell-cushion {
+	color: var(--irisBlue) !important;
+}
+
+/*outside border*/
+.fc-theme-standard .fc-scrollgrid {
+	border: var(--fc-border-color, transparent);
+}
+
+/*inside grid*/
+.fc-theme-standard td,
+.fc-theme-standard th {
+	border: var(--fc-border-color, transparent);
+}
+
+.fc .fc-daygrid-day-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.fc-daygrid-day-frame fc-scrollgrid-sync-inner{
+
+}
+
+#external-events {
+	display: none;
+}
+
+.nextPrev {
+	position: relative;
+	top: 50vh;
+}
+
+#next-button {
+	position: absolute;
+	right: 358px;
+	top: 871px;
+}
