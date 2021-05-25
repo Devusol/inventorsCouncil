@@ -122,6 +122,10 @@
 	align-items: center;
 }
 
+.fc-daygrid-day-frame fc-scrollgrid-sync-inner{
+
+}
+
 #external-events {
 	display: none;
 }

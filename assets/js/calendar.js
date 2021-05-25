@@ -11,6 +11,36 @@ document.addEventListener('DOMContentLoaded', function () {
         "description": "To ensure JSON bin is not blank",
         "location": "Winter Garden, FL"
       }
+    },
+    {
+      "title": "An Event to mess with",
+      "start": "2021-05-20T05:00:00.000Z",
+      "end": "2021-05-21T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
+    },
+    {
+      "title": "Another Event to mess with",
+      "start": "2021-05-12T05:00:00.000Z",
+      "end": "2021-05-13T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
+    },
+    {
+      "title": "Yet another event to mess with",
+      "start": "2021-05-18T05:00:00.000Z",
+      "end": "2021-05-19T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
     }];
 
   var putCalendarEvent = new XMLHttpRequest();
@@ -35,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
       center: '',
       end: 'today'
     },
+    eventColor: "black",
     navLinks: false, // can click day/week names to navigate views
     selectable: true,
     //selectMirror: true,
@@ -102,27 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   calendar.render();
   readEventCalendarJSON();
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   putCalendarEvent.onreadystatechange = () => {
@@ -139,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
       //calendar.refetchEvents();
     }
   };
-
 
   function updateEventCalendarJSON() {
     putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
@@ -170,8 +179,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var numbers = document.getElementsByClassName('fc-daygrid-day-number');
   function onDateHover() {
+    console.log(calendar);
+    for (const elem of calendar.getEvents()) {
+      console.log(elem);
+      
+    }
+    
+
+
     for (const element of numbers) {
       element.addEventListener('mouseenter', function () {
+       
         let xCoord = this.getBoundingClientRect().x;
         let yCoord = this.getBoundingClientRect().y;
         console.log(this.getBoundingClientRect().x, this.getBoundingClientRect().y);
@@ -179,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
         calendarPopup.style.top = `${yCoord + 250}px`;
         calendarPopup.style.left = `${xCoord - 100}px`;
         calendarPopup.style.display = "block";
+        //console.log(myEvents[0].start);
       });
       element.addEventListener('mouseleave', function () {
         calendarPopup.style.display = "none";
@@ -191,10 +210,12 @@ document.addEventListener('DOMContentLoaded', function () {
     onDateHover();
     console.log(numbers);
   });
+
   document.getElementById('next-button').addEventListener('click', function () {
     calendar.next();
     onDateHover();
   });
+
   onDateHover();
 });
 
