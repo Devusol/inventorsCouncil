@@ -128,3 +128,19 @@
 #members #header {
   height: 115px !important;
 }
+
+.social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.memberCard {
+  width: 10vw;
+}
