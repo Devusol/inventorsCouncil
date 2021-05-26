@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-
 :root {
   --mirage: #151929;
   --bigStone: #152133;
@@ -308,6 +307,7 @@ i {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    z-index: 9999;
   }
   .navbar ul {
     display: none;
