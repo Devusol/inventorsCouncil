@@ -17,8 +17,15 @@ var memberJSON = [
         "companyEmail:": "https://www.flipsetter.com/Contact"
     },
     {
+        "memberImage": "2piLabs.jpg",
+        "companyName": "3Pi Labs",
+        "companyDescription": "Narwani, Neil - 2-Pi Labs, based in Orlando, FL, can take your product idea from concept to working prototype and beyond. Our specialties include: With in-house 3D printers, electronic PCB assembly machines, CNC mills, lathes, laser cutters and other machine processes, we can rapidly design and prototype your idea to get your product out to market faster.",
+        "companyWebsite": "http://2pilabs.com/",
+        "companyEmail:": "create@2pilabs.com"
+    },
+    {
         "memberImage": "FlipSetter.jpg",
-        "companyName": "Flip Setter",
+        "companyName": "slip Setter",
         "companyDescription": "Krishnan, Sabaresh - FlipSetter lets you create job profile where you can apply, employ and do a lot more. Setup an organization page, add officers, members, events, news and enhance your own profile.", "companyWebsite": "http://2pilabs.com/",
         "companyWebsite": "https://www.flipsetter.com/",
         "companyEmail:": "https://www.flipsetter.com/Contact"
@@ -65,17 +72,33 @@ function myFunction() {
     filter = input.value.toUpperCase();
     cardContainer = document.getElementById("myItems");
     cards = cardContainer.getElementsByClassName("card");
-   
-     for (i = 0; i < cards.length; i++) {
+
+    for (i = 0; i < cards.length; i++) {
         title = cards[i].querySelector(".card-block h4.card-title");
         if (title.innerText.toUpperCase().indexOf(filter) > -1) {
             cards[i].style.display = "";
         } else {
             cards[i].style.display = "none";
         }
-    } 
+    }
 
-  /*   for (let cardFilter of cards){
-        title = cards[cardFilter]
-    } */
+    /*   for (let cardFilter of cards){
+          title = cards[cardFilter]
+      } */
 }
+
+function sortFunction(a, b) {
+    // Use toUpperCase() to ignore character casing
+    const bandA = a.companyName.toUpperCase();
+    const bandB = b.companyName.toUpperCase();
+
+    let comparison = 0;
+    if (bandA > bandB) {
+        comparison = 1;
+    } else if (bandA < bandB) {
+        comparison = -1;
+    }
+    return(comparison);
+}
+
+memberJSON.sort(sortFunction)
