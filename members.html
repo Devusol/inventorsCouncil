@@ -130,9 +130,28 @@
 
   </section>
 
-  <section class="membersInfo">
-    <div id="membersCards" class="d-flex flex-row"></div>
+  <section class="filterMembers">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()"
+            placeholder="Search for members..">
+          <button class="btn btn-outline-secondary btn-lg ml-3" style="width: 16vw;">Sort A-Z</button>
+        </div>
+      </div>
   </section>
+
+  <!--  <section class="membersInfo">
+    <div id="membersCards" class="d-flex flex-row"></div>
+  </section> -->
+
+  <section class="membersInfo">
+    <div id="myItems">
+      <div id="membersCardsLandscape"></div>
+    </div>
+  </section>
+
 
   <!-----------FOOTER-->
   <footer id="footer">

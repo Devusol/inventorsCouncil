@@ -1,4 +1,5 @@
 var membersCards = document.getElementById("membersCards");
+var membersCardsLandscape = document.getElementById("membersCardsLandscape");
 
 var memberJSON = [
     {
@@ -23,7 +24,7 @@ var memberJSON = [
         "companyEmail:": "https://www.flipsetter.com/Contact"
     }];
 
-for (let cardData of memberJSON) {
+/* for (let cardData of memberJSON) {
     membersCards.innerHTML += `<div class="card p-2 memberCard">
     <img class="card-img-top" src="assets/img/members/${cardData.memberImage}" style="height:auto;" alt="Card image cap">
         <div class="card-body">
@@ -33,4 +34,48 @@ for (let cardData of memberJSON) {
             <a href="${cardData.companyEmail}" class="btn btn-primary p-2">Contact</a>
         </div>
       </div>`
+} */
+
+for (let cardData of memberJSON) {
+    membersCardsLandscape.innerHTML += `<div class="container py-3">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+                <img src="assets/img/members/${cardData.memberImage}" class="w-100">
+            </div>
+            <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                <h4 class="card-title">${cardData.companyName}</h4>
+                <p class="card-text">${cardData.companyDescription}</p>
+                <a href="${cardData.companyWebsite}" class="btn btn-primary p-2">Website</a>
+                <a href="${cardData.companyEmail}" class="btn btn-primary p-2">Contact</a>
+                </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        </div>`
+}
+
+
+function myFunction() {
+    var input, filter, cards, cardContainer, h5, title, i;
+    input = document.getElementById("myFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("myItems");
+    cards = cardContainer.getElementsByClassName("card");
+   
+     for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-block h4.card-title");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    } 
+
+  /*   for (let cardFilter of cards){
+        title = cards[cardFilter]
+    } */
 }
