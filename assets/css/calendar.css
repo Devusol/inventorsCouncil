@@ -1,23 +1,22 @@
 :root {
-    /*background*/
+	/*background*/
 	--mirage: #151929;
-    --bigStone: #152133;
-    --luckyPoint: #262d48;
+	--bigStone: #152133;
+	--luckyPoint: #262d48;
 
-    --midnightExpress: #141B2F;
-	--studio: #8656A0;
-  --irisBlue: #0DB0E3;
-  --darkTangerine: #F2A413;
-  --allports: #12668A;
-  --stormGrey: #848587;
-  --gainsboro: #DFDFDF;
+	--midnightExpress: #141b2f;
+	--studio: #8656a0;
+	--irisBlue: #0db0e3;
+	--darkTangerine: #f2a413;
+	--allports: #12668a;
+	--stormGrey: #848587;
+	--gainsboro: #dfdfdf;
 }
-
 
 #external-events {
 	width: 250px;
 	padding: 0 10px;
-/*	border: 1px solid #ccc;*/
+	/*	border: 1px solid #ccc;*/
 	text-align: left;
 	float: left;
 }
@@ -26,7 +25,6 @@
 	margin: 3px 0;
 	cursor: move;
 }
-
 
 #calendar {
 	max-width: 1100px;
@@ -37,12 +35,12 @@
 
 /* The popup form - hidden by default */
 .form-popup {
-  cursor: pointer;
+	cursor: pointer;
 	display: none;
-	position: fixed;
-	top: 50vh;
+	/*position: fixed;
+	 top: 50vh;
 	left: 50vw;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
 	border: 3px solid grey;
 	z-index: 9;
 	overflow: auto; /* Enable scroll if needed */
@@ -51,7 +49,7 @@
 }
 
 .input-popup {
-  cursor: pointer;
+	cursor: pointer;
 	display: none;
 	position: fixed;
 	top: 50vh;
@@ -81,7 +79,6 @@
 	background: #f1f1f1;
 }
 
-
 /* Set a style for the submit/login button */
 .form-container .btn {
 	background-color: #04aa6d;
@@ -94,15 +91,13 @@
 	opacity: 0.8;
 }
 
-
-
 /* Add some hover effects to buttons */
-.form-container .btn:hover{
+.form-container .btn:hover {
 	opacity: 1;
 }
 
-.fc-daygrid-day-number{
-	font-size: xx-large ;
+.fc-daygrid-day-number {
+	font-size: xx-large;
 	color: white !important;
 }
 
@@ -112,23 +107,36 @@
 
 /*outside border*/
 .fc-theme-standard .fc-scrollgrid {
-
 	border: var(--fc-border-color, transparent);
 }
 
-
 /*inside grid*/
-.fc-theme-standard td, .fc-theme-standard th{
+.fc-theme-standard td,
+.fc-theme-standard th {
 	border: var(--fc-border-color, transparent);
 }
 
 .fc .fc-daygrid-day-top {
 	display: flex;
-    flex-direction: column;
-    align-items: center;
-	
+	flex-direction: column;
+	align-items: center;
+}
+
+.fc-daygrid-day-frame fc-scrollgrid-sync-inner{
+
 }
 
 #external-events {
 	display: none;
+}
+
+.nextPrev {
+	position: relative;
+	top: 50vh;
+}
+
+#next-button {
+	position: absolute;
+	right: 358px;
+	top: 871px;
 }
