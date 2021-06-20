@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       "title": "An Event to mess with",
-      "start": "2021-05-20T05:00:00.000Z",
-      "end": "2021-05-21T05:00:00.000Z",
+      "start": "2021-06-20T05:00:00.000Z",
+      "end": "2021-06-21T05:00:00.000Z",
       "allDay": true,
       "extendedProps": {
         "description": "A different Event",
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       "title": "Another Event to mess with",
-      "start": "2021-05-12T05:00:00.000Z",
-      "end": "2021-05-13T05:00:00.000Z",
+      "start": "2021-06-12T05:00:00.000Z",
+      "end": "2021-06-13T05:00:00.000Z",
       "allDay": true,
       "extendedProps": {
         "description": "A different Event",
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
       "title": "Yet another event to mess with",
-      "start": "2021-05-18T05:00:00.000Z",
-      "end": "2021-05-19T05:00:00.000Z",
+      "start": "2021-06-18T05:00:00.000Z",
+      "end": "2021-06-19T05:00:00.000Z",
       "allDay": true,
       "extendedProps": {
         "description": "A different Event",
@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var addEventButton = document.getElementById('inputButton');
   var nextPrevButtons = document.getElementsByClassName('nextPrev');
 
-  //const prevMonth = () => 
-  //nst next = () => calendar.next();
-
+ 
   new FullCalendar.Draggable(document.getElementById('external-events-list'), {
     itemSelector: '.fc-event-main'
   });
