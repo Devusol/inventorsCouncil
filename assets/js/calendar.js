@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
     putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
     putCalendarEvent.setRequestHeader("Content-Type", "application/json");
     putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-    console.log(myEvents);
+    //console.log(myEvents);
     // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
   }
 
@@ -173,22 +173,19 @@ document.addEventListener('DOMContentLoaded', function () {
   } */
 
   function readEventCalendarJSON() {
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Master-Key': '$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK'
-      }
-    })
+    fetch(EVENTS_URL)
       .then(response => response.json())
       .then(json => {
-        res.json([json]);
+        myEvents = json.record;
+        console.log(myEvents); 
+        calendar.addEventSource(myEvents);
+        calendar.refetchEvents();       
       })
 
-      //myEvents = JSON.parse(getCalendarEvents.responseText);
-     // myEvents = myEvents.record;
-      //calendar.addEventSource(myEvents);
-      //calendar.refetchEvents();
+    //myEvents = JSON.parse(getCalendarEvents.responseText);
+    // myEvents = myEvents.record;
+    //calendar.addEventSource(myEvents);
+    //
 
 
 
@@ -235,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('prev-button').addEventListener('click', function () {
     calendar.prev();
     //onDateHover();
-    console.log(numbers);
+    //console.log(numbers);
   });
 
   document.getElementById('next-button').addEventListener('click', function () {
