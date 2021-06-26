@@ -1,50 +1,52 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-  // var myEvents = [];
-  var myEvents = [
-    {
-      "title": "Initialize Calendar Data",
-      "start": "2021-01-01T05:00:00.000Z",
-      "end": "2021-01-02T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "To ensure JSON bin is not blank",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "An Event to mess with",
-      "start": "2021-06-20T05:00:00.000Z",
-      "end": "2021-06-21T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "Another Event to mess with",
-      "start": "2021-06-12T05:00:00.000Z",
-      "end": "2021-06-13T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "Yet another event to mess with",
-      "start": "2021-06-18T05:00:00.000Z",
-      "end": "2021-06-19T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    }];
+  var myEvents = [];
+  /*  var myEvents = [
+     {
+       "title": "Initialize Calendar Data",
+       "start": "2021-01-01T05:00:00.000Z",
+       "end": "2021-01-02T05:00:00.000Z",
+       "allDay": true,
+       "extendedProps": {
+         "description": "To ensure JSON bin is not blank",
+         "location": "Winter Garden, FL"
+       }
+     },
+     {
+       "title": "An Event to mess with",
+       "start": "2021-06-20T05:00:00.000Z",
+       "end": "2021-06-21T05:00:00.000Z",
+       "allDay": true,
+       "extendedProps": {
+         "description": "A different Event",
+         "location": "Winter Garden, FL"
+       }
+     },
+     {
+       "title": "Another Event to mess with",
+       "start": "2021-06-12T05:00:00.000Z",
+       "end": "2021-06-13T05:00:00.000Z",
+       "allDay": true,
+       "extendedProps": {
+         "description": "A different Event",
+         "location": "Winter Garden, FL"
+       }
+     },
+     {
+       "title": "Yet another event to mess with",
+       "start": "2021-06-18T05:00:00.000Z",
+       "end": "2021-06-19T05:00:00.000Z",
+       "allDay": true,
+       "extendedProps": {
+         "description": "A different Event",
+         "location": "Winter Garden, FL"
+       }
+     }]; */
 
-  var putCalendarEvent = new XMLHttpRequest();
-  var getCalendarEvents = new XMLHttpRequest();
+  const EVENTS_URL = "https://app.dronefieldguide.com/keysafe/videos";
+  const JSONBIN_URL = "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56";
+  /* var putCalendarEvent = new XMLHttpRequest();
+  var getCalendarEvents = new XMLHttpRequest(); */
   var spanClose = document.getElementsByClassName("close");
   var calendarPopup = document.getElementById('descriptionCard');
   var calendarInput = document.getElementById('inputCard');
@@ -52,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var addEventButton = document.getElementById('inputButton');
   var nextPrevButtons = document.getElementsByClassName('nextPrev');
 
- 
   new FullCalendar.Draggable(document.getElementById('external-events-list'), {
     itemSelector: '.fc-event-main'
   });
@@ -76,12 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
       spanClose[1].onclick = function () {
         calendarInput.style.display = "none";
       }
-      console.log(arg);
-      console.log(document.getElementById('inputStart'));
+      /*   console.log(arg); */
+      /* console.log(document.getElementById('inputStart')); */
       let newStartTime = arg.start.setHours(8, 30);
       let newEndTime = arg.start.setHours(10, 30);
-      console.log(new Date(newStartTime));
-      console.log(new Date(newEndTime));
+      /*   console.log(new Date(newStartTime));
+        console.log(new Date(newEndTime)); */
       addEventButton.addEventListener('click', function () {
         let title = document.getElementById('inputTitle').value;
         let eventInput = {
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
   readEventCalendarJSON();
 
 
-  putCalendarEvent.onreadystatechange = () => {
+  /* putCalendarEvent.onreadystatechange = () => {
     if (putCalendarEvent.readyState == XMLHttpRequest.DONE) {
       console.log(putCalendarEvent.responseText);
     }
@@ -146,21 +147,48 @@ document.addEventListener('DOMContentLoaded', function () {
       calendar.addEventSource(myEvents);
       //calendar.refetchEvents();
     }
-  };
+  }; */
+
+  /*   function updateEventCalendarJSON() {
+      putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
+      putCalendarEvent.setRequestHeader("Content-Type", "application/json");
+      putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
+      console.log(myEvents);
+      // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
+    } */
 
   function updateEventCalendarJSON() {
     putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
     putCalendarEvent.setRequestHeader("Content-Type", "application/json");
     putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-    console.log(myEvents);
+    //console.log(myEvents);
     // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
   }
 
-  function readEventCalendarJSON() {
+  /* function readEventCalendarJSON() {
     getCalendarEvents.open("GET", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56/latest", true);
     getCalendarEvents.setRequestHeader("Content-Type", "application/json");
     getCalendarEvents.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
     //  getCalendarEvents.send(); // comment to avoid API requests, be sure to switch myEvents variable to open
+  } */
+
+  function readEventCalendarJSON() {
+    fetch(EVENTS_URL)
+      .then(response => response.json())
+      .then(json => {
+        myEvents = json.record;
+        console.log(myEvents); 
+        calendar.addEventSource(myEvents);
+        calendar.refetchEvents();       
+      })
+
+    //myEvents = JSON.parse(getCalendarEvents.responseText);
+    // myEvents = myEvents.record;
+    //calendar.addEventSource(myEvents);
+    //
+
+
+
   }
 
   function showEventForm(eventDetails) {
@@ -177,20 +205,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var numbers = document.getElementsByClassName('fc-daygrid-day-number');
   function onDateHover() {
-    console.log(calendar);
+    /* console.log(calendar); */
     for (const elem of calendar.getEvents()) {
-      console.log(elem);
-      
-    }
-    
+      /* console.log(elem); */
 
+    }
 
     for (const element of numbers) {
       element.addEventListener('mouseenter', function () {
-       
+
         let xCoord = this.getBoundingClientRect().x;
         let yCoord = this.getBoundingClientRect().y;
-        console.log(this.getBoundingClientRect().x, this.getBoundingClientRect().y);
+        /* console.log(this.getBoundingClientRect().x, this.getBoundingClientRect().y); */
         calendarPopup.style.position = "absolute";
         calendarPopup.style.top = `${yCoord + 250}px`;
         calendarPopup.style.left = `${xCoord - 100}px`;
@@ -205,8 +231,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('prev-button').addEventListener('click', function () {
     calendar.prev();
-    onDateHover();
-    console.log(numbers);
+    //onDateHover();
+    //console.log(numbers);
   });
 
   document.getElementById('next-button').addEventListener('click', function () {
@@ -214,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
     onDateHover();
   });
 
-  onDateHover();
+  //onDateHover();
 });
 
 
