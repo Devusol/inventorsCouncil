@@ -188,7 +188,8 @@ i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
-} */
+  color: rgba(255, 255, 255, 0.8);
+} 
 
  .navbar > ul > li > a:before {
   content: "";
@@ -210,10 +211,11 @@ i {
   width: 100%;
 }
 
-.navbar a:hover,
+.navbar i:hover,.navbar a:hover,
 .navbar .active,
 .navbar li:hover > a {
   color: #fff;
+  cursor: pointer;
 }
 
 .navbar .dropdown ul {
