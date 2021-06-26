@@ -44,9 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
      }]; */
 
   const EVENTS_URL = "https://app.dronefieldguide.com/keysafe/videos";
-  const JSONBIN_URL = "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56";
-  /* var putCalendarEvent = new XMLHttpRequest();
-  var getCalendarEvents = new XMLHttpRequest(); */
+  
+  
   var spanClose = document.getElementsByClassName("close");
   var calendarPopup = document.getElementById('descriptionCard');
   var calendarInput = document.getElementById('inputCard');
@@ -165,31 +164,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
   }
 
-  /* function readEventCalendarJSON() {
-    getCalendarEvents.open("GET", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56/latest", true);
-    getCalendarEvents.setRequestHeader("Content-Type", "application/json");
-    getCalendarEvents.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-    //  getCalendarEvents.send(); // comment to avoid API requests, be sure to switch myEvents variable to open
-  } */
-
+   
   function readEventCalendarJSON() {
     fetch(EVENTS_URL)
       .then(response => response.json())
       .then(json => {
         myEvents = json.record;
-        console.log(myEvents); 
         calendar.addEventSource(myEvents);
         calendar.refetchEvents();       
       })
-
-    //myEvents = JSON.parse(getCalendarEvents.responseText);
-    // myEvents = myEvents.record;
-    //calendar.addEventSource(myEvents);
-    //
-
-
-
-  }
+    }
 
   function showEventForm(eventDetails) {
     let description = eventDetails.extendedProps.description;
