@@ -1,2 +1,0 @@
-# inventorsCouncil
-Neil Project
