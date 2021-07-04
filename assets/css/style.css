@@ -557,3 +557,9 @@ button[type="buttonDonate"]:hover {
   border: 2px solid var(--studio);
   box-shadow: 0 5px 15px var(--studio);
 }
+
+.sub-navbar {
+	background-color: rgba(18, 102, 138, 0.3);
+	/*  background: #12668A; */
+
+}

@@ -12,7 +12,6 @@ $(document).ready(function () {
 
 window.onload = () => {
   $('body').css("display", 'initial');
-  console.log($('body').css('display'))
 };
 
 /*
