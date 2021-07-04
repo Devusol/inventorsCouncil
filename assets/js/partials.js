@@ -1,10 +1,21 @@
- $(document).ready(function () {
-  $("head").load("/html/shared/head.html");
-  $("header").load("/html/shared/navbar.html");
-  $("footer").load("/html/shared/footer.html");
-}); 
+$(document).ready(function () {
 
-/* 
+  $("head").load("/html/shared/head.html", function () {
+    $("header").load("/html/shared/navbar.html", function () {
+      $("footer").load("/html/shared/footer.html", function () {
+        console.log($('body').css('display'))
+      })
+    })
+  });
+
+});
+
+window.onload = () => {
+  $('body').css("display", 'initial');
+  console.log($('body').css('display'))
+};
+
+/*
 async loadCSSStyles(){
   return new Promise((resolve, reject)=>{
     const styleURLs = [...];
