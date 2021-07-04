@@ -1,20 +1,3 @@
-
-
-:root {
-    /*background*/
-	--mirage: #151929;
-    --bigStone: #152133;
-    --luckyPoint: #262d48;
-
-    --midnightExpress: #141B2F;
-	--studio: #8656A0;
-  --irisBlue: #0DB0E3;
-  --darkTangerine: #F2A413;
-  --allports: #12668A;
-  --stormGrey: #848587;
-  --gainsboro: #DFDFDF;
-}
-
 #members{
     background: var(--mirage);
     background-image: url(../img/background/backgroundPat.png);
