@@ -24,6 +24,7 @@
 	border: none;
 	background-color: var(--irisBlue);
 	text-transform: uppercase;
+  font-size: 100%;
 }
 
 .btn-outline-primary {
