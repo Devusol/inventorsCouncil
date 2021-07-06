@@ -1,0 +1,83 @@
+/* Button Templates */
+button[type="buttonNormal"] {
+    /*   background-color: var(--irisBlue);
+      color: var(--gainsboro);
+      font-family: "Metropolis";
+      font-size: bold;
+      text-transform: uppercase;
+      /* text-align: center; */
+      /* min-width: 40%;
+      max-width: 50%; */
+      /* text-align: center;*/
+     /*  border: none; 
+      border-radius: 4px; */
+    
+      /* height: 50px; */
+     /*  display: inline-block; */ */
+    }
+    
+    button[type="buttonNormal"]:hover {
+      background-color: var(--studio);
+      box-shadow: 0 5px 15px var(--studio);
+      color: var(--gainsboro);
+      font-family: "Metropolis";
+      font-size: bold;
+      text-transform: uppercase;
+    }
+    
+    button[type="buttonNormal"]:focus {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      color: var(--gainsboro);
+      font-family: "Metropolis";
+      font-size: bold;
+      text-transform: uppercase;
+      min-width: 40%;
+      max-width: 50%;
+      border-radius: 0;
+      cursor: pointer;
+      border: 2px solid var(--irisBlue);
+      box-shadow: 0 5px 15px var(--irisBlue);
+    }
+    
+    button[type="buttonNormal"]:active {
+      font-family: "Metropolis";
+      font-size: bold;
+      text-transform: uppercase;
+     /*  min-width: 40%;
+      max-width: 50%; */
+      border: 2px solid var(--irisBlue);
+      color: var(--gainsboro);
+    }
+    
+    button[type="buttonNormal"]:disabled {
+      font-family: "Metropolis";
+      font-size: bold;
+      text-transform: uppercase;
+      background-color: var(--stormGrey);
+      color: var(--gainsboro);
+    }
+    
+    button[type="buttonDonate"] {
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      color: var(--irisBlue);
+      font-family: "Metropolis";
+      font-size: bold;
+      padding: 1%;
+      text-transform: uppercase;
+      min-width: 40%;
+      max-width: 50%;
+      height: auto;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid var(--irisBlue);
+      box-shadow: 0 5px 15px var(--irisBlue);
+    }
+    
+    button[type="buttonDonate"]:hover {
+      background-color: var(--studio);
+      color: var(--gainsboro);
+      border: 2px solid var(--studio);
+      box-shadow: 0 5px 15px var(--studio);
+    }
