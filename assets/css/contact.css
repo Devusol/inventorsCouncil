@@ -11,87 +11,22 @@ body {
 }
 
 .verticalSplitLineContact {
-    height: 75%;
-    top: 15vh;
-    /*   border-left: 2px solid #f2a413;
-    
-    position: fixed;
-    
-    left: 50vw;
-    z-index: 1;
-    overflow-x: hidden;
-    padding-top: 20%; */
-    /* border-left: unset;
-        height: 0;
-        position: absolute;
-        transform: translate(0, 15vh);
-        left: unset;
-        overflow-x: hidden; */
+    height: 100%;
     background-color: #f2a413;
-    /* border-left: 2px solid #f2a413; */
     width: 2px;
-   
-    /* left: 50vw; */
+      
 }
 
-/* Contact Page Buttons */
-
-/* button[type="button"] {
+input[type="text"],
+select {
   width: 100%;
-  background-color: #0cb0e3;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 14px 15px;
-  text-align: center;
+  padding: 12px 20px;
   margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  height: 50px;
   display: inline-block;
-}
-
-button[type="button"]:hover {
-  background-color: #8656a0;
-  box-shadow: 0 5px 15px #8656a0;
-}
- */
-/* Contact Page Mobile */
-
-@media screen and (max-width: 1600px) {
-    .verticalSplitLineContact {
-        /* border-left: unset;
-        height: 0;
-        position: absolute;
-        transform: translate(0, 15vh);
-        left: unset;
-        overflow-x: hidden; */
-        background-color: #f2a413;
-        /* border-left: 2px solid #f2a413; */
-        width: 2px;
-        margin: auto;
-        /* position: relative; */
-        top: 15vh;
-        /* left: 50vw; */
-
-    }
-
-    .contactCentered {
-        position: unset;
-        top: unset;
-        left: unset;
-        width: unset;
-        transform: translate(10vw, 15vh);
-        text-align: center;
-    }
-
-    .contactBottom {
-        position: unset;
-        top: unset;
-        left: unset;
-        width: unset;
-        transform: translate(10vw, 15vh);
-        text-align: center;
-    }
+  color: #dfdfdf;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 2px solid #dfdfdf;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
