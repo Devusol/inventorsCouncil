@@ -36,16 +36,18 @@
 	box-shadow: 3px 3px 8px var(--irisBlue), inset 2px 2px 8px var(--irisBlue);
 }
 
-.btn-outline-primary:hover{
-  border: 2px solid var(--studio) !important;
-  color: var(--studio);
-  background-color: transparent;
-  box-shadow: 3px 3px 8px var(--studio), inset 2px 2px 8px var(--studio);
+.btn-outline-primary:hover {
+	border: 2px solid var(--studio) !important;
+	color: var(--studio);
+	background-color: transparent;
+	box-shadow: 3px 3px 8px var(--studio), inset 2px 2px 8px var(--studio);
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
 	font-weight: lighter;
-  background: transparent !important;
+	background: transparent !important;
 	background-color: transparent !important;
 	border: 3px solid var(--studio) !important;
 	border: 0 none !important;
@@ -57,26 +59,24 @@
 	border: 3px solid var(--studio);
 }
 
-
 .btn-primary:hover {
-  color: var(--studio);
+	color: var(--studio);
 	background-color: var(--irisBlue);
 	box-shadow: 5px 5px var(--studio);
 }
 
-.btn-primary:active{
-  color: white;
+.btn-primary:active {
+	color: white;
 	font-weight: lighter;
 	background-color: var(--studio) !important;
 	border: none !important;
-  outline-color: transparent !important;
+	outline-color: transparent !important;
 }
 
-.btn-primary:active .bi-slack{
-  background: white !important;
-  -webkit-background-clip: text !important;
+.btn-primary:active .bi-slack {
+	background: white !important;
+	-webkit-background-clip: text !important;
 	-webkit-text-fill-color: transparent !important;
-
 }
 
 .btn-primary:focus {
@@ -85,7 +85,7 @@
 	box-shadow: 2px 2px 8px var(--studio);
 	border: 3px solid var(--studio);
 }
-.btn-primary:focus .bi-slack{
+.btn-primary:focus .bi-slack {
 	background: -webkit-linear-gradient(#8457aa, #10aee1);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -102,7 +102,6 @@
 	box-shadow: none !important;
 	border: 3px solid var(--stormGrey) !important;
 }
-
 
 /*--------------------------------------------------------------
 # General
@@ -234,6 +233,10 @@ i {
 /**
   * Desktop Navigation 
   */
+
+.sub-navbar {
+	background-color: rgba(18, 102, 138, 0.3);
+}
 
 .navbar ul {
 	margin: 0;
@@ -484,110 +487,109 @@ i {
 /*HERO*/
 
 #heroPhoto {
-    width: 100%;
-    height: 150%;
-    background-size: cover;
-    position: relative;
-    background-image: radial-gradient(farthest-corner circle at 40px 40px, #5a456b 0%, #010101 40%);
+	width: 100%;
+	height: 150%;
+	background-size: cover;
+	position: relative;
+	background-image: radial-gradient(farthest-corner circle at 40px 40px, #5a456b 0%, #010101 40%);
 }
 
 #newHero {
-    padding: 200px 100px 100px 100px;
+	padding: 200px 100px 100px 100px;
 }
 
 #lightBulb {
-    height: 60vh;
+	height: 60vh;
 }
 
 @media (max-width: 991px) {
-    #lightBulb {
-        height: 28vh;
-        position: relative;
-        top: -316px;
-        left: 74px;
-    }
+	#lightBulb {
+		height: 28vh;
+		position: relative;
+		top: -316px;
+		left: 74px;
+	}
 }
 
 #newHero h1 {
-    font-size: 5rem;
-    font-weight: bolder;
+	font-size: 5rem;
+	font-weight: bolder;
 }
 
 #newHero u {
-    text-decoration-color: #f3b212;
+	text-decoration-color: #f3b212;
 }
 
 #newHero h2 {
-    font-size: 2rem;
-    color: #0da8d9;
-    font-weight: bolder;
+	font-size: 2rem;
+	color: #0da8d9;
+	font-weight: bolder;
 }
 
 #newHero i {
-    font-size: 3.5rem;
-    color: #0da8d9;
+	font-size: 3.5rem;
+	color: #0da8d9;
 }
 
 #newHero h3 {
-    font-size: 1rem;
-    font-weight: bolder;
-    color: #6c6c6c;
+	font-size: 1rem;
+	font-weight: bolder;
+	color: #6c6c6c;
 }
 
 @media (max-width: 991px) {
-    #newHero h1 {
-        z-index: 20;
-        font-size: 3.0rem;
-        font-weight: bolder;
-    }
-    #wordsHero {
-        padding-right: 25%;
-        z-index: 20;
-    }
-    #newHero {
-        padding: 150px 0px 0px 0px;
-    }
-    #newHero h2 {
-        font-size: 1.1rem;
-        color: white;
-        font-weight: bolder;
-    }
-    #newHero i {
-        font-size: 14px;
-        color: white;
-    }
-    #wordsHero i {
-        font-size: 25px !important;
-    }
+	#newHero h1 {
+		z-index: 20;
+		font-size: 3.0rem;
+		font-weight: bolder;
+	}
+	#wordsHero {
+		padding-right: 25%;
+		z-index: 20;
+	}
+	#newHero {
+		padding: 150px 0px 0px 0px;
+	}
+	#newHero h2 {
+		font-size: 1.1rem;
+		color: white;
+		font-weight: bolder;
+	}
+	#newHero i {
+		font-size: 14px;
+		color: white;
+	}
+	#wordsHero i {
+		font-size: 25px !important;
+	}
 }
 
 #wordsHero {
-    padding-right: 25%;
+	padding-right: 25%;
 }
 
 #wordsHero i {
-    font-size: 37px;
+	font-size: 37px;
 }
-
 
 /*HOME EVENTS*/
 
 #homeEventsPhoto {
-    width: 100%;
-    height: 150%;
-    background-image: linear-gradient(#010101 10%, rgba(0, 0, 0, .5), #010101 100%), url(../img/home/conference-auditorium-meeting.jpg);
-    background-size: cover;
-    position: relative;
+	width: 100%;
+	height: 150%;
+	background-image: linear-gradient(#010101 10%, rgba(0, 0, 0, .5), #010101 100%),
+		url(../img/home/conference-auditorium-meeting.jpg);
+	background-size: cover;
+	position: relative;
 }
 
 #homeEvents {
-    padding: 100px 100px 100px 100px;
+	padding: 100px 100px 100px 100px;
 }
 
 #eventsOverall u {
-    text-decoration-color: #f3b212;
+	text-decoration-color: #f3b212;
 }
-
 
 /***************************FOOTER***************************/
 
