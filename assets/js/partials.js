@@ -1,12 +1,8 @@
 $(document).ready(function () {
   let nav = $('.sub-navbar-content');
   $("head").load("/html/shared/head.html", function () {
-  
     $("header").load("/html/shared/navbar.html", function () {
-      
-
       $('.sub-navbar').append(nav);
-
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'))
       })
