@@ -119,12 +119,12 @@ body {
 }
 
 a {
-	color: white;
+	color: var(--gainsboro);
 	text-decoration: none;
 }
 
 a:hover {
-	color: rgb(0, 85, 255);
+	color: var(--studio);
 	text-decoration: none;
 }
 
