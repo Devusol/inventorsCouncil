@@ -20,7 +20,6 @@
     position: relative;
     height: auto;
     color: white;
-    border: 3px soild #73ad21;
     background-image: linear-gradient(to left, transparent 13%, var(--luckyPoint) 43%);
 }
 
