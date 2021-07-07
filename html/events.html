@@ -21,15 +21,15 @@
 
   <main>
 
-    <section id="calendarSec" class="my-5">
+    <section id="calendar-section" class="my-5">
       <h1 class="mt-5">ICCF EVENTS</h1>
-
+      <div class="fs-1" id="calendar" >
+      </div>
       <div class="container-fluid">
-        <div class="row justify-content-around align-items-center">
+        <div class="row justify-content-center align-items-center">
           <div class="col-1"><i class="icofont-simple-left"></i></div>
-          <div id="calendar" class="col-4">
-           <!--  <div id='calendar'></div> -->
-          </div>
+          <!--     <div id="calendar" class="col-4">
+          </div> -->
           <div class="col-1"><i class="icofont-simple-right"></i></div>
         </div>
       </div>
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <div class="form-popup" id="descriptionCard">
+  <div class="form-popup invisible" id="descriptionCard">
     <form id="descriptionForm" action="/action_page.php" class="form-container">
       <span class="close">&times;</span>
       <h1>Event Details</h1>
@@ -80,7 +80,7 @@
     </form>
   </div>
 
-  <div class="input-popup" id="inputCard">
+  <div class="input-popup invisible" id="inputCard">
     <form id="inputForm" action="/action_page.php" class="form-container">
       <span class="close">&times;</span>
       <h1>Event Details</h1>
@@ -108,9 +108,20 @@
 
   <footer id="footer">
   </footer>
+  
+  <script src='/vendor/fullcalendar/lib/main.js'></script> 
+ 
+ <!--  <script>
 
-  <script src='/vendor/fullcalendar/lib/main.js'></script>
-  <script src='/assets/js/calendar.js'></script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+  </script> -->
 </body>
 
 </html>
