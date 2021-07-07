@@ -4,12 +4,16 @@
 }
 
 #membersHeader {
-    padding: 200px 100px 100px 100px;
+    padding: 200px 0px 100px 0px;
 }
 
 #membersHeader h1 {
     font-size: 5.0rem;
     font-weight: bolder;
+}
+
+#membersHeader button {
+    height: 3.5rem;
 }
 
 #ourMissionWords {
@@ -28,7 +32,7 @@
 }
 
 .sectionLine {
-    padding: 100px 100px 100px 100px;
+    padding: 100px 115px 100px 115px;
 }
 
 .sectionLine h4 {
@@ -48,11 +52,11 @@
     margin-left: 10px
 }
 
-.ourPurpose {
-    padding: 0px 100px 100px 100px;
+.ourMembers {
+    padding: 0px 115px 100px 115px;
 }
 
-.ourPurpose h4 {
+.ourMembers h4 {
     color: var(--stormGrey);
 }
 
@@ -82,4 +86,46 @@
 
 .memberCard {
     width: 10vw;
+}
+
+
+/******************************PROPABLY REUSE SIGN UP SECTION*************************/
+
+#signUpBoxWords {
+    padding: 25px 0px 25px 100px;
+}
+
+.signUpBox {
+    position: relative;
+    height: auto;
+    color: white;
+    background-image: linear-gradient(to left, transparent 10%, var(--luckyPoint) 32%);
+}
+
+#signUpBoxWords h2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.stockPic {
+    z-index: -1;
+}
+
+.stockPic img {
+    height: 100%;
+    width: auto;
+    padding: 0px !important;
+    float: right;
+}
+
+.buttonsignUpBox {
+    padding: 25px 0px 25px 84px;
+}
+
+
+/*************************************************************************************/
+
+.ourMembers h4 {
+    color: var(--stormGrey);
 }

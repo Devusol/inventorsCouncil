@@ -43,10 +43,11 @@
     width: auto;
     justify-content: flex-end;
     padding: 0px !important;
+    float: right;
 }
 
 .sectionLine {
-    padding: 100px 100px 100px 100px;
+    padding: 100px 115px 100px 115px;
 }
 
 .sectionLine h4 {
@@ -71,7 +72,7 @@
 }
 
 .ourPurpose {
-    padding: 0px 100px 100px 100px;
+    padding: 0px 115px 100px 115px;
 }
 
 .ourPurpose h4 {
