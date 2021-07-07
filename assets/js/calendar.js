@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   calendar.render();
-  readEventCalendarJSON();
+  //readEventCalendarJSON();
 
 
   /* putCalendarEvent.onreadystatechange = () => {
