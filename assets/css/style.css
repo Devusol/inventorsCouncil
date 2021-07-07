@@ -134,6 +134,9 @@ i {
     color: var(--gainsboro);
 }
 
+u {
+	text-decoration-color: #f3b212;
+}
 
 .overlay {
     position: absolute !important;
