@@ -8,7 +8,8 @@
 <body style="display: none;">
 
     <header class="fixed-top align-items-center header-transparent header-scrolled">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="/assets/js/partials.js"></script>
 
     </header>
@@ -18,105 +19,74 @@
 
     <main>
 
-        <!--HERO LIGHT BULB-->
         <section id="heroPhoto">
-            <div id="newHero">
-
-                <!--Picture of Light Bulb and words-->
-                <div class="row justify-content-center hero-padding">
-                    <div class="col-lg-4">
-
-                        <h1>Have an
-                            <br>
-                            <u>idea</u>?
-                        </h1>
+            <div id="newHero" class="container-fluid  hero-padding">
+                <div class="row justify-content-lg-center ">
+                    <div style="z-index: 1;" class="col-lg-4 col-md-6">
+                        <h1>Have an<br><u>idea</u>?</h1>
                         <br>
                         <h2>Invetion Process &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
                             <i class="icofont-simple-right"></i>
                         </h2>
                         <br>
-                        <h3>If you are an inventor in Central Florida looking for guidance on how to move forward with your invention, you have found the place! The Inventors Council of Central Florida is where inventors meet monthly to discuss their inventions.
+                        <h3>If you are an inventor in Central Florida looking for guidance on how to move forward with
+                            your invention, you have found the place! The Inventors Council of Central Florida is where
+                            inventors meet monthly to discuss their inventions.
                         </h3>
-
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-end">
-                        <img id="lightBulb" src="assets/img/lightbulb.png" alt="Light Bulb">
+                    <div class="col-lg-6 justify-content-lg-end">
+                        <img id="lightBulb" src="assets/img/lightbulb.png" alt="Light-Bulb">
                     </div>
                 </div>
-
-
             </div>
-
         </section>
-
-        <!--Home Events-->
 
         <section id="homeEventsPhoto">
-            <div id="homeEvents">
-
-                <!--Picture of Light Bulb and words-->
-                <div class="col-lg-12   align-items-stretch homeEvents-padding">
-                    <div class="row">
-                        <div id="eventsOverall" class="col-lg-12  d-flex align-items-stretch">
-                            <h2>
-                                <u>EVENTS</u>
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-5  align-items-stretch">
-                            <div class="col-lg-5  d-flex align-items-stretch">
-                                <h4>Details &nbsp;
-                                    <i class="icofont-simple-right"></i>
-                                    <br> Subscribe
-                                    <i class="icofont-simple-right"></i>
-                                    <br>
-                                </h4>
+            <div id="homeEvents" class="container-fluid">
+                <div class="row pb-5">
+                    <div class="col-lg-4">
+                        <nav class="navbar flex-column">
+                            <div>
+                                <h2 class="nav-link pl-2"><u>EVENTS</u></h2>
+                                <a class="nav-link  pl-2">
+                                    <h4>Details &nbsp;<i class="icofont-simple-right"></i></h4>
+                                </a>
+                                <a class="nav-link pl-2">
+                                    <h4>Subscribe &nbsp;<i class="icofont-simple-right"></i></h4>
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-lg-3   align-items-stretch">
-                            <h4>Meetup</h4>
-                            <h5>
-                                <br>Every First Saturday at 1:00 p.m. via Zoom
-                            </h5>
-                        </div>
-                        <div class="col-lg-3 d-flex align-items-stretch">
-
-                        </div>
+                        </nav>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-5  d-flex align-items-stretch">
-                            <div class="col-lg-3  d-flex align-items-stretch">
 
-                            </div>
-                        </div>
-                        <div class="col-lg-3  align-items-stretch">
-                            <br>
-                            <br>
-                            <h4>Next Meeting</h4>
-                            <h5>
-                                <br>April 3rd -
-                                <i>Online</i> via Zoom Receive notifications for our meetings by signing up
-                            </h5>
-                        </div>
-                        <div class="col-lg-3  align-items-stretch">
-                            <br>
-                            <br>
-                            <h4>Admission Fee</h4>
-                            <br>
-                            <h5>-First Visit FREE!
-                                <br> -Non-member admission $5.00
-                                <br> -Annual Membership $30.00
-                                <br>
-                            </h5>
-                        </div>
+                    <div class="col-lg-4 align-self-end">
+                        <h4>Meetup</h4>
+                        <h5>Every First Saturday at 1:00 p.m. via Zoom</h5>
+
                     </div>
                 </div>
 
+                <div class="row py-5">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
 
+                        <h4>Next Meeting</h4>
+                        <h5><span id="next-event">April 3rd </span> - <i>Online</i> via Zoom</h5>
+                        <p>Receive notifications for our meetings by signing up</p>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <h4>Admission Fee</h4>
+                        <h5>-First Visit FREE!
+                            <br> -Non-member admission $5.00
+                            <br> -Annual Membership $30.00
+                            <br>
+                        </h5>
+                    </div>
+                </div>
             </div>
-
         </section>
+
+        
     </main>
 
     <footer id="footer">
