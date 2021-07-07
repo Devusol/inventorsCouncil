@@ -1,12 +1,15 @@
 $(document).ready(function () {
   let nav = $('.sub-navbar-content');
+
   $("head").load("/html/shared/head.html", function () {
+    /* $('.sign-up').load("/html/shared/signup.html", function () { */
     $("header").load("/html/shared/navbar.html", function () {
       $('.sub-navbar').append(nav);
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'))
       })
     })
+    /* }) */
   });
 
 });
@@ -16,7 +19,7 @@ window.onload = () => {
   /* console.log($('.sub-navbar')[0]); */
   /*  */
 
-
+  $('.sign-up').load("/html/shared/signup.html");
   $('body').css("display", 'initial');
 
 };
