@@ -1,4 +1,14 @@
-/*HERO*/
+@media screen and (max-width: 992px) {
+	#lightBulb {
+		margin-top: -20%;
+		z-index: 0;
+		width: 100%;
+	}
+
+	#heroPhoto {
+		padding-top: 10%;
+	}
+}
 
 #heroPhoto {
 	width: 100%;
@@ -11,19 +21,10 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 992px) {
-	#lightBulb {
-		margin-top: -20%;
-		z-index: 0;
-		width: 100%;
-	}
-}
-
 #newHero h1 {
 	font-size: 5rem;
 	font-weight: bolder;
 }
-
 
 #newHero h2 {
 	font-size: 2rem;
@@ -48,7 +49,6 @@
 	background-image: linear-gradient(#010101 10%, rgba(0, 0, 0, .5), #010101 100%),
 		url(../img/home/conference-auditorium-meeting.jpg);
 	background-size: cover;
-	
 }
 
 #homeEvents h5 {
