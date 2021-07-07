@@ -1,82 +1,84 @@
 #aboutUs {
-	background: var(--mirage);
-	background-image: url(../img/background/backgroundPat.png);
+    background: var(--mirage);
+    background-image: url(../img/background/backgroundPat.png);
 }
 
 #aboutHeader {
-	padding: 200px 100px 100px 100px;
+    padding: 200px 100px 100px 100px;
 }
 
 #aboutHeader h1 {
-	font-size: 5.0rem;
-	font-weight: bolder;
+    font-size: 5.0rem;
+    font-weight: bolder;
 }
 
 #ourMissionWords {
-	padding: 25px 0px 25px 100px;
+    padding: 25px 0px 25px 100px;
 }
 
 .ourMissionBox {
-	position: relative;
-	height: auto;
-	color: white;
-	border: 3px soild #73ad21;
-	background-image: linear-gradient(to left, transparent 14%, var(--luckyPoint) 47%);
+    position: relative;
+    height: auto;
+    color: white;
+    border: 3px soild #73ad21;
+    background-image: linear-gradient(to left, transparent 13%, var(--luckyPoint) 43%);
 }
 
 #ourMissionWords h2 {
-	font-size: 2rem;
-	color: #0da8d9;
-	font-weight: bolder;
+    font-size: 2rem;
+    color: #0da8d9;
+    font-weight: bolder;
 }
 
 #ourMissionWords h3 i {
-	font-size: 1.5rem;
-	color: #0da8d9;
+    font-size: 1.5rem;
+    color: #0da8d9;
 }
 
 .stockPic {
-	height: 300px;
-	width: 100px;
-	z-index: -1;
-	justify-content: flex-end;
-	padding: 0px !important;
+    z-index: -1;
+}
+
+.stockPic img {
+    height: 100%;
+    width: auto;
+    justify-content: flex-end;
+    padding: 0px !important;
 }
 
 .sectionLine {
-	padding: 100px 100px 100px 100px;
+    padding: 100px 100px 100px 100px;
 }
 
 .sectionLine h4 {
-	display: flex;
-	flex-direction: row;
-}
-.sectionLine h4:after {
-	content: "";
-	flex: 1 1;
-	border-bottom: 1px solid;
-	border-color: var(--darkTangerine);
-	margin: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .sectionLine h4:after {
-	margin-left: 10px;
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    border-color: var(--darkTangerine);
+    margin: auto;
+}
+
+.sectionLine h4:after {
+    margin-left: 10px;
 }
 
 #aboutRow {
-	margin: 0px !important;
+    margin: 0px !important;
 }
 
 .ourPurpose {
-	padding: 0px 100px 100px 100px;
+    padding: 0px 100px 100px 100px;
 }
 
 .ourPurpose h4 {
-	color: var(--stormGrey);
+    color: var(--stormGrey);
 }
 
-
-
 #aboutUs #header {
-	height: 115px !important;
+    height: 115px !important;
 }

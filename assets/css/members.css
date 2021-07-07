@@ -1,10 +1,10 @@
-#members{
+#members {
     background: var(--mirage);
     background-image: url(../img/background/backgroundPat.png);
 }
 
-#membersHeader{
-        padding: 200px 100px 100px 100px;
+#membersHeader {
+    padding: 200px 100px 100px 100px;
 }
 
 #membersHeader h1 {
@@ -14,61 +14,41 @@
 
 #ourMissionWords {
     padding: 25px 0px 25px 100px;
-
-  }
-
-.ourMissionBox {
-    position: relative;
-    height: auto;
-    color: white;
-    border: 3px soild #73AD21;
-    background-image: linear-gradient(to left, transparent -10%, var(--luckyPoint) 31%);
 }
 
 #ourMissionWords h2 {
     font-size: 2rem;
     color: white;
     font-weight: bolder;
+}
 
-  }
-
-  #ourMissionWords h3 {
+#ourMissionWords h3 {
     font-size: 1.5rem;
     color: var(--stormGrey);
-  }
+}
 
-  .stockPic{
-      height: 300px;
-      width: 100px;
-      z-index: -1;
-      justify-content: flex-end;
-  }
-
-
-  .sectionLine {
+.sectionLine {
     padding: 100px 100px 100px 100px;
 }
-  
 
-  .sectionLine h4 {
+.sectionLine h4 {
     display: flex;
     flex-direction: row;
-  }
-   .sectionLine h4:after{
+}
+
+.sectionLine h4:after {
     content: "";
     flex: 1 1;
     border-bottom: 1px solid;
     border-color: var(--darkTangerine);
     margin: auto;
-  }
+}
 
-  .sectionLine h4:after {
+.sectionLine h4:after {
     margin-left: 10px
-  }
+}
 
-  
-
-  .ourPurpose {
+.ourPurpose {
     padding: 0px 100px 100px 100px;
 }
 
@@ -76,31 +56,30 @@
     color: var(--stormGrey);
 }
 
-
 #membersUs #header {
     height: 115px !important;
 }
 
 #ourMissionSec {
-  padding: 0px 100px 100px 100px;
+    padding: 0px 100px 100px 100px;
 }
 
 #members #header {
-  height: 115px !important;
+    height: 115px !important;
 }
 
 .social {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .memberCard {
-  width: 10vw;
+    width: 10vw;
 }
