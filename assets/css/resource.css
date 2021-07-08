@@ -1,7 +1,7 @@
  /* Resources Page */
  
  #bodyResources {
-     background: url(/inventorsCouncil/inventorsCouncil/assets/img/resources/wrench-pattent.png) right top no-repeat, url(/inventorsCouncil/assets/img/resources/piece-fire-pattent.png) left no-repeat;
+     background: url(/inventorsCouncil/assets/img/resources/wrench-pattent.png) right top no-repeat, url(/inventorsCouncil/assets/img/resources/piece-fire-pattent.png) left no-repeat;
      background-size: 50%;
      background-color: var(--mirage);
  }
