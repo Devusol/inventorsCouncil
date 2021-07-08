@@ -1,11 +1,10 @@
-console.log('login js loaded')
-
-
+console.log('login js loaded');
+let callbackURL="localhost:5501/html/welcome.html"
 
 createAuth0Client({
     domain: 'dev-fk12ns8a.us.auth0.com',
     client_id: 'fIeFC0BieZU9ryIiaHoBsxclXGt0MYvH',
-    redirectUri: 'localhost:5500/loggedin.html'
+    redirectUri: callbackURL
 }).then(auth0 => {
     console.log(auth0.getUser());
     if (auth0.getUser()) {
