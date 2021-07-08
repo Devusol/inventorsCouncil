@@ -1,7 +1,7 @@
  /* Resources Page */
  
  #bodyResources {
-     background: url(/assets/img/resources/wrench-pattent.png) right top no-repeat, url(/assets/img/resources/piece-fire-pattent.png) left no-repeat;
+     background: url(/inventorsCouncil/inventorsCouncil/assets/img/resources/wrench-pattent.png) right top no-repeat, url(/inventorsCouncil/assets/img/resources/piece-fire-pattent.png) left no-repeat;
      background-size: 50%;
      background-color: var(--mirage);
  }
@@ -24,7 +24,7 @@
  .inventionProtoFinanceBox {
      height: auto;
      color: white;
-     background-image: linear-gradient(to right, var(--luckyPoint) 40%, transparent 70%), url("/assets/img/resources/prototyping-notes.jpg");
+     background-image: linear-gradient(to right, var(--luckyPoint) 40%, transparent 70%), url("/inventorsCouncil/assets/img/resources/prototyping-notes.jpg");
      background-size: cover;
      margin: 0 1%;
  }
@@ -135,25 +135,25 @@
  }
  
  #limeDesign {
-     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/assets/img/resources/electronics-battery-styled.png");
+     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/inventorsCouncil/assets/img/resources/electronics-battery-styled.png");
  }
  
  #inventL {
-     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/assets/img/resources/cad-styled.png");
+     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/inventorsCouncil/assets/img/resources/cad-styled.png");
  }
  
  #piLabs {
-     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/assets/img/resources/computer-graphics-styled.png");
+     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/inventorsCouncil/assets/img/resources/computer-graphics-styled.png");
  }
  
  #famLab {
-     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/assets/img/resources/electronics-closeup-styled.png");
+     background-image: linear-gradient(to left, rgba(8, 9, 14, .7) 60%, rgba(8, 9, 14) 90%), url("/inventorsCouncil/assets/img/resources/electronics-closeup-styled.png");
  }
  
  .patMarkBox1 {
      height: auto;
      color: white;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .8) 70%), url("/assets/img/resources/arrow-pattent.png");
+     background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .8) 70%), url("/inventorsCouncil/assets/img/resources/arrow-pattent.png");
      background-size: cover;
      margin: 0 1%;
  }
@@ -161,7 +161,7 @@
  .patMarkBox2 {
      height: auto;
      color: white;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .9) 70%), url("/assets/img/resources/marketing-numbers-graph.jpg");
+     background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .9) 70%), url("/inventorsCouncil/assets/img/resources/marketing-numbers-graph.jpg");
      background-size: cover;
      margin: 0 1%;
  }
