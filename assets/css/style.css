@@ -111,7 +111,7 @@
 
 @font-face {
 	font-family: metropolis;
-	src: url(./assets/fonts/Metropolis-Regular.woff);
+	src: url(/inventorsCouncil/assets/fonts/Metropolis-Regular.woff);
 }
 
 body {
