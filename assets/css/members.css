@@ -123,6 +123,21 @@
     padding: 25px 0px 25px 84px;
 }
 
+@media (max-width: 1280px) {
+    .stockPic {
+        display: none;
+    }
+    .signUpBox {
+        background-color: var(--luckyPoint);
+    }
+    #signUpBoxWords {
+        padding: 25px 100px 25px 100px;
+    }
+    .buttonsignUpBox {
+        padding: 25px 84px 25px 84px;
+    }
+}
+
 
 /*************************************************************************************/
 
