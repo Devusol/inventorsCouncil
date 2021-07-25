@@ -4,7 +4,7 @@
 }
 
 #aboutHeader {
-    padding: 200px 0px 100px 0px;
+    padding: 5% 0% 5% 0%;
 }
 
 #aboutHeader h1 {
@@ -13,7 +13,7 @@
 }
 
 #ourMissionWords {
-    padding: 25px 0px 25px 100px;
+    padding: 5% 0% 5% 10%;
 }
 
 .ourMissionBox {
@@ -47,7 +47,7 @@
 }
 
 .sectionLine {
-    padding: 100px 115px 100px 115px;
+    padding: 5% 10% 5% 10%;
 }
 
 .sectionLine h4 {
@@ -72,7 +72,7 @@
 }
 
 .ourPurpose {
-    padding: 0px 115px 100px 115px;
+    padding: 0% 10% 5% 10%;
 }
 
 .ourPurpose h4 {

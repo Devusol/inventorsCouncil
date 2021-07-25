@@ -2,83 +2,73 @@
     #calendar-section {
         padding-top: 4rem;
     }
-
-	.fc-daygrid-day-number {
-		font-size: xx-large;
-		color: white !important;
-	}
-
-	.fc-col-header-cell-cushion {
-		color: var(--irisBlue) !important;
-	}
-
-	/*outside border*/
-	.fc-theme-standard .fc-scrollgrid {
-		border: var(--fc-border-color, transparent);
-	}
-
-	/*inside grid*/
-	.fc-theme-standard td,
-	.fc-theme-standard th {
-		/*border: var(--fc-border-color, transparent);*/
-	}
-
-	.fc .fc-daygrid-day-top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+    .fc-daygrid-day-number {
+        font-size: xx-large;
+        color: white !important;
+    }
+    .fc-col-header-cell-cushion {
+        color: var(--irisBlue) !important;
+    }
+    /*outside border*/
+    .fc-theme-standard .fc-scrollgrid {
+        border: var(--fc-border-color, transparent);
+    }
+    /*inside grid*/
+    .fc-theme-standard td,
+    .fc-theme-standard th {
+        /*border: var(--fc-border-color, transparent);*/
+    }
+    .fc .fc-daygrid-day-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 992px) {
     #calendar-section {
         padding: 6rem 1rem;
     }
-
-	.fc-scroller {
-		overflow: hidden !important;
-	}
-
-	.fc-daygrid-day-number {
-		font-size: x-large;
-		color: white !important;
-	}
-
-	.fc-col-header-cell-cushion {
-		color: var(--irisBlue) !important;
-	}
-
-	/*outside border*/
-	.fc-theme-standard .fc-scrollgrid {
-		border: var(--fc-border-color, transparent);
-	}
-
-	/*inside grid*/
-	.fc-theme-standard td,
-	.fc-theme-standard th {
-		/*border: var(--fc-border-color, transparent);*/
-	}
-
-	.fc .fc-daygrid-day-top {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+    .fc-scroller {
+        overflow: hidden !important;
+    }
+    .fc-daygrid-day-number {
+        font-size: x-large;
+        color: white !important;
+    }
+    .fc-col-header-cell-cushion {
+        color: var(--irisBlue) !important;
+    }
+    /*outside border*/
+    .fc-theme-standard .fc-scrollgrid {
+        border: var(--fc-border-color, transparent);
+    }
+    /*inside grid*/
+    .fc-theme-standard td,
+    .fc-theme-standard th {
+        /*border: var(--fc-border-color, transparent);*/
+    }
+    .fc .fc-daygrid-day-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .fc-daygrid-day-number {
-		font-size: medium;
-		color: white !important;
-	}
+        font-size: medium;
+        color: white !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .fc-daygrid-day-number {
-		font-size: x-small;
-		color: white !important;
-	}
+        font-size: x-small;
+        color: white !important;
+    }
 }
+
 
 /* @media screen and (max-width: 576px) {
 	#calendar {
@@ -130,22 +120,23 @@
 } */
 
 #events {
-	background: var(--mirage);
-	background-image: url(../img/background/patternDots.png);
+    background: var(--mirage);
+    background-image: url(../img/background/patternDots.png);
 }
 
 #eventsHeader {
-	padding: 200px 100px 100px 100px;
+    padding: 5% 10% 5% 10%;
 }
 
 #eventsHeader h1 {
-	font-size: 5.0rem;
-	font-weight: bolder;
+    font-size: 5.0rem;
+    font-weight: bolder;
 }
 
 #events #header {
-	height: 115px !important;
+    height: 115px !important;
 }
+
 
 /* .fc-scroller {
     overflow: hidden !important;

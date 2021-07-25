@@ -1,133 +1,133 @@
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
-	--mirage: #151929;
-	--bigStone: #152133;
-	--luckyPoint: #262d48;
-	--midnightExpress: #141b2f;
-	--studio: #8656a9;
-	--irisBlue: #0db0e3;
-	--darkTangerine: #f2a413;
-	--allports: #12668a;
-	--stormGrey: #848587;
-	--gainsboro: #dfdfdf;
+    --mirage: #151929;
+    --bigStone: #152133;
+    --luckyPoint: #262d48;
+    --midnightExpress: #141b2f;
+    --studio: #8656a9;
+    --irisBlue: #0db0e3;
+    --darkTangerine: #f2a413;
+    --allports: #12668a;
+    --stormGrey: #848587;
+    --gainsboro: #dfdfdf;
 }
 
 .header-transparent {
-	backdrop-filter: blur(17px);
-	z-index: 999;
+    backdrop-filter: blur(17px);
+    z-index: 999;
 }
 
 .btn-primary {
-	width: 100%;
-	min-height: 40px;
-	font-weight: bold;
-	border: none;
-	background-color: var(--irisBlue);
-	text-transform: uppercase;
-	font-size: 100%;
+    width: 100%;
+    min-height: 40px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--irisBlue);
+    text-transform: uppercase;
+    font-size: 100%;
 }
 
 .btn-outline-primary {
-	width: 100%;
-	min-height: 40px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: var(--irisBlue);
-	border: 2px solid !important;
-	box-shadow: 3px 3px 8px var(--irisBlue), inset 2px 2px 8px var(--irisBlue);
+    width: 100%;
+    min-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--irisBlue);
+    border: 2px solid !important;
+    box-shadow: 3px 3px 8px var(--irisBlue), inset 2px 2px 8px var(--irisBlue);
 }
 
 .btn-outline-primary:hover {
-	border: 2px solid var(--studio) !important;
-	color: var(--studio);
-	background-color: transparent;
-	box-shadow: 3px 3px 8px var(--studio), inset 2px 2px 8px var(--studio);
+    border: 2px solid var(--studio) !important;
+    color: var(--studio);
+    background-color: transparent;
+    box-shadow: 3px 3px 8px var(--studio), inset 2px 2px 8px var(--studio);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active,
-.show > .btn-outline-primary.dropdown-toggle {
-	font-weight: lighter;
-	background: transparent !important;
-	background-color: transparent !important;
-	border: 3px solid var(--studio) !important;
-	border: 0 none !important;
+.show>.btn-outline-primary.dropdown-toggle {
+    font-weight: lighter;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 3px solid var(--studio) !important;
+    border: 0 none !important;
 }
 
 .btn-outline-primary:focus {
-	color: var(--gainsboro);
-	box-shadow: 2px 2px 8px var(--studio);
-	border: 3px solid var(--studio);
+    color: var(--gainsboro);
+    box-shadow: 2px 2px 8px var(--studio);
+    border: 3px solid var(--studio);
 }
 
 .btn-primary:hover {
-	color: var(--studio);
-	background-color: var(--irisBlue);
-	box-shadow: 5px 5px var(--studio);
+    color: var(--studio);
+    background-color: var(--irisBlue);
+    box-shadow: 5px 5px var(--studio);
 }
 
 .btn-primary:active {
-	color: white;
-	font-weight: lighter;
-	background-color: var(--studio) !important;
-	border: none !important;
-	outline-color: transparent !important;
+    color: white;
+    font-weight: lighter;
+    background-color: var(--studio) !important;
+    border: none !important;
+    outline-color: transparent !important;
 }
 
 .btn-primary:active .bi-slack {
-	background: white !important;
-	-webkit-background-clip: text !important;
-	-webkit-text-fill-color: transparent !important;
+    background: white !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 
 .btn-primary:focus {
-	color: var(--midnightExpress);
-	background-color: white;
-	box-shadow: 2px 2px 8px var(--studio);
-	border: 3px solid var(--studio);
+    color: var(--midnightExpress);
+    background-color: white;
+    box-shadow: 2px 2px 8px var(--studio);
+    border: 3px solid var(--studio);
 }
 
 .btn-primary:focus .bi-slack {
-	background: -webkit-linear-gradient(#8457aa, #10aee1);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-decoration: none;
+    background: -webkit-linear-gradient(#8457aa, #10aee1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled,
 .btn-primary.disabled:hover {
-	color: var(--midnightExpress);
-	font-weight: lighter;
-	background-color: var(--gainsboro) !important;
-	border-color: var(--stormGrey) !important;
-	box-shadow: none !important;
-	border: 3px solid var(--stormGrey) !important;
+    color: var(--midnightExpress);
+    font-weight: lighter;
+    background-color: var(--gainsboro) !important;
+    border-color: var(--stormGrey) !important;
+    box-shadow: none !important;
+    border: 3px solid var(--stormGrey) !important;
 }
 
 @font-face {
-	font-family: metropolis;
-	src: url(/assets/fonts/Metropolis-Regular.woff);
+    font-family: metropolis;
+    src: url(/assets/fonts/Metropolis-Regular.woff);
 }
 
 body {
-	color: #444444;
-	background-color: grey;
+    color: #444444;
+    background-color: grey;
 }
 
 a,
 p {
-	color: var(--gainsboro);
-	text-decoration: none;
+    color: var(--gainsboro);
+    text-decoration: none;
 }
 
 a:hover {
-	color: var(--studio);
-	text-decoration: none;
+    color: var(--studio);
+    text-decoration: none;
 }
 
 h1,
@@ -137,64 +137,64 @@ h4,
 h5,
 h6,
 i {
-	color: var(--gainsboro);
+    color: var(--gainsboro);
 }
 
 u {
-	text-decoration-color: #f3b212;
+    text-decoration-color: #f3b212;
 }
 
 .overlay {
-	position: absolute !important;
-	background: rgba(100, 100, 100, 0);
-	top: 0px;
-	width: 100%;
+    position: absolute !important;
+    background: rgba(100, 100, 100, 0);
+    top: 0px;
+    width: 100%;
 }
 
 .img-fluid {
-	width: auto !important;
-	height: 80% !important;
+    width: auto !important;
+    height: 80% !important;
 }
 
 .sub-navbar {
-	background-color: rgba(18, 102, 138, 0.3);
+    background-color: rgba(18, 102, 138, 0.3);
 }
 
 footer {
-	background: #262d48;
-	color: var(--gainsboro);
-	font-size: 14px;
+    background: #262d48;
+    color: var(--gainsboro);
+    font-size: 14px;
 }
 
 .icofont-facebook,
 .icofont-twitter,
 .icofont-instagram,
 footer .bi-slack {
-	font-size: 32px;
-	background: -webkit-linear-gradient(#8457aa, #10aee1);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-decoration: none;
-	padding-inline: 22px;
+    font-size: 32px;
+    background: -webkit-linear-gradient(#8457aa, #10aee1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    padding-inline: 1rem;
 }
 
 .social-links a:hover {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 footer h4 {
-	font-size: 16px;
-	font-weight: 600;
-	border-bottom: 3px solid #f3b212;
-	width: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 3px solid #f3b212;
+    width: 50%;
     padding-bottom: 1rem;
 }
 
 footer li {
-	list-style-type: none;
+    list-style-type: none;
     padding: 0.25rem 0;
 }
 
 footer a:hover {
-	color: #ffc451;
+    color: #ffc451;
 }

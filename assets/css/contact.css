@@ -1,24 +1,24 @@
 /*     Contact Page */
 
 body {
-	background: var(--mirage);
-	background-image: url(../img/background/patternDots.png);
+    background: var(--mirage);
+    background-image: url(../img/background/patternDots.png);
 }
 
 .contact-row {
-	margin-top: 10%;
+    margin-top: 10%;
 }
 
 .verticalSplitLineContact {
-	height: 100%;
-	background-color: #f2a413;
-	width: 2px;
+    height: 100%;
+    background-color: #f2a413;
+    width: 2px;
 }
 
 .form-field {
-	width: 100%;
-	padding: 12px 20px;
-	color: var(--gainsboro);
-	background-color: Transparent;
-	border: 2px solid var(--gainsboro);
+    width: 100%;
+    padding: 1% 10%;
+    color: var(--gainsboro);
+    background-color: Transparent;
+    border: 2px solid var(--gainsboro);
 }

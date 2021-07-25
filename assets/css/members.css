@@ -4,7 +4,7 @@
 }
 
 #membersHeader {
-    padding: 200px 0px 100px 0px;
+    padding: 5% 10% 5% 10%;
 }
 
 #membersHeader h1 {
@@ -17,7 +17,7 @@
 }
 
 #ourMissionWords {
-    padding: 25px 0px 25px 100px;
+    padding: 5% 0% 5% 10%;
 }
 
 #ourMissionWords h2 {
@@ -32,7 +32,7 @@
 }
 
 .sectionLine {
-    padding: 100px 115px 100px 115px;
+    padding: 5% 10% 5% 10%;
 }
 
 .sectionLine h4 {
@@ -53,7 +53,7 @@
 }
 
 .ourMembers {
-    padding: 0px 115px 100px 115px;
+    padding: 5% 10% 5% 10%;
 }
 
 .ourMembers h4 {
@@ -65,7 +65,7 @@
 }
 
 #ourMissionSec {
-    padding: 0px 100px 100px 100px;
+    padding: 0% 10% 10% 10%;
 }
 
 #members #header {
@@ -92,7 +92,7 @@
 /******************************PROPABLY REUSE SIGN UP SECTION*************************/
 
 #signUpBoxWords {
-    padding: 25px 0px 25px 100px;
+    padding: 5% 0% 5% 10%;
 }
 
 .signUpBox {
@@ -120,7 +120,7 @@
 }
 
 .buttonsignUpBox {
-    padding: 25px 0px 25px 84px;
+    padding: 5% 0% 5% 10%;
 }
 
 @media (max-width: 1280px) {
@@ -131,10 +131,10 @@
         background-color: var(--luckyPoint);
     }
     #signUpBoxWords {
-        padding: 25px 100px 25px 100px;
+        padding: 5% 10% 5% 10%;
     }
     .buttonsignUpBox {
-        padding: 25px 84px 25px 84px;
+        padding: 5% 10% 5% 10%;
     }
 }
 
