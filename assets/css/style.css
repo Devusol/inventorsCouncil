@@ -164,6 +164,7 @@ footer {
     background: #262d48;
     color: var(--gainsboro);
     font-size: 14px;
+    padding: 2vw;
 }
 
 .icofont-facebook,
