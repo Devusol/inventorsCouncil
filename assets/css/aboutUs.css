@@ -45,7 +45,19 @@ main {
     position: relative;
     height: auto;
     color: white;
-    background-image: linear-gradient(to left, transparent 13%, var(--luckyPoint) 43%);
+    background-image: linear-gradient(to left, transparent 13vw, var(--luckyPoint) 43vw);
+}
+
+@media (min-width: 1700px) {
+    .ourMissionBox {
+        background-image: linear-gradient(to left, transparent 10vw, var(--luckyPoint) 30vw);
+    }
+}
+
+@media (min-width: 2400px) {
+    .ourMissionBox {
+        background-image: linear-gradient(to left, transparent 2vw, var(--luckyPoint) 20vw);
+    }
 }
 
 #ourMissionWords h2 {
