@@ -7,115 +7,114 @@
 
 <body style="display: none;">
 
-  <header class="fixed-top align-items-center header-transparent header-scrolled">
+    <header class="fixed-top align-items-center header-transparent header-scrolled">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/assets/js/partials.js"></script>
-  </header>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/assets/js/partials.js"></script>
+    </header>
 
-  <div class='sub-navbar-items'>
-    <a class="sub-navbar-content nav-link active" aria-current="page" href="/index.html">OUR PURPOSE</a>
-    <a class="sub-navbar-content nav-link" href="/html/about.html">UPCOMING EVENTS</a>
-  </div>
-
-  <main>
-
-    <section id="calendar-section" class="my-5">
-      <h1 class="mt-5">ICCF EVENTS</h1>
-      <div class="fs-1" id="calendar" >
-      </div>
-      <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-1"><i class="icofont-simple-left"></i></div>
-          <!--     <div id="calendar" class="col-4">
-          </div> -->
-          <div class="col-1"><i class="icofont-simple-right"></i></div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="ourPurpose">
-
-      <h2>Our Purpose</h2>
-
-      <h4>THIS IS THE SPACE FOR THE BLOCK FOR SLACK AND SO ON</h4>
-
-    </section>
-
-    <section class="sign-up b-0">
-
-    </section>
-  </main>
-
-
-  <div id='external-events' class="invisible">
-    <h4>Draggable Events</h4>
-    <div id='external-events-list'>
-      <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-        <div class='fc-event-main'
-          data-event='{ "title": "1 Hour Event", "start":"12:00", "duration" : "01:00", "allDay": "false"}'>1 Hour
-          Event</div>
-      </div>
-      <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-        <div class='fc-event-main'
-          data-event='{ "title": "Monthly Member Meeting", "extendedProps": {"description":"Last Wednesday of every month.","location":"MakerFX"}}'>
-          Monthly Member Meeting</div>
-      </div>
-      <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-        <div class='fc-event-main' data-event='{ "title": "2 Day Event", "duration": {"days": 2 }}'>2 Day Event
-        </div>
-      </div>
-      <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-        <div class='fc-event-main' data-event='{ "title": "1 Week Event", "duration": {"days": 7 }}'>1 Week Event
-        </div>
-      </div>
+    <div class='sub-navbar-items'>
+        <a class="sub-navbar-content nav-link active" aria-current="page" href="/index.html">CALENDAR</a>
+        <a class="sub-navbar-content nav-link" href="/html/about.html">MAKER FX</a>
+        <a class="sub-navbar-content nav-link" href="/html/about.html">AMCON</a>
+        <a class="sub-navbar-content nav-link" href="/html/about.html">SLACK</a>
     </div>
-  </div>
 
-  <div class="form-popup invisible" id="descriptionCard">
-    <form id="descriptionForm" action="/action_page.php" class="form-container">
-      <span class="close">&times;</span>
-      <h1>Event Details</h1>
-      <p id='description'>Description: </p>
-      <p id='location'>Location: </p>
-      <button id="deleteButton" type="button" class="btn">Delete Event</button>
-    </form>
-  </div>
+    <main>
 
-  <div class="input-popup invisible" id="inputCard">
-    <form id="inputForm" action="/action_page.php" class="form-container">
-      <span class="close">&times;</span>
-      <h1>Event Details</h1>
+        <section id="calendar-section" class="my-5">
+            <h1 class="mt-5">ICCF EVENTS</h1>
+            <div class="fs-1" id="calendar">
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-1"><i class="icofont-simple-left"></i></div>
+                    <!--     <div id="calendar" class="col-4">
+          </div> -->
+                    <div class="col-1"><i class="icofont-simple-right"></i></div>
+                </div>
+            </div>
 
-      <label for="inputTitle"><b>Event title</b></label><br>
-      <input id="inputTitle" type="" placeholder="Event Title" name="inputTitle" required><br>
+        </section>
 
-      <label for="inputDescription"><b>Description: </b></label>
-      <textarea id="inputDescription" placeholder="Event details" name="inputDescription" required>
+        <section class="ourPurpose">
+
+            <h2>Our Purpose</h2>
+
+            <h4>THIS IS THE SPACE FOR THE BLOCK FOR SLACK AND SO ON</h4>
+
+        </section>
+
+        <section class="sign-up b-0">
+
+        </section>
+    </main>
+
+
+    <div id='external-events' class="invisible">
+        <h4>Draggable Events</h4>
+        <div id='external-events-list'>
+            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                <div class='fc-event-main' data-event='{ "title": "1 Hour Event", "start":"12:00", "duration" : "01:00", "allDay": "false"}'>1 Hour Event
+                </div>
+            </div>
+            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                <div class='fc-event-main' data-event='{ "title": "Monthly Member Meeting", "extendedProps": {"description":"Last Wednesday of every month.","location":"MakerFX"}}'>
+                    Monthly Member Meeting</div>
+            </div>
+            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                <div class='fc-event-main' data-event='{ "title": "2 Day Event", "duration": {"days": 2 }}'>2 Day Event
+                </div>
+            </div>
+            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                <div class='fc-event-main' data-event='{ "title": "1 Week Event", "duration": {"days": 7 }}'>1 Week Event
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-popup invisible" id="descriptionCard">
+        <form id="descriptionForm" action="/action_page.php" class="form-container">
+            <span class="close">&times;</span>
+            <h1>Event Details</h1>
+            <p id='description'>Description: </p>
+            <p id='location'>Location: </p>
+            <button id="deleteButton" type="button" class="btn">Delete Event</button>
+        </form>
+    </div>
+
+    <div class="input-popup invisible" id="inputCard">
+        <form id="inputForm" action="/action_page.php" class="form-container">
+            <span class="close">&times;</span>
+            <h1>Event Details</h1>
+
+            <label for="inputTitle"><b>Event title</b></label><br>
+            <input id="inputTitle" type="" placeholder="Event Title" name="inputTitle" required><br>
+
+            <label for="inputDescription"><b>Description: </b></label>
+            <textarea id="inputDescription" placeholder="Event details" name="inputDescription" required>
         </textarea><br>
 
-      <label for="inputLocation"><b>Location: </b></label>
-      <input id="inputLocation" type="text" placeholder="Location" name="inputLocation" required><br>
+            <label for="inputLocation"><b>Location: </b></label>
+            <input id="inputLocation" type="text" placeholder="Location" name="inputLocation" required><br>
 
-      <label for="inputStartTime"><b>Start time: </b></label>
-      <input id="inputStart" type="time" placeholder="Start time" name="inputStartTime" required><br>
+            <label for="inputStartTime"><b>Start time: </b></label>
+            <input id="inputStart" type="time" placeholder="Start time" name="inputStartTime" required><br>
 
-      <label for="inputEndTime"><b>End Time: </b></label>
-      <input id="inputEnd" type="time" placeholder="End Time" name="inputEndTime" required><br>
+            <label for="inputEndTime"><b>End Time: </b></label>
+            <input id="inputEnd" type="time" placeholder="End Time" name="inputEndTime" required><br>
 
-      <button id="inputButton" type="button" class="btn">Submit Event</button>
+            <button id="inputButton" type="button" class="btn">Submit Event</button>
 
-    </form>
-  </div>
+        </form>
+    </div>
 
-  <footer id="footer">
-  </footer>
-  
- <script src='/vendor/fullcalendar/lib/main.js'></script> 
- <script src="/assets/js/calendar.js"></script>
-  <!-- <script>
+    <footer id="footer">
+    </footer>
+
+    <script src='/vendor/fullcalendar/lib/main.js'></script>
+    <script src="/assets/js/calendar.js"></script>
+    <!-- <script>
 
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
