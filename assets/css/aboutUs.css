@@ -1,10 +1,10 @@
-main {
-    padding-top: 10vh;
+section {
+    padding-top: 10vh !important;
 }
 
 @media (max-width: 1200px) {
-    main {
-        padding-top: 20vh;
+    section {
+        padding-top: 20vh !important;
     }
 }
 
