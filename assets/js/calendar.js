@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
        }
      }]; */
 
-  const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getEvents";
-  const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putEvents";
+  const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
+  /* const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putEvents"; */
+  const PUT_EVENTS_URL = "http://localhost:5000/api/v1/putevents";
 
   var spanClose = document.getElementsByClassName("close");
   var calendarPopup = document.getElementById('descriptionCard');
@@ -131,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   calendar.render();
   readEventCalendarJSON();
+  updateEventCalendarJSON();
 
 
   /* putCalendarEvent.onreadystatechange = () => {
@@ -149,11 +151,17 @@ document.addEventListener('DOMContentLoaded', function () {
     } */
 
   function updateEventCalendarJSON() {
-    fetch(PUT_EVENTS_URL).then()
-    putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
-    putCalendarEvent.setRequestHeader("Content-Type", "application/json");
-    putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-    console.log(myEvents);
+    fetch(PUT_EVENTS_URL, {
+      method: 'POST',
+      body: {message: "hello from calendar"}
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        /*    calendar.addEventSource(myEvents);
+           calendar.refetchEvents(); */
+      })
+
     // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
   }
 
@@ -163,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(json => {
         myEvents = json[0].record;
-        
+
         calendar.addEventSource(myEvents);
         calendar.refetchEvents();
       })
