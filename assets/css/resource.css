@@ -119,12 +119,12 @@
  }
  
  section {
-     padding: 0 10%;
+     padding: 0 10vw;
  }
  
  .fabricationResources {
-     margin: 2% 0;
-     padding: 0 10%;
+     margin: 2vw 0;
+     padding: 0 10vw;
  }
  
  .fabricationResources .card-body {

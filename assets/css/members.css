@@ -3,10 +3,6 @@
     background-image: url(../img/background/backgroundPat.png);
 }
 
-#membersHeader {
-    padding: 5% 10% 5% 10%;
-}
-
 #membersHeader h1 {
     font-size: 5.0rem;
     font-weight: bolder;
