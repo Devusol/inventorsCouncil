@@ -1,51 +1,53 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   var myEvents = [];
-  /*  var myEvents = [
-     {
-       "title": "Initialize Calendar Data",
-       "start": "2021-01-01T05:00:00.000Z",
-       "end": "2021-01-02T05:00:00.000Z",
-       "allDay": true,
-       "extendedProps": {
-         "description": "To ensure JSON bin is not blank",
-         "location": "Winter Garden, FL"
-       }
-     },
-     {
-       "title": "An Event to mess with",
-       "start": "2021-06-20T05:00:00.000Z",
-       "end": "2021-06-21T05:00:00.000Z",
-       "allDay": true,
-       "extendedProps": {
-         "description": "A different Event",
-         "location": "Winter Garden, FL"
-       }
-     },
-     {
-       "title": "Another Event to mess with",
-       "start": "2021-06-12T05:00:00.000Z",
-       "end": "2021-06-13T05:00:00.000Z",
-       "allDay": true,
-       "extendedProps": {
-         "description": "A different Event",
-         "location": "Winter Garden, FL"
-       }
-     },
-     {
-       "title": "Yet another event to mess with",
-       "start": "2021-06-18T05:00:00.000Z",
-       "end": "2021-06-19T05:00:00.000Z",
-       "allDay": true,
-       "extendedProps": {
-         "description": "A different Event",
-         "location": "Winter Garden, FL"
-       }
-     }]; */
+  /* var myEvents = [
+    {
+      "title": "Initialize Calendar Data",
+      "start": "2021-01-01T05:00:00.000Z",
+      "end": "2021-01-02T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "To ensure JSON bin is not blank",
+        "location": "Winter Garden, FL"
+      }
+    },
+    {
+      "title": "An Event to mess with",
+      "start": "2021-06-20T05:00:00.000Z",
+      "end": "2021-06-21T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
+    },
+    {
+      "title": "Another Event to mess with",
+      "start": "2021-06-12T05:00:00.000Z",
+      "end": "2021-06-13T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
+    },
+    {
+      "title": "Yet another event to mess with",
+      "start": "2021-06-18T05:00:00.000Z",
+      "end": "2021-06-19T05:00:00.000Z",
+      "allDay": true,
+      "extendedProps": {
+        "description": "A different Event",
+        "location": "Winter Garden, FL"
+      }
+    }]; */
 
-  const EVENTS_URL = "https://app.dronefieldguide.com/keysafe/videos";
-  
-  
+  const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
+  const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
+
+
+
   var spanClose = document.getElementsByClassName("close");
   var calendarPopup = document.getElementById('descriptionCard');
   var calendarInput = document.getElementById('inputCard');
@@ -122,58 +124,42 @@ document.addEventListener('DOMContentLoaded', function () {
       // console.log(myEvents);
     },
     eventReceive: function (arg) {
+      console.log(myEvents);
       arg.event.setProp("id", `${arg.event.title}_${arg.event.start}_${myEvents.length + 1}`);
       myEvents.push(arg.event.toPlainObject());
-      // console.log(myEvents);
+
       updateEventCalendarJSON();
     }
   });
 
   calendar.render();
   readEventCalendarJSON();
+  //console.log(myEvents);
+  //updateEventCalendarJSON();
 
-
-  /* putCalendarEvent.onreadystatechange = () => {
-    if (putCalendarEvent.readyState == XMLHttpRequest.DONE) {
-      console.log(putCalendarEvent.responseText);
-    }
-  };
-
-  getCalendarEvents.onreadystatechange = () => {
-    if (getCalendarEvents.readyState == XMLHttpRequest.DONE) {
-      myEvents = JSON.parse(getCalendarEvents.responseText);
-      myEvents = myEvents.record;
-      calendar.addEventSource(myEvents);
-      //calendar.refetchEvents();
-    }
-  }; */
-
-  /*   function updateEventCalendarJSON() {
-      putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
-      putCalendarEvent.setRequestHeader("Content-Type", "application/json");
-      putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-      console.log(myEvents);
-      // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
-    } */
 
   function updateEventCalendarJSON() {
-    putCalendarEvent.open("PUT", "https://api.jsonbin.io/v3/b/60a5bc0ab396ee6b13c47e56", true);
-    putCalendarEvent.setRequestHeader("Content-Type", "application/json");
-    putCalendarEvent.setRequestHeader("X-Master-Key", "$2b$10$KuI.8Dq8BQ/dX0oMBQ08CuSyMAg1eHQMCR2jtZV0lxASiM0nIctzK");
-    //console.log(myEvents);
-    // putCalendarEvent.send(JSON.stringify(myEvents)); // comment to avoid API requests, be sure to switch myEvents variable to open
+    console.log('updateEvent: ', myEvents);
+    fetch(PUT_EVENTS_URL, {
+      headers: { 'Content-Type': 'application/json' },
+      method: 'PUT',
+      body: JSON.stringify(myEvents)
+    })
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
 
-   
+
   function readEventCalendarJSON() {
-    fetch(EVENTS_URL)
+    fetch(GET_EVENTS_URL)
       .then(response => response.json())
       .then(json => {
-        myEvents = json.record;
+        myEvents = json[0].record;
+        console.log(myEvents);
         calendar.addEventSource(myEvents);
-        calendar.refetchEvents();       
+        calendar.refetchEvents();
       })
-    }
+  }
 
   function showEventForm(eventDetails) {
     let description = eventDetails.extendedProps.description;
@@ -213,18 +199,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  document.getElementById('prev-button').addEventListener('click', function () {
+  document.querySelector('.prev-button').addEventListener('click', function () {
     calendar.prev();
     //onDateHover();
     //console.log(numbers);
   });
 
-  document.getElementById('next-button').addEventListener('click', function () {
+  document.querySelector('.next-button').addEventListener('click', function () {
     calendar.next();
     onDateHover();
   });
 
   //onDateHover();
+
 });
 
 
