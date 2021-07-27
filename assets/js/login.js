@@ -1,6 +1,7 @@
 
 let auth0 = null;
 const fetchAuthConfig = () => fetch("/auth_config.json");
+const query = window.location.search;
 
 const configureClient = async () => {
     const response = await fetchAuthConfig();
@@ -18,8 +19,8 @@ const updateUI = async () => {
 
     const isAuthenticated = await auth0.isAuthenticated();
 
-    document.getElementById("btn-logout").disabled = !isAuthenticated;
-    document.getElementById("btn-login").disabled = isAuthenticated;
+    document.querySelector("#btn-logout").disabled = !isAuthenticated;
+    document.querySelector("#btn-login").disabled = isAuthenticated;
 
     if (isAuthenticated) {
         document.querySelector(".gated-content-1").classList.remove("invisible");
@@ -37,14 +38,14 @@ const updateUI = async () => {
     }
 };
 
-const query = window.location.search;
-  if (query.includes("code=") && query.includes("state=")) {
+
+if (auth0 && query.includes("code=") && query.includes("state=")) {
     // Process the login state
-    await auth0.handleRedirectCallback();
+    auth0.handleRedirectCallback();
     updateUI();
     // Use replaceState to redirect the user away and remove the querystring parameters
     window.history.replaceState({}, document.title, "/");
-  }
+}
 
 
 /* createAuth0Client({
@@ -115,9 +116,8 @@ const query = window.location.search;
 }); */
 
 const login = async () => {
-    await auth0.loginWithRedirect({ 
-   /*  await auth0.loginWithPopup({ */
-        redirect_uri: window.location.origin/
+    await auth0.loginWithRedirect({
+        redirect_uri: window.location.origin
     });
 };
 
