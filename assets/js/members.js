@@ -1,5 +1,5 @@
-var membersCards = document.getElementById("membersCards");
-var membersCardsLandscape = document.getElementById("membersCardsLandscape");
+var membersCards = document.querySelector("#membersCards");
+var membersCardsLandscape = document.querySelector("#membersCardsLandscape");
 
 var memberJSON = [
     {
@@ -48,7 +48,7 @@ for (let cardData of memberJSON) {
     <div class="card">
       <div class="row">
         <div class="col-md-4">
-                <img src="assets/img/members/${cardData.memberImage}" class="w-100">
+                <img src="/assets/img/members/${cardData.memberImage}" class="w-100">
             </div>
             <div class="col-md-8 px-3">
                 <div class="card-block px-3">

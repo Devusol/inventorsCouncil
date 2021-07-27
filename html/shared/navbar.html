@@ -30,8 +30,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/html/contact.html">CONTACT</a>
                 </li>
-                <li class="nav-item"><a class="nav-link"><i class="bi bi-box-arrow-in-right login"></i>
+                <!-- <li class="nav-item"><a class="nav-link"><i class="bi bi-box-arrow-in-right btn-login"></i>
                     </a>
+                </li> -->
+
+                <li class="nav-item"><button id='btn-login' class='btn btn-outline-info' disabled='true'
+                        onclick="login()">Login</button>
+                </li>
+                <li class="nav-item"><button id='btn-logout' class='btn btn-outline-info' disabled='true'
+                        onclick="logout()">Logout</button>
+                </li>
+
+
+                <li class="nav-item">
+                    <div class="invisible avatar-img-div">
+                        <img id="avatar-img" class="ui avatar image" src="">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -40,6 +54,6 @@
 </nav>
 
 <nav class="navbar sub-navbar justify-content-start p-0 flex-column flex-md-row">
-  
+
 
 </nav>

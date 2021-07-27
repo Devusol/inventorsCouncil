@@ -12,28 +12,30 @@ const configureClient = async () => {
 };
 
 const updateUI = async () => {
+   
   const isAuthenticated = await auth0.isAuthenticated();
 
   document.getElementById("btn-logout").disabled = !isAuthenticated;
   document.getElementById("btn-login").disabled = isAuthenticated;
 
   if (isAuthenticated) {
-    document.getElementById("gated-content-1").classList.remove("hidden");
-    document.getElementById("gated-content-2").classList.remove("hidden");
+    document.queryCommandEnabled(".gated-content-1").classList.remove("invisible");
+    /* document.getElementById("gated-content-2").classList.remove("invisible"); */
 
     const claims = await auth0.getIdTokenClaims()
     const pictureUrl = claims.picture
     
-    document.getElementById("avatar-img").src = pictureUrl || 'https://icon-library.net/images/icon-of-music/icon-of-music-8.jpg';
-    document.getElementById("avatar-img-div").classList.remove("hidden")
+    document.querySelector(".avatar-img").src = pictureUrl || 'https://icon-library.net/images/icon-of-music/icon-of-music-8.jpg';
+    document.querySelector(".avatar-img-div").classList.remove("invisible")
 
   } else {
-    document.getElementById("gated-content-1").classList.add("hidden");
-    document.getElementById("gated-content-2").classList.add("hidden");
+    document.querySelector(".gated-content-1").classList.add("invisible");
+    /* document.getElementById("gated-content-2").classList.add("invisible"); */
   }
 };
 
 window.onload = async () => {
+    
   await configureClient();
   updateUI();
   const query = window.location.search;

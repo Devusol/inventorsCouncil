@@ -29,10 +29,10 @@
             </div>
             <div class="container-fluid">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-1"><i class="icofont-simple-left"></i></div>
+                    <div class="col-1 prev-button"><i class="icofont-simple-left"></i></div>
                     <!--     <div id="calendar" class="col-4">
           </div> -->
-                    <div class="col-1"><i class="icofont-simple-right"></i></div>
+                    <div class="col-1 next-button"><i class="icofont-simple-right"></i></div>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
         </section>
     </main>
 
-    <div id='external-events' class="invisible fixed-bottom w-25">
+    <div id='external-events' class="invisible fixed-bottom w-25 gated-content-1">
         <div id='external-events-list' class='btn-group-vertical'>
             <button class='btn btn-info'>Draggable Events</button>
             <!-- <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'> -->
@@ -126,8 +126,9 @@
     <footer id="footer">
     </footer>
 
-    <script src='/vendor/fullcalendar/lib/main.js'></script>
-    <script src="/assets/js/calendar.js"></script>
+    <!-- <script src='/vendor/fullcalendar/lib/main.js'></script> -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js' defer></script>
+    <script src="/assets/js/calendar.js" defer></script>
     <!-- <script>
 
     document.addEventListener('DOMContentLoaded', function () {
