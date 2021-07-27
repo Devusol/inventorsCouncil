@@ -9,7 +9,8 @@
 
     <header class="fixed-top align-items-center header-transparent header-scrolled">
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="/assets/js/partials.js"></script>
     </header>
 
@@ -56,33 +57,35 @@
 
         <section class="sign-up b-0">
 
-
-
         </section>
     </main>
 
+    <div id='external-events' class="invisible fixed-bottom w-25">
+        <div id='external-events-list' class='btn-group-vertical'>
+            <button class='btn btn-info'>Draggable Events</button>
+            <!-- <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'> -->
+            <button class='btn btn-outline-info draggable-event'
+                data-event='{ "title": "1 Hour Event", "start":"12:00", "duration" : "01:00", "allDay": "false"}'>1
+                Hour Event
+            </button>
+            <!--  </div> -->
 
-    <div id='external-events' class="invisible">
-        <h4>Draggable Events</h4>
-        <div id='external-events-list'>
-            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-                <div class='fc-event-main' data-event='{ "title": "1 Hour Event", "start":"12:00", "duration" : "01:00", "allDay": "false"}'>1 Hour Event
-                </div>
-            </div>
-            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-                <div class='fc-event-main' data-event='{ "title": "Monthly Member Meeting", "extendedProps": {"description":"Last Wednesday of every month.","location":"MakerFX"}}'>
-                    Monthly Member Meeting</div>
-            </div>
-            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-                <div class='fc-event-main' data-event='{ "title": "2 Day Event", "duration": {"days": 2 }}'>2 Day Event
-                </div>
-            </div>
-            <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-                <div class='fc-event-main' data-event='{ "title": "1 Week Event", "duration": {"days": 7 }}'>1 Week Event
-                </div>
-            </div>
+            <button type="button" class='btn btn-outline-info draggable-event'
+                data-event='{ "title": "Monthly Member Meeting", "extendedProps": {"description":"Last Wednesday of every month.","location":"MakerFX"}}'>
+                Monthly Member Meeting</button>
+
+            <button class='btn btn-outline-info draggable-event'
+                data-event='{ "title": "2 Day Event", "duration": {"days": 2 }}'>2 Day Event
+            </button>
+
+            <button class='btn btn-outline-info draggable-event'
+                data-event='{ "title": "1 Week Event", "duration": {"days": 7 }}'>1 Week
+                Event
+            </button>
+
         </div>
     </div>
+
 
     <div class="form-popup invisible" id="descriptionCard">
         <form id="descriptionForm" action="/action_page.php" class="form-container">

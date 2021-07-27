@@ -1,47 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   var myEvents = [];
-  /* var myEvents = [
-    {
-      "title": "Initialize Calendar Data",
-      "start": "2021-01-01T05:00:00.000Z",
-      "end": "2021-01-02T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "To ensure JSON bin is not blank",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "An Event to mess with",
-      "start": "2021-06-20T05:00:00.000Z",
-      "end": "2021-06-21T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "Another Event to mess with",
-      "start": "2021-06-12T05:00:00.000Z",
-      "end": "2021-06-13T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    },
-    {
-      "title": "Yet another event to mess with",
-      "start": "2021-06-18T05:00:00.000Z",
-      "end": "2021-06-19T05:00:00.000Z",
-      "allDay": true,
-      "extendedProps": {
-        "description": "A different Event",
-        "location": "Winter Garden, FL"
-      }
-    }]; */
 
   const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
   const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
@@ -56,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var nextPrevButtons = document.getElementsByClassName('nextPrev');
 
   new FullCalendar.Draggable(document.getElementById('external-events-list'), {
-    itemSelector: '.fc-event-main'
+    itemSelector: '.draggable-event'
   });
 
   var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
