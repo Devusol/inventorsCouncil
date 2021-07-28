@@ -1,8 +1,6 @@
 
 /* document.addEventListener('DOMContentLoaded', function () { */
 /*  document.onload () => { */
-
-
 const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
 const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
 
@@ -69,21 +67,35 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       calendar.unselect();
     });
   },
-  /* eventClick: function (arg) {
-    console.log('event clicked', arg.event);
-    const isId = (idMatch) => idMatch.id == arg.event.id;
-    let delIndex = myEvents.findIndex(isId);
-    showEventForm(arg.event);
-    deleteEventButton.addEventListener("click", function () {
-      myEvents.splice(delIndex, 1); //see above note about id's and deletion
-      arg.event.remove();
-      //  console.log(myEvents);
-      calendarPopup.style.display = "none";
-      updateEventCalendarJSON();
-    })
-  } */
+  /*  eventClick: function (arg) {
+     console.log('event clicked', arg.event);
+     const isId = (idMatch) => idMatch.id == arg.event.id;
+     let delIndex = myEvents.findIndex(isId);
+     showEventForm(arg.event);
+     deleteEventButton.addEventListener("click", function () {
+       myEvents.splice(delIndex, 1); //see above note about id's and deletion
+       arg.event.remove();
+       //  console.log(myEvents);
+       calendarPopup.style.display = "none";
+       updateEventCalendarJSON();
+     })
+   }, */
   eventClick: function (arg) {
-    console.log('event clicked', arg.event);
+
+    console.log('event clicked', arg.el);
+    let eventor = arg.el;
+    $(eventor).attr({
+      'data-toggle': 'popover',
+      'data-placement': 'top',
+      'title': 'Popover title',
+      'data-content': "And here's some amazing content. It's very engaging. Right?"
+    });
+
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
+
   },
   eventDrop: function (arg) {
     console.log("event Dropped: ", arg.event.toPlainObject());
@@ -117,7 +129,7 @@ function readEventCalendarJSON() {
     .then(response => response.json())
     .then(json => {
       myEvents = json[0].record;
-      console.log(myEvents);
+     // console.log(myEvents);
       calendar.addEventSource(myEvents);
       calendar.refetchEvents();
       calendar.render();
@@ -148,7 +160,7 @@ document.querySelector('.next-button').addEventListener('click', function () {
   //onDateHover();
 });
 
-  //onDateHover();
+//onDateHover();
 
 /* }); */
 
@@ -178,3 +190,10 @@ document.querySelector('.next-button').addEventListener('click', function () {
     });
   }
 } */
+function getEventsOnCal(){
+  let allEvents = document.getElementsByClassName('fc-event');
+  for (const data of allEvents) {
+    console.log(data.innerText);
+}
+}
+getEventsOnCal();
