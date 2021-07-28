@@ -156,3 +156,15 @@
         bottom: 0px;
         padding: 0px;
     }
+    
+    .album {
+        background-color: rgba(38, 45, 72, 0.3);
+    }
+    
+    .album .card {
+        background-color: var(--luckyPoint);
+    }
+    
+    .officers {
+        padding-bottom: 15vh;
+    }
