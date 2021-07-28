@@ -28,11 +28,14 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
   eventColor: "black",
   navLinks: false, // can click day/week names to navigate views
   selectable: true,
-  //selectMirror: true,
-  //editable: true,
+  selectMirror: true,
+  editable: true,
   dayMaxEvents: true, // allow "more" link when too many events
   eventSources: [{ events: myEvents }],
   droppable: true,
+  dateClick: function (info) {
+    console.log('date clicked', info)
+  },
   select: function (arg) {
     calendarInput.style.display = "block";
     spanClose[1].onclick = function () {
@@ -66,7 +69,8 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       calendar.unselect();
     });
   },
-  eventClick: function (arg) {
+  /* eventClick: function (arg) {
+    console.log('event clicked', arg.event);
     const isId = (idMatch) => idMatch.id == arg.event.id;
     let delIndex = myEvents.findIndex(isId);
     showEventForm(arg.event);
@@ -77,6 +81,9 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       calendarPopup.style.display = "none";
       updateEventCalendarJSON();
     })
+  } */
+  eventClick: function (arg) {
+    console.log('event clicked', arg.event);
   },
   eventDrop: function (arg) {
     console.log("event Dropped: ", arg.event.toPlainObject());
@@ -133,7 +140,7 @@ function showEventForm(eventDetails) {
 document.querySelector('.prev-button').addEventListener('click', function () {
   calendar.prev();
   //onDateHover();
-  
+
 });
 
 document.querySelector('.next-button').addEventListener('click', function () {
@@ -148,9 +155,9 @@ document.querySelector('.next-button').addEventListener('click', function () {
 
 /* var numbers = document.getElementsByClassName('fc-daygrid-day-number'); */
 /* function onDateHover() {
-  /* console.log(calendar); 
+  /* console.log(calendar);
   for (const elem of calendar.getEvents()) {
-    /* console.log(elem); 
+    /* console.log(elem);
 
   }
 
@@ -159,7 +166,7 @@ document.querySelector('.next-button').addEventListener('click', function () {
 
       let xCoord = this.getBoundingClientRect().x;
       let yCoord = this.getBoundingClientRect().y;
-      /* console.log(this.getBoundingClientRect().x, this.getBoundingClientRect().y); 
+      /* console.log(this.getBoundingClientRect().x, this.getBoundingClientRect().y);
       calendarPopup.style.position = "absolute";
       calendarPopup.style.top = `${yCoord + 250}px`;
       calendarPopup.style.left = `${xCoord - 100}px`;

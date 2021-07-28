@@ -12,20 +12,21 @@ const configureClient = async () => {
 };
 
 const updateUI = async () => {
-   
+
   const isAuthenticated = await auth0.isAuthenticated();
 
-  document.getElementById("btn-logout").disabled = !isAuthenticated;
-  document.getElementById("btn-login").disabled = isAuthenticated;
+  document.querySelector("#btn-logout").disabled = !isAuthenticated;
+  document.querySelector("#btn-login").disabled = isAuthenticated;
 
   if (isAuthenticated) {
-    document.queryCommandEnabled(".gated-content-1").classList.remove("invisible");
+    document.querySelector(".gated-content-1").classList.remove("invisible");
+    calendar.editable = 'true';
     /* document.getElementById("gated-content-2").classList.remove("invisible"); */
 
     const claims = await auth0.getIdTokenClaims()
     const pictureUrl = claims.picture
-    
-    document.querySelector(".avatar-img").src = pictureUrl || 'https://icon-library.net/images/icon-of-music/icon-of-music-8.jpg';
+
+    document.querySelector(".avatar-img").src = pictureUrl || 'https://i.imgur.com/eCikmGJs.png';
     document.querySelector(".avatar-img-div").classList.remove("invisible")
 
   } else {
@@ -34,8 +35,8 @@ const updateUI = async () => {
   }
 };
 
-window.onload = async () => {
-    
+window.addEventListener('fireAuth0', async () => { //fireAuth0 event gets fired from partial.js loader
+  console.log('loaded');
   await configureClient();
   updateUI();
   const query = window.location.search;
@@ -46,11 +47,11 @@ window.onload = async () => {
     // Use replaceState to redirect the user away and remove the querystring parameters
     window.history.replaceState({}, document.title, "/");
   }
-};
+});
 
 const login = async () => {
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin
+    redirect_uri: window.location.href
   });
 };
 
