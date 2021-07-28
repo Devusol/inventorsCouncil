@@ -67,35 +67,18 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
       calendar.unselect();
     });
   },
-  /*  eventClick: function (arg) {
-     console.log('event clicked', arg.event);
-     const isId = (idMatch) => idMatch.id == arg.event.id;
-     let delIndex = myEvents.findIndex(isId);
-     showEventForm(arg.event);
-     deleteEventButton.addEventListener("click", function () {
-       myEvents.splice(delIndex, 1); //see above note about id's and deletion
-       arg.event.remove();
-       //  console.log(myEvents);
-       calendarPopup.style.display = "none";
-       updateEventCalendarJSON();
-     })
-   }, */
   eventClick: function (arg) {
-
-    console.log('event clicked', arg.el);
-    let eventor = arg.el;
-    $(eventor).attr({
-      'data-toggle': 'popover',
-      'data-placement': 'top',
-      'title': 'Popover title',
-      'data-content': "And here's some amazing content. It's very engaging. Right?"
-    });
-
-    $(function () {
-      $('[data-toggle="popover"]').popover()
+/*     console.log('event clicked', arg.event); */
+    const isId = (idMatch) => idMatch.id == arg.event.id;
+    let delIndex = myEvents.findIndex(isId);
+    showEventForm(arg);
+    deleteEventButton.addEventListener("click", function () {
+      myEvents.splice(delIndex, 1); //see above note about id's and deletion
+      arg.event.remove();
+      //  console.log(myEvents);
+      calendarPopup.style.display = "none";
+      updateEventCalendarJSON();
     })
-
-
   },
   eventDrop: function (arg) {
     console.log("event Dropped: ", arg.event.toPlainObject());
@@ -129,34 +112,46 @@ function readEventCalendarJSON() {
     .then(response => response.json())
     .then(json => {
       myEvents = json[0].record;
-     // console.log(myEvents);
+      // console.log(myEvents);
       calendar.addEventSource(myEvents);
       calendar.refetchEvents();
       calendar.render();
+      getEventsOnPage();
     })
 }
 
 function showEventForm(eventDetails) {
-  let description = eventDetails.extendedProps.description;
-  let location = eventDetails.extendedProps.location;
+  let description = eventDetails.event.extendedProps.description;
+  let location = eventDetails.event.extendedProps.location;
+  let descriptionCard = document.querySelector(".form-popup");
+
+  console.log(description, location, eventDetails.jsEvent.pageX);
+
+  calendarPopup.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
+  calendarPopup.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
+  calendarPopup.style.zIndex = 1;
+
   document.getElementById("description").innerHTML = description;
   document.getElementById("location").innerHTML = location;
-  calendarPopup.style.display = "block";
+  calendarPopup.classList.remove("invisible");
   // When the user clicks on <span> (x), close the modal
   spanClose[0].onclick = function () {
-    calendarPopup.style.display = "none";
+    calendarPopup.classList.add("invisible");
   }
 }
 
 
-document.querySelector('.prev-button').addEventListener('click', function () {
+document.querySelector('.prev-button').addEventListener('click', async () => {
   calendar.prev();
+  await getEventsOnPage();
+
   //onDateHover();
 
 });
 
-document.querySelector('.next-button').addEventListener('click', function () {
+document.querySelector('.next-button').addEventListener('click', async () => {
   calendar.next();
+  /*   await getEventsOnPage(); */
   //onDateHover();
 });
 
@@ -190,10 +185,16 @@ document.querySelector('.next-button').addEventListener('click', function () {
     });
   }
 } */
-function getEventsOnCal(){
+
+/* function getEventsOnPage() {
   let allEvents = document.getElementsByClassName('fc-event');
+
   for (const data of allEvents) {
-    console.log(data.innerText);
-}
-}
-getEventsOnCal();
+    $(data).attr({
+      'data-toggle': 'popover',
+      'data-placement': 'top',
+      'title': 'Popover title',
+      'data-content': "And here's some amazing content. It's very engaging. Right?"
+    });
+  }
+} */
