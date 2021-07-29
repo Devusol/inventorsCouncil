@@ -141,3 +141,34 @@
 /* .fc-scroller {
     overflow: hidden !important;
 } */
+
+.makerFaire,
+.tradeShow {
+    padding: 0% !important;
+}
+
+.tradeShow h3 {
+    font-size: 1.5rem !important;
+    color: #0da8d9 !important;
+}
+
+.tradeShow .col-lg-5 {
+    max-width: 100% !important;
+}
+
+#ourMissionWords.col-lg-4 {
+    padding-left: 0% !important;
+    max-width: 100% !important;
+}
+
+.tradeShow h1 {
+    padding-left: 15px;
+}
+
+.tradeShow i {
+    color: #1a0dab;
+}
+
+.tradeShow i:hover {
+    text-decoration: underline;
+}
