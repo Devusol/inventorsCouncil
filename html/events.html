@@ -330,7 +330,7 @@
 
     <div id='external-events' class="invisible fixed-bottom w-25 gated-content-1">
         <div id='external-events-list' class='btn-group-vertical'>
-            <button class='btn btn-info'>Draggable Events</button>
+            <button class='btn btn-info' data-toggle="modal" data-target="#exampleModalCenter">Draggable Events</button>
             <!-- <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'> -->
             <button class='btn btn-outline-info draggable-event' data-event='{ "title": "1 Hour Event", "start":"12:00", "duration" : "01:00", "allDay": "false"}'>1
                 Hour Event
@@ -351,9 +351,9 @@
     </div>
 
 
-    <div class="form-popup" id="descriptionCard" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+    <div class="form-popup invisible position-absolute btn-info" id="descriptionCard">
         <form id="descriptionForm" action="/action_page.php" class="form-container">
-            <span class="close">&times;</span>
+            <span class="close p-2">&times;</span>
             <h1>Event Details</h1>
             <p id='description'>Description: </p>
             <p id='location'>Location: </p>
@@ -361,7 +361,7 @@
         </form>
     </div>
 
-    <div class="input-popup invisible" id="inputCard">
+     <div class="input-popup invisible" id="inputCard">
         <form id="inputForm" action="/action_page.php" class="form-container">
             <span class="close">&times;</span>
             <h1>Event Details</h1>

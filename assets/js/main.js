@@ -17,3 +17,4 @@ theForm.addEventListener("submit", function(e) {
 $('.carousel').carousel({
     interval: 2000
 })
+
