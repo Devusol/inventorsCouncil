@@ -4,8 +4,8 @@
 
 
 const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
-/* const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents"; */
-const PUT_EVENTS_URL = "http://localhost:8080/timesheets";
+ const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
+
 
 
 
@@ -103,14 +103,30 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
 
 readEventCalendarJSON();
 
-function updateEventCalendarJSON() {
-  const accessToken = auth0.getTokenSilently()
-  console.log('access Token', accessToken);
+/* function updateEventCalendarJSON() {
+  const token = await auth0.getTokenSilently();
+  console.log('auth token: ', token);
 
   fetch(PUT_EVENTS_URL, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + accessToken
+      Authorization: `Bearer ${token}`
+    },
+    method: 'PUT',
+    body: JSON.stringify(myEvents)
+  })
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+ */
+const updateEventCalendarJSON = async () => {
+
+  await auth0.isAuthenticated() ? console.log('youre in') : alert('please login to continue')
+  const token = await auth0.getTokenSilently();
+  await fetch(PUT_EVENTS_URL, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
     },
     method: 'PUT',
     body: JSON.stringify(myEvents)
