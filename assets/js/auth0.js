@@ -8,6 +8,7 @@ const configureClient = async () => {
   auth0 = await createAuth0Client({
     domain: config.domain,
     client_id: config.clientId,
+    audience: config.audience
   });
 };
 
@@ -36,9 +37,14 @@ const updateUI = async () => {
 };
 
 window.addEventListener('fireAuth0', async () => { //fireAuth0 event gets fired from partial.js loader
-  console.log('loaded');
   await configureClient();
   updateUI();
+
+  const isAuthenticated = await auth0.isAuthenticated();
+  if (isAuthenticated) {
+    return;
+  }
+
   const query = window.location.search;
   if (query.includes("code=") && query.includes("state=")) {
     // Process the login state

@@ -4,7 +4,9 @@
 
 
 const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
-const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
+/* const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents"; */
+const PUT_EVENTS_URL = "http://localhost:8080/timesheets";
+
 
 
 var myEvents = [];
@@ -102,9 +104,14 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
 readEventCalendarJSON();
 
 function updateEventCalendarJSON() {
-  console.log('updateEvent: ', myEvents);
+  const accessToken = auth0.getTokenSilently()
+  console.log('access Token', accessToken);
+
   fetch(PUT_EVENTS_URL, {
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + accessToken
+    },
     method: 'PUT',
     body: JSON.stringify(myEvents)
   })

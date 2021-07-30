@@ -1,4 +1,5 @@
 {
     "domain": "dev-fk12ns8a.us.auth0.com",
-    "clientId": "ow0S9gjPxORQA56VZyHgas5ExV8Yhi4Y"
-}
+    "clientId": "8rzmRQ40ARDaEzkxYYYMYgnzG7UKbmrH",
+    "audience": "https://app.devusol.com/aproxy"
+  }
