@@ -68,7 +68,7 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
     });
   },
   eventClick: function (arg) {
-/*     console.log('event clicked', arg.event); */
+     console.log('event clicked', arg.event); 
     const isId = (idMatch) => idMatch.id == arg.event.id;
     let delIndex = myEvents.findIndex(isId);
     showEventForm(arg);
@@ -133,6 +133,7 @@ function showEventForm(eventDetails) {
 
   document.getElementById("description").innerHTML = description;
   document.getElementById("location").innerHTML = location;
+  console.log(calendarPopup);
   calendarPopup.classList.remove("invisible");
   // When the user clicks on <span> (x), close the modal
   spanClose[0].onclick = function () {
