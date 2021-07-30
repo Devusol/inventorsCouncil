@@ -165,10 +165,15 @@
     padding-left: 15px;
 }
 
-.tradeShow i {
-    color: #1a0dab;
+.makerFaire a,
+.tradeShow a {
+    color: #f13ed9;
 }
 
-.tradeShow i:hover {
+.tradeShow a:hover {
     text-decoration: underline;
+}
+
+.tradeshowBox {
+    background-image: linear-gradient(to left, transparent -6vw, var(--luckyPoint) 25vw) !important;
 }
