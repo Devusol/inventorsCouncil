@@ -357,14 +357,15 @@
             <h1>Event Details</h1>
             <p id='description'>Description: </p>
             <p id='location'>Location: </p>
-            <button id="deleteButton" type="button" class="btn">Delete Event</button>
+            <button id="deleteButton" type="button" class="btn btn-secondary gated-content-1 invisible">Delete Event</button>
+            <button id="editButton" type="button" class="btn btn-secondary gated-content-1 invisible">Edit Event</button>
         </form>
     </div>
 
-     <div class="input-popup invisible" id="inputCard">
+     <div class="input-popup position-absolute btn-info gated-content-2 invisible" id="inputCard">
         <form id="inputForm" action="/action_page.php" class="form-container">
             <span class="close">&times;</span>
-            <h1>Event Details</h1>
+            <h1>Add an Event</h1>
 
             <label for="inputTitle"><b>Event title</b></label><br>
             <input id="inputTitle" type="" placeholder="Event Title" name="inputTitle" required><br>

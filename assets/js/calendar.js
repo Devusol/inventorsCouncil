@@ -1,11 +1,5 @@
-
-/* document.addEventListener('DOMContentLoaded', function () { */
-/*  document.onload () => { */
 const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
- const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
-
-
-
+const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
 
 var myEvents = [];
 var spanClose = document.getElementsByClassName("close");
@@ -27,19 +21,22 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
   },
   eventColor: "black",
   navLinks: false, // can click day/week names to navigate views
-  selectable: true,
+  selectable: false,
   selectMirror: true,
-  editable: true,
+  editable: false,
   dayMaxEvents: true, // allow "more" link when too many events
   eventSources: [{ events: myEvents }],
   droppable: true,
-  dateClick: function (info) {
-    console.log('date clicked', info)
-  },
+  /* dateClick: function (info) {
+    clearPopups();
+  //  console.log('date clicked', info)
+  }, */
   select: function (arg) {
-    calendarInput.style.display = "block";
+
+    // console.log(`dates selected: ${arg.start} to ${arg.end}`);
+    showEventEdit(arg);
     spanClose[1].onclick = function () {
-      calendarInput.style.display = "none";
+      calendarInput.classList.add("invisible");
     }
     /*   console.log(arg); */
     /* console.log(document.getElementById('inputStart')); */
@@ -70,17 +67,22 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
     });
   },
   eventClick: function (arg) {
-     console.log('event clicked', arg.event); 
-    const isId = (idMatch) => idMatch.id == arg.event.id;
+    console.log('event clicked', arg.event);
+    let isId = (idMatch) => idMatch.id == arg.event.id;
     let delIndex = myEvents.findIndex(isId);
-    showEventForm(arg);
+    showEventDetails(arg);
     deleteEventButton.addEventListener("click", function () {
-      myEvents.splice(delIndex, 1); //see above note about id's and deletion
+      myEvents.splice(delIndex, 1);
       arg.event.remove();
-      //  console.log(myEvents);
-      calendarPopup.style.display = "none";
+      calendarPopup.classList.add("invisible");
       updateEventCalendarJSON();
     })
+    /*  editEventButton.addEventListener("click", function () {
+       myEvents.splice(delIndex, 1);
+       arg.event.remove();
+       calendarPopup.classList.add("invisible");
+       updateEventCalendarJSON();
+     }) */
   },
   eventDrop: function (arg) {
     console.log("event Dropped: ", arg.event.toPlainObject());
@@ -98,24 +100,7 @@ var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
 
 readEventCalendarJSON();
 
-/* function updateEventCalendarJSON() {
-  const token = await auth0.getTokenSilently();
-  console.log('auth token: ', token);
-
-  fetch(PUT_EVENTS_URL, {
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    },
-    method: 'PUT',
-    body: JSON.stringify(myEvents)
-  })
-    .then(response => response.json())
-    .then(json => console.log(json))
-}
- */
 const updateEventCalendarJSON = async () => {
-
   await auth0.isAuthenticated() ? console.log('youre in') : alert('please login to continue')
   const token = await auth0.getTokenSilently();
   await fetch(PUT_EVENTS_URL, {
@@ -127,7 +112,10 @@ const updateEventCalendarJSON = async () => {
     body: JSON.stringify(myEvents)
   })
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => {
+      console.log(json[0].record);
+      calendar.render();
+    })
 }
 
 function readEventCalendarJSON() {
@@ -139,16 +127,30 @@ function readEventCalendarJSON() {
       calendar.addEventSource(myEvents);
       calendar.refetchEvents();
       calendar.render();
-      getEventsOnPage();
+
     })
 }
 
-function showEventForm(eventDetails) {
+function showEventEdit(eventDetails) {
+  calendarPopup.classList.add('invisible');
+  calendarInput.classList.add('invisible');
+
+  calendarInput.classList.remove('invisible');
+  calendarInput.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
+  calendarInput.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
+  calendarInput.style.zIndex = 1;
+
+  // When the user clicks on <span> (x), close the modal
+  spanClose[0].onclick = function () {
+    calendarPopup.classList.add("invisible");
+  }
+}
+
+function showEventDetails(eventDetails) {
+  calendarPopup.classList.add('invisible');
+  calendarInput.classList.add('invisible');
   let description = eventDetails.event.extendedProps.description;
   let location = eventDetails.event.extendedProps.location;
-  let descriptionCard = document.querySelector(".form-popup");
-
-  console.log(description, location, eventDetails.jsEvent.pageX);
 
   calendarPopup.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
   calendarPopup.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
@@ -156,33 +158,23 @@ function showEventForm(eventDetails) {
 
   document.getElementById("description").innerHTML = description;
   document.getElementById("location").innerHTML = location;
-  console.log(calendarPopup);
   calendarPopup.classList.remove("invisible");
   // When the user clicks on <span> (x), close the modal
+
   spanClose[0].onclick = function () {
     calendarPopup.classList.add("invisible");
   }
 }
 
-
 document.querySelector('.prev-button').addEventListener('click', async () => {
   calendar.prev();
-  await getEventsOnPage();
-
-  //onDateHover();
-
 });
 
 document.querySelector('.next-button').addEventListener('click', async () => {
   calendar.next();
-  /*   await getEventsOnPage(); */
-  //onDateHover();
 });
 
 //onDateHover();
-
-/* }); */
-
 
 /* var numbers = document.getElementsByClassName('fc-daygrid-day-number'); */
 /* function onDateHover() {

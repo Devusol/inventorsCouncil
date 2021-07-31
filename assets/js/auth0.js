@@ -1,4 +1,5 @@
 let auth0 = null;
+
 const fetchAuthConfig = () => fetch("/auth_config.json");
 
 const configureClient = async () => {
@@ -20,15 +21,20 @@ const updateUI = async () => {
   document.querySelector("#btn-login").disabled = isAuthenticated;
 
   if (isAuthenticated) {
-    document.querySelector(".gated-content-1").classList.remove("invisible");
-    calendar.editable = 'true';
+    document.querySelectorAll(".gated-content-1").forEach((e) => {
+      e.classList.remove("invisible");
+    })
+    calendar.setOption('editable', true);
+    calendar.setOption('selectable', true);
+
+
     /* document.getElementById("gated-content-2").classList.remove("invisible"); */
 
-    const claims = await auth0.getIdTokenClaims()
-    const pictureUrl = claims.picture
+    const claims = await auth0.getIdTokenClaims();
+    const pictureUrl = claims.picture;
 
     document.querySelector(".avatar-img").src = pictureUrl || 'https://i.imgur.com/eCikmGJs.png';
-    document.querySelector(".avatar-img-div").classList.remove("invisible")
+    document.querySelector(".avatar-img-div").classList.remove("invisible");
 
   } else {
     document.querySelector(".gated-content-1").classList.add("invisible");
