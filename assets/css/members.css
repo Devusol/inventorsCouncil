@@ -140,3 +140,15 @@
 .ourMembers h4 {
     color: var(--stormGrey);
 }
+
+#membersCardsLandscape .card {
+    background-color: var(--luckyPoint);
+}
+
+#membersCardsLandscape .col-md-8 {
+    padding: 1%;
+}
+
+#membersCardsLandscape .col-md-4 {
+    padding: 0%;
+}
