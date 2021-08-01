@@ -177,3 +177,34 @@
 .tradeshowBox {
     background-image: linear-gradient(to left, transparent -6vw, var(--luckyPoint) 25vw) !important;
 }
+
+#eventsHeader {
+    padding: 5% 0% 5% 0%;
+}
+
+.fc-header-toolbar,
+.fc-toolbar {
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to right, #0db0e3 13vw, #8656a9 43vw);
+    width: 100%;
+    height: 20vh;
+    padding: 0% !important;
+}
+
+#calendar-section {
+    padding: 0% !important;
+}
+
+.fc-daygrid,
+.fc-dayGridMonth-view,
+.fc-view,
+.fc-toolbar-chunk {
+    padding: 0 10vw !important;
+}
+
+#calendar-section .fc .fc-toolbar-title {
+    font-size: 3.75em;
+    margin: 0;
+    font-weight: lighter;
+}
