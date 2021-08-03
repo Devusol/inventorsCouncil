@@ -6,37 +6,36 @@ fetch("/assets/json/members.json")
     .then((response) => response.json())
     .then((json) => {
         membersJSON = json;
-        for (let cardData of json) {
-            let visWeb, visEmail; 
-            cardData.companyWebsite ? visWeb = 'invisible' : visWeb = 'visible';
-            cardData.companyEmail ? visEmail = 'invisible' : visEmail = 'visible';
-            membersCardsLandscape.innerHTML += `<div class="container py-3">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-4">
-                <img src="/assets/img/members/${cardData.memberImage}" class="w-100">
-            </div>
-            <div class="col-md-8 px-3">
-                <div class="card-block px-3">
-                <h4 class="card-title">${cardData.companyName}</h4>
-                <p class="card-text">${cardData.companyDescription}</p><br>
+        let visWeb, visMail;
+        for (let cardData of membersJSON) {
+            cardData.companyWebsite ? visWeb = "visible" : visWeb = "invisible";
+            cardData.companyEmail ? visMail = "visible" : visMail = "invisible";
+
+            membersCardsLandscape.innerHTML += `<div class="container py-3"> 
+                <div class="card">
                 <div class="row">
-                        <div class="col-lg-6">
-                            <a href="${cardData.companyWebsite}" class="btn btn-primary p-2 ${visWeb}">Website</a>
+                    <div class="col-md-4">
+                            <img src="/assets/img/members/${cardData.memberImage}" class="w-100">
                         </div>
-                        <div class="col-lg-6">
-                            <a href="${cardData.companyEmail}" class="btn btn-primary p-2 ${visEmail}">Contact</a>
+                        <div class="col-md-8 px-3">
+                            <div class="card-block px-3">
+                            <h4 class="card-title">${cardData.companyName}</h4>
+                            <p class="card-text">${cardData.companyDescription}</p><br>
+                            <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="${cardData.companyWebsite}" class="btn btn-outline-primary p-2 ${visWeb}">Website</a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="mailto:${cardData.companyEmail}" class="btn btn-outline-primary p-2 ${visMail}">Contact</a>
+                                    </div>
+                            </div>
+                            </div>
+                            </div>
+                
                         </div>
-                </div>
-                </div>
-                </div>
-      
-              </div>
-            </div>
-          </div>
-        </div>`;
-            cardData.companyWebsite ? console.log('has website') : console.log('no website');
-            console.log(membersCardsLandscape);
+                        </div>
+                    </div>
+                    </div>`;
         }
     });
 
