@@ -7,6 +7,9 @@ fetch("/assets/json/members.json")
     .then((json) => {
         membersJSON = json;
         for (let cardData of json) {
+            let visWeb, visEmail; 
+            cardData.companyWebsite ? visWeb = 'invisible' : visWeb = 'visible';
+            cardData.companyEmail ? visEmail = 'invisible' : visEmail = 'visible';
             membersCardsLandscape.innerHTML += `<div class="container py-3">
     <div class="card">
       <div class="row">
@@ -19,10 +22,10 @@ fetch("/assets/json/members.json")
                 <p class="card-text">${cardData.companyDescription}</p><br>
                 <div class="row">
                         <div class="col-lg-6">
-                            <a href="${cardData.companyWebsite}" class="btn btn-primary p-2">Website</a>
+                            <a href="${cardData.companyWebsite}" class="btn btn-primary p-2 ${visWeb}">Website</a>
                         </div>
                         <div class="col-lg-6">
-                            <a href="${cardData.companyEmail}" class="btn btn-primary p-2">Contact</a>
+                            <a href="${cardData.companyEmail}" class="btn btn-primary p-2 ${visEmail}">Contact</a>
                         </div>
                 </div>
                 </div>
@@ -31,7 +34,9 @@ fetch("/assets/json/members.json")
               </div>
             </div>
           </div>
-        </div>`
+        </div>`;
+            cardData.companyWebsite ? console.log('has website') : console.log('no website');
+            console.log(membersCardsLandscape);
         }
     });
 
@@ -50,32 +55,39 @@ fetch("/assets/json/members.json")
 
 
 function searchFunction() {
-    let input = $('#myFilter'),
+    let input = document.querySelector('#myFilter'),
         filter = input.value.toUpperCase(),
-        cardContainer = $('#myItems'),
-        cards = $('.card'),
-        title,
-        i;
-    /*  input = document.getElementById("myFilter");
-     filter = input.value.toUpperCase();
-     cardContainer = document.getElementById("myItems");
-     cards = cardContainer.getElementsByClassName("card"); */
+        cards = $('.card');
 
-    for (i = 0; i < cards.length; i++) {
-        title = cards[i].querySelector(".card-block h4.card-title");
+    if (filter == "") {
+        for (let cardFilter in cards) {
+            cards[cardFilter].parentElement.style.display = "";
+        }
+        return;
+    }
+
+    for (let cardFilter in cards) {
+        let title = cards[cardFilter].querySelector(".card-block h4.card-title");
         if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-            cards[i].style.display = "";
+            cards[cardFilter].style.display = "";
         } else {
-            cards[i].style.display = "none";
+            cards[cardFilter].parentElement.style.display = "none";
         }
     }
 
-    /*   for (let cardFilter of cards){
-          title = cards[cardFilter]
-      } */
+    /*    for (i = 0; i < cards.length; i++) {
+           title = cards[i].querySelector(".card-block h4.card-title");
+           if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+               cards[i].style.display = "";
+           } else {
+               cards[i].style.display = "none";
+           }
+       }
+    */
 }
 
-function sortFunction(a, b) {
+function sortFunction() {
+    console.log('under construction')
     // Use toUpperCase() to ignore character casing
     const bandA = a.companyName.toUpperCase();
     const bandB = b.companyName.toUpperCase();
