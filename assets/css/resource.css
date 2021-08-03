@@ -169,3 +169,7 @@
  #patMark {
      margin-bottom: 100px;
  }
+ 
+ #protoFinance .card {
+     background-color: transparent;
+ }
