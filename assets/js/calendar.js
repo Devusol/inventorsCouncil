@@ -1,5 +1,6 @@
 const GET_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/getevents";
 const PUT_EVENTS_URL = "https://app.devusol.com/aproxy/iccf/api/v1/putevents";
+/* const PUT_EVENTS_URL = "http://localhost:3000/api/v1/putevents"; */
 
 var myEvents = [];
 var spanClose = document.getElementsByClassName("close");
@@ -111,9 +112,14 @@ const updateEventCalendarJSON = async () => {
     method: 'PUT',
     body: JSON.stringify(myEvents)
   })
-    .then(response => response.json())
+    .then(response => {
+      let resClone = response.clone();
+      resClone.text()
+        .then(value => value == "Insufficient scope" ? alert("Insufficient scope. Please log in as an administrator") : console.log("admin is logged in"));
+      response.json();
+    })
     .then(json => {
-      console.log(json[0].record);
+      console.log(json);
       calendar.render();
     })
 }
