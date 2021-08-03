@@ -1,110 +1,4 @@
-let membersCards = document.querySelector("#membersCards");
-let membersCardsLandscape = document.querySelector("#membersCardsLandscape");
-let membersJSON = []
-
-fetch("/assets/json/members.json")
-    .then((response) => response.json())
-    .then((json) => {
-        membersJSON = json;
-        for (let cardData of json) {
-            let visWeb, visEmail; 
-            cardData.companyWebsite ? visWeb = 'invisible' : visWeb = 'visible';
-            cardData.companyEmail ? visEmail = 'invisible' : visEmail = 'visible';
-            membersCardsLandscape.innerHTML += `<div class="container py-3">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-4">
-                <img src="/assets/img/members/${cardData.memberImage}" class="w-100">
-            </div>
-            <div class="col-md-8 px-3">
-                <div class="card-block px-3">
-                <h4 class="card-title">${cardData.companyName}</h4>
-                <p class="card-text">${cardData.companyDescription}</p><br>
-                <div class="row">
-                        <div class="col-lg-6">
-                            <a href="${cardData.companyWebsite}" class="btn btn-primary p-2 ${visWeb}">Website</a>
-                        </div>
-                        <div class="col-lg-6">
-                            <a href="${cardData.companyEmail}" class="btn btn-primary p-2 ${visEmail}">Contact</a>
-                        </div>
-                </div>
-                </div>
-                </div>
-      
-              </div>
-            </div>
-          </div>
-        </div>`;
-            cardData.companyWebsite ? console.log('has website') : console.log('no website');
-            console.log(membersCardsLandscape);
-        }
-    });
-
-
-/* for (let cardData of memberJSON) {
-    membersCards.innerHTML += `<div class="card p-2 memberCard">
-    <img class="card-img-top" src="assets/img/members/${cardData.memberImage}" style="height:auto;" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">${cardData.companyName}</h5>
-            <p class="card-text" style="height: 10vh; overflow:auto">${cardData.companyDescription}</p>
-            <a href="${cardData.companyWebsite}" class="btn btn-primary p-2">Website</a>
-            <a href="${cardData.companyEmail}" class="btn btn-primary p-2">Contact</a>
-        </div>
-      </div>`
-} */
-
-
-function searchFunction() {
-    let input = document.querySelector('#myFilter'),
-        filter = input.value.toUpperCase(),
-        cards = $('.card');
-
-    if (filter == "") {
-        for (let cardFilter in cards) {
-            cards[cardFilter].parentElement.style.display = "";
-        }
-        return;
-    }
-
-    for (let cardFilter in cards) {
-        let title = cards[cardFilter].querySelector(".card-block h4.card-title");
-        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-            cards[cardFilter].style.display = "";
-        } else {
-            cards[cardFilter].parentElement.style.display = "none";
-        }
-    }
-
-    /*    for (i = 0; i < cards.length; i++) {
-           title = cards[i].querySelector(".card-block h4.card-title");
-           if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-               cards[i].style.display = "";
-           } else {
-               cards[i].style.display = "none";
-           }
-       }
-    */
-}
-
-function sortFunction() {
-    console.log('under construction')
-    // Use toUpperCase() to ignore character casing
-    const bandA = a.companyName.toUpperCase();
-    const bandB = b.companyName.toUpperCase();
-
-    let comparison = 0;
-    if (bandA > bandB) {
-        comparison = 1;
-    } else if (bandA < bandB) {
-        comparison = -1;
-    }
-    return (comparison);
-}
-
-/* memberJSON.sort(sortFunction) */
-
-
-/* var memberJSON = [{
+[{
     "memberImage": "TalkToMe.jpg",
     "companyName": "Sydspeak Inc.",
     "companyDescription": "Birr, Sydney - Sydspeak Inc. introduces Talk To Me 100. This easy to use communication device helps teachers, parents and therapists teach children speak their first words. Press a symbol button and it speaks the word. With 100 words and the corresponding picture symbols communication partners can interact using the most frequently used words for functional interactive conversation. Talk To Me 100 is affordable at $59.",
@@ -115,14 +9,12 @@ function sortFunction() {
     "memberImage": "SharkBait.jpg",
     "companyName": "SharkBait",
     "companyDescription": "Colangelo, Mark - SharkBait serves inventors by providing access to the expert support non-institutional inventors need to make informed decisions from concept to commercialization. Developed by financial angels, makers and startup innovators, the SharkBait system requires no confidential information yet provides progressive levels of personalized insight & guidance to help inventors learn about invention, identify best next steps, and make better use of their time and financial resources!",
-    "companyWebsite": "https://sharkbaitventures.com/",
-    /*"companyEmail:": "https://www.flipsetter.com/Contact"
+    "companyWebsite": "https://sharkbaitventures.com/"
 },
 {
     "memberImage": "NoLogo.png",
     "companyName": "F. Technology Consulting Center",
     "companyDescription": "Flinchbaugh, Dr. David E., Executive Director. - Inventors Council Co-founding member (1974), sponsor since 1986, and current ICCF President. David and Heidi promote new product development and entrepreneurship among our members. We have helped form 21 new companies since 1980 and have filed 57 patent applications since 1996 for consumer goods, military, aerospace, education, art, entertainment, and medical. One medical product example is the ''UroCycler'', a unique, FDA-certified, highly engineered, patient safety, bladder management system now used in 68 countries.",
-    /*"companyWebsite": "http://2pilabs.com/",
     "companyEmail:": "drdavidflinchbaugh@bellsouth.net"
 },
 {
@@ -143,15 +35,12 @@ function sortFunction() {
     "memberImage": "innovate.png",
     "companyName": "Innovate, LLC",
     "companyDescription": "Hassan, Dr. Michael - INNOVATE offers Consulting Services in Electrical, Electronics, Computer, and Systems Engineering; Expert Witness Services; Professional Development Services; Research and Development; Creative Problem Solving; Products' Innovation, Design and Development; Intellectual Properties Development; Innovative Idea Creation and Problem Solving. Contact us by email or phone 407.780.5585.",
-    /*"companyWebsite": "http://keepmekozy.com/",
     "companyEmail:": "innovatellc@gmail.com"
 },
 {
     "memberImage": "NoLogo.png",
     "companyName": "Eating on a Dollar a Day",
-    "companyDescription": "Looking For Next Iphone App to program. Longtime member and engineer loves building iphone apps. Make me an offer. Best way is to meet at Stardust, Starbucks and I will program as you work.",
-    /*"companyWebsite": "http://2pilabs.com/",
-    "companyEmail:": "https://www.flipsetter.com/Contact"
+    "companyDescription": "Looking For Next Iphone App to program. Longtime member and engineer loves building iphone apps. Make me an offer. Best way is to meet at Stardust, Starbucks and I will program as you work."
 },
 {
     "memberImage": "InventingDaily.jpg",
@@ -205,9 +94,7 @@ function sortFunction() {
 {
     "memberImage": "PetRock.png",
     "companyName": "The Pet Rock Throwback",
-    "companyDescription": "Stewart, Evan - The 70's are back in fashion, music, style, collectibles, and rocks for pets. The Pet Rock is a whimsical cornerstone of that revival. Forget the hassles of a dog or a cat. Own the only mineral proven to make you feel loved. For a great stocking stuffer or gag gift, pick up a few Pet Rocks today.",
-    /* "companyWebsite": "http://2pilabs.com/",
-     "companyEmail:": "create@2pilabs.com"
+    "companyDescription": "Stewart, Evan - The 70's are back in fashion, music, style, collectibles, and rocks for pets. The Pet Rock is a whimsical cornerstone of that revival. Forget the hassles of a dog or a cat. Own the only mineral proven to make you feel loved. For a great stocking stuffer or gag gift, pick up a few Pet Rocks today."
 },
 {
     "memberImage": "Vilardi.jpg",
@@ -233,9 +120,5 @@ function sortFunction() {
 {
     "memberImage": "RavenLogo.jpg",
     "companyName": "Charismatic Raven Productions",
-    "companyDescription": "Yannantuono, Al - Charismatic Raven Productions was started on November 10th 2010, and is a small business devoted to bringing the creativity of ones imagination to life. Our operations are based in Orlando Florida.The services of CRP include 2d graphic design (T-shirt design, business cards, holiday cards, conceptual design, flyers, advertisements, banners,company logos and so much more.). In addition we also are skilled in the 3d aspect of design (3d models, conceptual models for inventors, logo introduction videos, and short films.) We are proud to be in conjunction with the Inventors Council of Central Florida.",
-    /* "companyWebsite": "https://www.flipsetter.com/",
-     "companyEmail:": "https://www.flipsetter.com/Contact"
-}
-];
- */
+    "companyDescription": "Yannantuono, Al - Charismatic Raven Productions was started on November 10th 2010, and is a small business devoted to bringing the creativity of ones imagination to life. Our operations are based in Orlando Florida.The services of CRP include 2d graphic design (T-shirt design, business cards, holiday cards, conceptual design, flyers, advertisements, banners,company logos and so much more.). In addition we also are skilled in the 3d aspect of design (3d models, conceptual models for inventors, logo introduction videos, and short films.) We are proud to be in conjunction with the Inventors Council of Central Florida."
+}]
