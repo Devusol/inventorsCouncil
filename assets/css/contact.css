@@ -15,10 +15,38 @@ body {
     width: 2px;
 }
 
+@media (max-width: 575px) {
+    .verticalSplitLineContact {
+        width: 60vw;
+        background-color: #f2a413;
+        height: 2px;
+    }
+    #slackDonate {
+        padding-top: 10%;
+    }
+    #contactFill {
+        padding-bottom: 9%;
+    }
+}
+
 .form-field {
     width: 100%;
     padding: 1% 10%;
     color: var(--gainsboro);
     background-color: Transparent;
     border: 2px solid var(--gainsboro);
+}
+
+#contactHeader {
+    padding: 5% 0% 0% 0%;
+}
+
+#contactHeader h1 {
+    font-size: 5.0rem;
+    font-weight: bolder;
+}
+
+#formSection {
+    padding-top: 0px !important;
+    padding-bottom: 5% !important;
 }
