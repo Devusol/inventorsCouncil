@@ -1,11 +1,13 @@
 $(document).ready(function () {
-  let nav = $('.sub-navbar-content');
+  let subNav = $('.sub-navbar-content');
   const fireAuth0 = new Event('fireAuth0');
 
   $("head").load("/html/shared/head.html", function () {
     /* $('.sign-up').load("/html/shared/signup.html", function () { */
     $("header").load("/html/shared/navbar.html", function () {
-      $('.sub-navbar-items').append(nav);
+      console.log($('.sub-navbar-items.navbar-extra-items'));
+      $('.sub-navbar-items.navbar-extra-items').append(subNav);
+      /* $('.navbar-extra-items').append(subNav); */
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'));
         window.dispatchEvent(fireAuth0);

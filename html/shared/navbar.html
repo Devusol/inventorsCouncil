@@ -3,8 +3,8 @@
         <a class="navbar-brand" href="/index.html">
             <img src="/assets/img/logowhite.png" width="40" height="40" alt="Inventor's Council Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarExtraContent"
-            aria-controls="navbarExtraContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-extra-content"
+            aria-controls="navbar-extra-content" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i class="bi-list"></i>
             </span>
@@ -62,24 +62,30 @@
     <a class="nav-link active" aria-current="page" href="/index.html">HOME3</a>
 </div> -->
 
-<nav class="collapse navbar-collapse navbar-expand-lg navbarExtraContent">
 
-    <a class="nav-link active" aria-current="page" href="/index.html">HOME3</a>
+<nav class="collapse navbar-collapse d-lg-none navbar-extra-content row">
 
-    <a class="nav-link" href="/html/about.html">ABOUT US3</a>
+    <div class="navbar-nav ml-3 col">
 
-    <a class="nav-link" href="/html/events.html">EVENTS3</a>
+        <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
 
-    <a class="nav-link" href="/html/resources.html">RESOURCES3</a>
+        <a class="nav-link" href="/html/about.html">ABOUT US</a>
 
-    <a class="nav-link" href="/html/members.html">MEMBERS3</a>
+        <a class="nav-link" href="/html/events.html">EVENTS</a>
 
-    <a class="nav-link" href="/html/contact.html">CONTACT3</a>
-    <button id='btn-login' class='btn btn-outline-info' disabled='true' onclick="login()">Login</button>
-    <button id='btn-logout' class='btn btn-outline-info' disabled='true' onclick="logout()">Logout</button>
+        <a class="nav-link" href="/html/resources.html">RESOURCES</a>
 
-    <div class="invisible avatar-img-div p-1 w-25 h-25 ml-2 mr-0">
-        <img class="avatar-img w-100" src="">
+        <a class="nav-link" href="/html/members.html">MEMBERS</a>
+
+        <a class="nav-link" href="/html/contact.html">CONTACT</a>
+        <button id='btn-login' class='btn btn-outline-info' disabled='true' onclick="login()">Login</button>
+        <button id='btn-logout' class='btn btn-outline-info' disabled='true' onclick="logout()">Logout</button>
+
+        <div class="invisible avatar-img-div p-1 w-25 h-25 ml-2 mr-0">
+            <img class="avatar-img w-100" src="">
+        </div>
     </div>
-
+    <div class="col navbar-extra-items">
+    </div>
+</nav>
 </nav>
