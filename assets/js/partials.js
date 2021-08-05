@@ -5,9 +5,7 @@ $(document).ready(function () {
   $("head").load("/html/shared/head.html", function () {
     /* $('.sign-up').load("/html/shared/signup.html", function () { */
     $("header").load("/html/shared/navbar.html", function () {
-      console.log($('.sub-navbar-items.navbar-extra-items'));
-      $('.sub-navbar-items.navbar-extra-items').append(subNav);
-      /* $('.navbar-extra-items').append(subNav); */
+      $('.sub-navbar-items').append(subNav);
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'));
         window.dispatchEvent(fireAuth0);
@@ -20,7 +18,7 @@ $(document).ready(function () {
 });
 
 window.onload = () => {
- 
+
 
   /* console.log($('.sub-navbar')[0]); */
   /*  */
@@ -28,7 +26,7 @@ window.onload = () => {
   $('.sign-up').load("/html/shared/signup.html");
   $('body').css("display", 'initial');
 
- 
+
 };
 
 /*
