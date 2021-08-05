@@ -7,7 +7,7 @@
   * Desktop Navigation 
   */
 
-.navbar ul {
+/* .navbar ul {
     margin: 0;
     padding-right: 5%;
     display: flex;
@@ -133,11 +133,6 @@
     }
 }
 
-
-/*
-    * Mobile Navigation 
-    */
-
 .mobile-nav-toggle {
     color: #fff;
     font-size: 28px;
@@ -250,4 +245,8 @@
 
 .navbar-mobile .dropdown>.dropdown-active {
     display: block;
+} */
+
+.sub-navbar {
+    background-color: rgba(18, 102, 138, 0.3);
 }

@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  let nav = $('.sub-navbar-content');
+  let subNav = $('.sub-navbar-content');
   const fireAuth0 = new Event('fireAuth0');
 
   $("head").load("/html/shared/head.html", function () {
     /* $('.sign-up').load("/html/shared/signup.html", function () { */
     $("header").load("/html/shared/navbar.html", function () {
-      $('.sub-navbar').append(nav);
+      $('.sub-navbar-items').append(subNav);
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'));
         window.dispatchEvent(fireAuth0);
@@ -18,7 +18,7 @@ $(document).ready(function () {
 });
 
 window.onload = () => {
- 
+
 
   /* console.log($('.sub-navbar')[0]); */
   /*  */
@@ -26,7 +26,7 @@ window.onload = () => {
   $('.sign-up').load("/html/shared/signup.html");
   $('body').css("display", 'initial');
 
- 
+
 };
 
 /*
