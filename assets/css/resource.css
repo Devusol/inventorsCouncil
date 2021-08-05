@@ -173,3 +173,22 @@
  #protoFinance .card {
      background-color: transparent;
  }
+ 
+ @media (max-width: 575px) {
+     #resourcesHeader h1 {
+         font-size: 3.0rem !important;
+         font-weight: bolder !important;
+     }
+     .filterMembers {
+         padding-top: 8vh !important;
+     }
+     .membersInfo {
+         padding-top: 5vh !important;
+     }
+     .ourMembers {
+         padding-top: 5vh !important;
+     }
+     .sign-up {
+         padding-top: 5vh !important;
+     }
+ }

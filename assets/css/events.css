@@ -204,3 +204,10 @@
     margin: 0;
     font-weight: lighter;
 }
+
+@media (max-width: 575px) {
+    #eventsHeader h1 {
+        font-size: 3.0rem !important;
+        font-weight: bolder !important;
+    }
+}

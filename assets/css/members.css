@@ -156,3 +156,17 @@
 #membersHeader {
     padding: 5% 0% 5% 0%;
 }
+
+#myFilter {
+    background-color: var(--irisBlue);
+    border: var(--irisBlue);
+    color: var(--gainsboro);
+    font-weight: bolder;
+}
+
+@media (max-width: 575px) {
+    #membersHeader h1 {
+        font-size: 3.0rem !important;
+        font-weight: bolder !important;
+    }
+}

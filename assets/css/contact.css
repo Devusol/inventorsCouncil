@@ -27,6 +27,10 @@ body {
     #contactFill {
         padding-bottom: 9%;
     }
+    #contactHeader h1 {
+        font-size: 3.0rem !important;
+        font-weight: bolder !important;
+    }
 }
 
 .form-field {

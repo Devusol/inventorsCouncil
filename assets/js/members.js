@@ -11,7 +11,7 @@ fetch("/assets/json/members.json")
             cardData.companyWebsite ? visWeb = "visible" : visWeb = "invisible";
             cardData.companyEmail ? visMail = "visible" : visMail = "invisible";
 
-            membersCardsLandscape.innerHTML += `<div class="container py-3"> 
+            membersCardsLandscape.innerHTML += `<div class="py-3"> 
                 <div class="card">
                 <div class="row">
                     <div class="col-md-4">
@@ -22,10 +22,10 @@ fetch("/assets/json/members.json")
                             <h4 class="card-title">${cardData.companyName}</h4>
                             <p class="card-text">${cardData.companyDescription}</p><br>
                             <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 mb-4">
                                         <a href="${cardData.companyWebsite}" class="btn btn-outline-primary p-2 ${visWeb}">Website</a>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 mb-4">
                                         <a href="mailto:${cardData.companyEmail}" class="btn btn-outline-primary p-2 ${visMail}">Contact</a>
                                     </div>
                             </div>
@@ -87,7 +87,7 @@ function searchFunction() {
 
 function sortFunction() {
     console.log('under construction')
-    // Use toUpperCase() to ignore character casing
+        // Use toUpperCase() to ignore character casing
     const bandA = a.companyName.toUpperCase();
     const bandB = b.companyName.toUpperCase();
 
