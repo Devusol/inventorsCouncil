@@ -66,18 +66,12 @@
 <nav class="collapse navbar-collapse d-lg-none navbar-extra-content row">
 
     <div class="navbar-nav ml-3 col">
-
-        <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
-
-        <a class="nav-link" href="/html/about.html">ABOUT US</a>
-
-        <a class="nav-link" href="/html/events.html">EVENTS</a>
-
-        <a class="nav-link" href="/html/resources.html">RESOURCES</a>
-
-        <a class="nav-link" href="/html/members.html">MEMBERS</a>
-
-        <a class="nav-link" href="/html/contact.html">CONTACT</a>
+        <a class="nav-mobile nav-link active" aria-current="page" href="/index.html">HOME</a>
+        <a class="nav-mobile nav-link" onclick="navPop(this)">ABOUT US</a>
+        <a class="nav-mobile nav-link" onclick="navPop(this)">EVENTS</a>
+        <a class="nav-mobile nav-link" onclick="navPop(this)">RESOURCES</a>
+        <a class="nav-mobile nav-link" onclick="navPop(this)">MEMBERS</a>
+        <a class="nav-mobile nav-link" href="/html/contact.html">CONTACT</a>
         <button id='btn-login' class='btn btn-outline-info' disabled='true' onclick="login()">Login</button>
         <button id='btn-logout' class='btn btn-outline-info' disabled='true' onclick="logout()">Logout</button>
 
@@ -85,7 +79,7 @@
             <img class="avatar-img w-100" src="">
         </div>
     </div>
-    <div class="col sub-navbar-items">
+    <div class="col mobile-navbar-items">
     </div>
 </nav>
 </nav>
