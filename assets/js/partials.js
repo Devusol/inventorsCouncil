@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("head").load("/html/shared/head.html", function () {
     /* $('.sign-up').load("/html/shared/signup.html", function () { */
     $("header").load("/html/shared/navbar.html", function () {
-      $('.sub-navbar').append(nav);
+      $('.sub-navbar-items').append(nav);
       $("footer").load("/html/shared/footer.html", function () {
         console.log($('body').css('display'));
         window.dispatchEvent(fireAuth0);
