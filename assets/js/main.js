@@ -1,5 +1,14 @@
 // Contact Page - Contact Form JS
 let theForm = document.getElementById("contactPageForm");
+let whichPage = window.location.pathname;
+
+//Set logo whit on index page and colorful on all other pages
+if (whichPage == "/" | whichPage == "/index.html"){
+  $("#brand-logo").attr("src","/assets/img/logowhite.png");
+}
+
+
+
 theForm.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log(this);
@@ -18,18 +27,17 @@ $('.carousel').carousel({
   interval: 2000
 })
 
+
+/* Handle setting navbar submenus on mobile toggle */
 function navPop(params) {
-
   $('.nav-mobile').each(function () {
-
     if (params.innerText == this.innerText) {
-      /*  $.get('/html/about.html', null, htmlResponse =>{ */
       $.get(`/html/${params.innerText.split(" ")[0].toLowerCase()}.html`, null, htmlResponse => {
         let navItems = $(htmlResponse).find('.sub-navbar-content');
         let linkTo;
         for (let item of $('#navbarSupportedContent').find(`a`)) {
           if (item.innerText == params.innerText) {
-            console.log(item.href);
+            //console.log(item.href);
             linkTo = item;
           }
         }
@@ -37,16 +45,6 @@ function navPop(params) {
         $('.mobile-navbar-items').append(linkTo, navItems);
       });
     }
-    // console.log(this.innerText);
   })
-
-  /*   if (params.name == "about") {
-      $.get('/html/about.html', null, htmlResponse => {
-         let navItems = $('.sub-navbar-menu');
-        $('.mobile-navbar-items').append(navItems); 
-        console.log(navItems, $('.mobile-navbar-items')); 
-        console.log('pop pop');
-      });
-    } 
-   */
 }
+
