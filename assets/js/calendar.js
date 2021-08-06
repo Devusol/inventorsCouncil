@@ -11,170 +11,170 @@ var addEventButton = document.getElementById('inputButton');
 var nextPrevButtons = document.getElementsByClassName('nextPrev');
 
 new FullCalendar.Draggable(document.getElementById('external-events-list'), {
-  itemSelector: '.draggable-event'
+    itemSelector: '.draggable-event'
 });
 
 var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-  headerToolbar: {
-    start: 'title',
-    center: '',
-    end: 'today'
-  },
-  eventColor: "black",
-  navLinks: false, // can click day/week names to navigate views
-  selectable: false,
-  selectMirror: true,
-  editable: false,
-  dayMaxEvents: true, // allow "more" link when too many events
-  eventSources: [{ events: myEvents }],
-  droppable: true,
-  /* dateClick: function (info) {
-    clearPopups();
-  //  console.log('date clicked', info)
-  }, */
-  select: function (arg) {
+    headerToolbar: {
+        start: 'today prev,next',
+        center: 'title',
+        end: ''
+    },
+    eventColor: "black",
+    navLinks: false, // can click day/week names to navigate views
+    selectable: false,
+    selectMirror: true,
+    editable: false,
+    dayMaxEvents: true, // allow "more" link when too many events
+    eventSources: [{ events: myEvents }],
+    droppable: true,
+    /* dateClick: function (info) {
+      clearPopups();
+    //  console.log('date clicked', info)
+    }, */
+    select: function(arg) {
 
-    // console.log(`dates selected: ${arg.start} to ${arg.end}`);
-    showEventEdit(arg);
-    spanClose[1].onclick = function () {
-      calendarInput.classList.add("invisible");
+        // console.log(`dates selected: ${arg.start} to ${arg.end}`);
+        showEventEdit(arg);
+        spanClose[1].onclick = function() {
+                calendarInput.classList.add("invisible");
+            }
+            /*   console.log(arg); */
+            /* console.log(document.getElementById('inputStart')); */
+        let newStartTime = arg.start.setHours(8, 30);
+        let newEndTime = arg.start.setHours(10, 30);
+        /*   console.log(new Date(newStartTime));
+          console.log(new Date(newEndTime)); */
+        addEventButton.addEventListener('click', function() {
+            let title = document.getElementById('inputTitle').value;
+            let eventInput = {
+                title: title,
+                start: arg.start,
+                end: arg.end,
+                allDay: arg.allDay,
+                extendedProps: {
+                    description: document.getElementById('inputDescription').value,
+                    location: document.getElementById('inputLocation').value
+                },
+                id: `${title}_${arg.start}_${myEvents.length + 1}`
+            }
+            calendar.addEvent(eventInput);
+            myEvents.push(eventInput);
+            console.log("added event");
+            calendarInput.style.display = "none";
+            document.getElementById('inputForm').reset();
+            updateEventCalendarJSON();
+            calendar.unselect();
+        });
+    },
+    eventClick: function(arg) {
+        console.log('event clicked', arg.event);
+        let isId = (idMatch) => idMatch.id == arg.event.id;
+        let delIndex = myEvents.findIndex(isId);
+        showEventDetails(arg);
+        deleteEventButton.addEventListener("click", function() {
+                myEvents.splice(delIndex, 1);
+                arg.event.remove();
+                calendarPopup.classList.add("invisible");
+                updateEventCalendarJSON();
+            })
+            /*  editEventButton.addEventListener("click", function () {
+               myEvents.splice(delIndex, 1);
+               arg.event.remove();
+               calendarPopup.classList.add("invisible");
+               updateEventCalendarJSON();
+             }) */
+    },
+    eventDrop: function(arg) {
+        console.log("event Dropped: ", arg.event.toPlainObject());
+        // myEvents.push(eventInput);
+        // console.log(myEvents);
+    },
+    eventReceive: function(arg) {
+        console.log(myEvents);
+        arg.event.setProp("id", `${arg.event.title}_${arg.event.start}_${myEvents.length + 1}`);
+        myEvents.push(arg.event.toPlainObject());
+
+        updateEventCalendarJSON();
     }
-    /*   console.log(arg); */
-    /* console.log(document.getElementById('inputStart')); */
-    let newStartTime = arg.start.setHours(8, 30);
-    let newEndTime = arg.start.setHours(10, 30);
-    /*   console.log(new Date(newStartTime));
-      console.log(new Date(newEndTime)); */
-    addEventButton.addEventListener('click', function () {
-      let title = document.getElementById('inputTitle').value;
-      let eventInput = {
-        title: title,
-        start: arg.start,
-        end: arg.end,
-        allDay: arg.allDay,
-        extendedProps: {
-          description: document.getElementById('inputDescription').value,
-          location: document.getElementById('inputLocation').value
-        },
-        id: `${title}_${arg.start}_${myEvents.length + 1}`
-      }
-      calendar.addEvent(eventInput);
-      myEvents.push(eventInput);
-      console.log("added event");
-      calendarInput.style.display = "none";
-      document.getElementById('inputForm').reset();
-      updateEventCalendarJSON();
-      calendar.unselect();
-    });
-  },
-  eventClick: function (arg) {
-    console.log('event clicked', arg.event);
-    let isId = (idMatch) => idMatch.id == arg.event.id;
-    let delIndex = myEvents.findIndex(isId);
-    showEventDetails(arg);
-    deleteEventButton.addEventListener("click", function () {
-      myEvents.splice(delIndex, 1);
-      arg.event.remove();
-      calendarPopup.classList.add("invisible");
-      updateEventCalendarJSON();
-    })
-    /*  editEventButton.addEventListener("click", function () {
-       myEvents.splice(delIndex, 1);
-       arg.event.remove();
-       calendarPopup.classList.add("invisible");
-       updateEventCalendarJSON();
-     }) */
-  },
-  eventDrop: function (arg) {
-    console.log("event Dropped: ", arg.event.toPlainObject());
-    // myEvents.push(eventInput);
-    // console.log(myEvents);
-  },
-  eventReceive: function (arg) {
-    console.log(myEvents);
-    arg.event.setProp("id", `${arg.event.title}_${arg.event.start}_${myEvents.length + 1}`);
-    myEvents.push(arg.event.toPlainObject());
-
-    updateEventCalendarJSON();
-  }
 });
 
 readEventCalendarJSON();
 
-const updateEventCalendarJSON = async () => {
-  await auth0.isAuthenticated() ? console.log('youre in') : alert('please login to continue')
-  const token = await auth0.getTokenSilently();
-  await fetch(PUT_EVENTS_URL, {
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`
-    },
-    method: 'PUT',
-    body: JSON.stringify(myEvents)
-  }).then(response => {
-    let resClone = response.clone();
-    resClone.text().then(value => value == "Insufficient scope" ? alert("Insufficient scope. Please log in as an administrator") : console.log("admin is logged in"));
-    response.json().then(json => {
-      console.log(json[0].record);
-      calendar.render();
-    })
-  });
+const updateEventCalendarJSON = async() => {
+    await auth0.isAuthenticated() ? console.log('youre in') : alert('please login to continue')
+    const token = await auth0.getTokenSilently();
+    await fetch(PUT_EVENTS_URL, {
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        method: 'PUT',
+        body: JSON.stringify(myEvents)
+    }).then(response => {
+        let resClone = response.clone();
+        resClone.text().then(value => value == "Insufficient scope" ? alert("Insufficient scope. Please log in as an administrator") : console.log("admin is logged in"));
+        response.json().then(json => {
+            console.log(json[0].record);
+            calendar.render();
+        })
+    });
 }
 
 function readEventCalendarJSON() {
-  fetch(GET_EVENTS_URL)
-    .then(response => response.json())
-    .then(json => {
-      myEvents = json[0].record;
-      // console.log(myEvents);
-      calendar.addEventSource(myEvents);
-      calendar.refetchEvents();
-      calendar.render();
+    fetch(GET_EVENTS_URL)
+        .then(response => response.json())
+        .then(json => {
+            myEvents = json[0].record;
+            // console.log(myEvents);
+            calendar.addEventSource(myEvents);
+            calendar.refetchEvents();
+            calendar.render();
 
-    })
+        })
 }
 
 function showEventEdit(eventDetails) {
-  calendarPopup.classList.add('invisible');
-  calendarInput.classList.add('invisible');
+    calendarPopup.classList.add('invisible');
+    calendarInput.classList.add('invisible');
 
-  calendarInput.classList.remove('invisible');
-  calendarInput.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
-  calendarInput.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
-  calendarInput.style.zIndex = 1;
+    calendarInput.classList.remove('invisible');
+    calendarInput.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
+    calendarInput.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
+    calendarInput.style.zIndex = 1;
 
-  // When the user clicks on <span> (x), close the modal
-  spanClose[0].onclick = function () {
-    calendarPopup.classList.add("invisible");
-  }
+    // When the user clicks on <span> (x), close the modal
+    spanClose[0].onclick = function() {
+        calendarPopup.classList.add("invisible");
+    }
 }
 
 function showEventDetails(eventDetails) {
-  calendarPopup.classList.add('invisible');
-  calendarInput.classList.add('invisible');
-  let description = eventDetails.event.extendedProps.description;
-  let location = eventDetails.event.extendedProps.location;
+    calendarPopup.classList.add('invisible');
+    calendarInput.classList.add('invisible');
+    let description = eventDetails.event.extendedProps.description;
+    let location = eventDetails.event.extendedProps.location;
 
-  calendarPopup.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
-  calendarPopup.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
-  calendarPopup.style.zIndex = 1;
+    calendarPopup.style.top = `${eventDetails.jsEvent.pageY - 150}px`;
+    calendarPopup.style.left = `${eventDetails.jsEvent.pageX - 150}px`;
+    calendarPopup.style.zIndex = 1;
 
-  document.getElementById("description").innerHTML = description;
-  document.getElementById("location").innerHTML = location;
-  calendarPopup.classList.remove("invisible");
-  // When the user clicks on <span> (x), close the modal
+    document.getElementById("description").innerHTML = description;
+    document.getElementById("location").innerHTML = location;
+    calendarPopup.classList.remove("invisible");
+    // When the user clicks on <span> (x), close the modal
 
-  spanClose[0].onclick = function () {
-    calendarPopup.classList.add("invisible");
-  }
+    spanClose[0].onclick = function() {
+        calendarPopup.classList.add("invisible");
+    }
 }
 
-document.querySelector('.prev-button').addEventListener('click', async () => {
-  calendar.prev();
+document.querySelector('.prev-button').addEventListener('click', async() => {
+    calendar.prev();
 });
 
-document.querySelector('.next-button').addEventListener('click', async () => {
-  calendar.next();
+document.querySelector('.next-button').addEventListener('click', async() => {
+    calendar.next();
 });
 
 //onDateHover();

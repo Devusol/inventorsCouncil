@@ -1,76 +1,74 @@
-@media screen and (min-width: 992px) {
-    #calendar-section {
-        padding-top: 4rem;
+    @media screen and (min-width: 992px) {
+        #calendar-section {
+            padding-top: 4rem;
+        }
+        .fc-daygrid-day-number {
+            font-size: xx-large;
+            color: white !important;
+        }
+        .fc-col-header-cell-cushion {
+            color: var(--irisBlue) !important;
+        }
+        /*outside border*/
+        .fc-theme-standard .fc-scrollgrid {
+            border: var(--fc-border-color, transparent);
+        }
+        /*inside grid*/
+        .fc-theme-standard td,
+        .fc-theme-standard th {
+            /*border: var(--fc-border-color, transparent);*/
+        }
+        .fc .fc-daygrid-day-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    .fc-daygrid-day-number {
-        font-size: xx-large;
-        color: white !important;
+    
+    @media screen and (max-width: 992px) {
+        #calendar-section {
+            padding: 6rem 1rem;
+        }
+        .fc-scroller {
+            overflow: hidden !important;
+        }
+        .fc-daygrid-day-number {
+            font-size: x-large;
+            color: white !important;
+        }
+        .fc-col-header-cell-cushion {
+            color: var(--irisBlue) !important;
+        }
+        /*outside border*/
+        .fc-theme-standard .fc-scrollgrid {
+            border: var(--fc-border-color, transparent);
+        }
+        /*inside grid*/
+        .fc-theme-standard td,
+        .fc-theme-standard th {
+            /*border: var(--fc-border-color, transparent);*/
+        }
+        .fc .fc-daygrid-day-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
-    .fc-col-header-cell-cushion {
-        color: var(--irisBlue) !important;
+    
+    @media screen and (max-width: 768px) {
+        .fc-daygrid-day-number {
+            font-size: medium;
+            color: white !important;
+        }
     }
-    /*outside border*/
-    .fc-theme-standard .fc-scrollgrid {
-        border: var(--fc-border-color, transparent);
+    
+    @media screen and (max-width: 576px) {
+        .fc-daygrid-day-number {
+            font-size: x-small;
+            color: white !important;
+        }
     }
-    /*inside grid*/
-    .fc-theme-standard td,
-    .fc-theme-standard th {
-        /*border: var(--fc-border-color, transparent);*/
-    }
-    .fc .fc-daygrid-day-top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    #calendar-section {
-        padding: 6rem 1rem;
-    }
-    .fc-scroller {
-        overflow: hidden !important;
-    }
-    .fc-daygrid-day-number {
-        font-size: x-large;
-        color: white !important;
-    }
-    .fc-col-header-cell-cushion {
-        color: var(--irisBlue) !important;
-    }
-    /*outside border*/
-    .fc-theme-standard .fc-scrollgrid {
-        border: var(--fc-border-color, transparent);
-    }
-    /*inside grid*/
-    .fc-theme-standard td,
-    .fc-theme-standard th {
-        /*border: var(--fc-border-color, transparent);*/
-    }
-    .fc .fc-daygrid-day-top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .fc-daygrid-day-number {
-        font-size: medium;
-        color: white !important;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .fc-daygrid-day-number {
-        font-size: x-small;
-        color: white !important;
-    }
-}
-
-
-/* @media screen and (max-width: 576px) {
+    /* @media screen and (max-width: 576px) {
 	#calendar {
 		width: 200px;
 		margin: 0 auto;
@@ -118,96 +116,151 @@
 		padding: 0;
 	}
 } */
-
-#events {
-    background: var(--mirage);
-    background-image: url(../img/background/patternDots.png);
-}
-
-#eventsHeader {
-    padding: 5% 10% 5% 10%;
-}
-
-#eventsHeader h1 {
-    font-size: 5.0rem;
-    font-weight: bolder;
-}
-
-#events #header {
-    height: 115px !important;
-}
-
-
-/* .fc-scroller {
+    
+    #events {
+        background: var(--mirage);
+        background-image: url(../img/background/patternDots.png);
+    }
+    
+    #eventsHeader h1 {
+        font-size: 5.0rem;
+        font-weight: bolder;
+    }
+    
+    #events #header {
+        height: 115px !important;
+    }
+    /* .fc-scroller {
     overflow: hidden !important;
 } */
-
-.makerFaire,
-.tradeShow {
-    padding: 0% !important;
-}
-
-.tradeShow h3 {
-    font-size: 1.5rem !important;
-    color: #0da8d9 !important;
-}
-
-.tradeShow .col-lg-5 {
-    max-width: 100% !important;
-}
-
-#ourMissionWords.col-lg-4 {
-    padding-left: 0% !important;
-    max-width: 100% !important;
-}
-
-.tradeShow h1 {
-    padding-left: 15px;
-}
-
-.makerFaire a,
-.tradeShow a {
-    color: #f13ed9;
-}
-
-.tradeShow a:hover {
-    text-decoration: underline;
-}
-
-.tradeshowBox {
-    background-image: linear-gradient(to left, transparent -6vw, var(--luckyPoint) 25vw) !important;
-}
-
-.fc-header-toolbar,
-.fc-toolbar {
-    position: relative;
-    color: white;
-    background-image: linear-gradient(to right, #0db0e3 13vw, #8656a9 43vw);
-    width: 100%;
-    height: 20vh;
-    padding: 0% !important;
-}
-
-#calendar-section {
-    padding: 0% !important;
-}
-
-.fc-daygrid,
-.fc-dayGridMonth-view,
-.fc-view,
-.fc-toolbar-chunk {
-    padding: 0 10vw !important;
-}
-
-#calendar-section .fc .fc-toolbar-title {
-    font-size: 3.75em;
-    margin: 0;
-    font-weight: lighter;
-}
-
-@media (max-width: 575px) {
-    #eventsHeader h1 {
-        font-size: 3.0rem !important;
-        font-weight: bolder !important;
+    
+    .makerFaire,
+    .tradeShow {
+        padding: 0% !important;
     }
-}
+    
+    .tradeShow h3 {
+        font-size: 1.5rem !important;
+        color: #0da8d9 !important;
+    }
+    
+    .tradeShow .col-lg-5 {
+        max-width: 100% !important;
+    }
+    
+    #ourMissionWords.col-lg-4 {
+        padding-left: 0% !important;
+        max-width: 100% !important;
+    }
+    
+    .tradeShow h1 {
+        padding-left: 15px;
+    }
+    
+    .makerFaire a,
+    .tradeShow a {
+        color: #f13ed9;
+    }
+    
+    .tradeShow a:hover {
+        text-decoration: underline;
+    }
+    
+    .tradeshowBox {
+        background-image: linear-gradient(to left, transparent -6vw, var(--luckyPoint) 25vw) !important;
+    }
+    
+    .fc-header-toolbar,
+    .fc-toolbar {
+        position: relative;
+        color: white;
+        background-image: linear-gradient(to right, #0db0e3 13vw, #8656a9 43vw);
+        width: 100%;
+        height: 20vh;
+        padding: 0% !important;
+    }
+    
+    #calendar-section {
+        padding: 0% !important;
+    }
+    
+    .fc-daygrid,
+    .fc-dayGridMonth-view,
+    .fc-view {
+        padding: 0 10vw !important;
+    }
+    
+    .fc-toolbar-chunk {
+        padding-left: 10vw !important;
+    }
+    
+    #calendar-section .fc .fc-toolbar-title {
+        font-size: 3.75em;
+        margin: 0;
+        font-weight: lighter;
+    }
+    
+    @media (max-width: 575px) {
+        #eventsHeader h1 {
+            font-size: 3.0rem !important;
+            font-weight: bolder !important;
+        }
+    }
+    
+    #prev-but {
+        background: url(/assets/img/events/calendar-arrow-left.png) no-repeat;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+    }
+    
+    #next-but {
+        background: url(/assets/img/events/calendar-arrow-right.png) no-repeat;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+    }
+    
+    .fc-toolbar-chunk {
+        padding-right: 0px !important;
+    }
+    
+    .fc-toolbar-chunk:nth-child(2) {
+        padding-left: 0px !important;
+    }
+    
+    .fc-toolbar-title {
+        margin-right: 40vw !important;
+    }
+    
+    @media (max-width:1470px) {
+        #calendar-section .fc .fc-toolbar-title {
+            font-size: 2.75em;
+        }
+        .fc-toolbar-chunk {
+            padding-left: 0px !important;
+            margin-right: 0px !important;
+        }
+    }
+    
+    .fc .fc-button-primary {
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+    
+    .fc .fc-button {
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+    
+    .fc .fc-button:focus {
+        display: none !important;
+    }
+    
+    .fc-direction-ltr .fc-toolbar>*> :not(:first-child) {
+        margin-left: 0em;
+    }
+    
+    #eventsHeader {
+        padding: 5% 0% 0% 0%;
+    }
