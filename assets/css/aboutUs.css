@@ -175,3 +175,15 @@
             font-weight: bolder !important;
         }
     }
+    
+    @media (max-width:992px) {
+        .carousel-item {
+            height: 100vh;
+        }
+    }
+    
+    @media (max-width:767px) {
+        .carousel-item {
+            height: 250vh;
+        }
+    }
