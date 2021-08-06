@@ -26,7 +26,6 @@
      color: white;
      background-image: linear-gradient(to right, var(--luckyPoint) 40%, transparent 70%), url("/assets/img/resources/prototyping-notes.jpg");
      background-size: cover;
-     margin: 0 1%;
  }
  /*
 
@@ -99,6 +98,16 @@
      height: 45vh;
      float: right;
  }
+ 
+ @media (max-width: 992px) {
+     .resourcesLightBulb img {
+         display: none;
+     }
+ }
+ 
+ .btn50 {
+     width: 50%;
+ }
  /* Resources Page Mobile 
 
 #resourceBody {
@@ -156,6 +165,7 @@
      background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .8) 70%), url("/assets/img/resources/arrow-pattent.png");
      background-size: cover;
      margin: 0 1%;
+     background-color: black;
  }
  
  .patMarkBox2 {
@@ -163,7 +173,6 @@
      color: white;
      background-image: linear-gradient(to right, rgba(0, 0, 0, .8) 40%, rgba(0, 0, 0, .9) 70%), url("/assets/img/resources/marketing-numbers-graph.jpg");
      background-size: cover;
-     margin: 0 1%;
  }
  
  #patMark {
@@ -190,5 +199,12 @@
      }
      .sign-up {
          padding-top: 5vh !important;
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     #inventionProcessBox,
+     #fabrication {
+         padding-top: 0px !important;
      }
  }
