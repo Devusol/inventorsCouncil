@@ -264,3 +264,78 @@
     #eventsHeader {
         padding: 5% 0% 0% 0%;
     }
+    
+    .btn-info {
+        background-color: var(--irisBlue);
+        border-color: var(--studio);
+        padding: 1%;
+        border-width: 2px;
+        border-radius: 6px;
+    }
+    
+    .btn-info:hover {
+        background-color: var(--irisBlue);
+        border-color: var(--studio);
+    }
+    
+    .btn-info:active {
+        background-color: var(--studio) !important;
+        border-color: var(--irisBlue) !important;
+    }
+    
+    .close:hover {
+        cursor: pointer;
+    }
+    
+    #external-events {
+        left: 60%;
+        top: 15%;
+    }
+    
+    #external-events {
+        /*    position: absolute !important; */
+        z-index: 9 !important;
+        text-align: center !important;
+    }
+    
+    #external-events-list {
+        /*  position: absolute !important; */
+        z-index: 9 !important;
+        background-color: #f1f1f1 !important;
+        border: 1px solid #d3d3d3 !important;
+        text-align: center !important;
+    }
+    
+    .btn-info {
+        cursor: move !important;
+        z-index: 10 !important;
+    }
+    
+    .btn-outline-info {
+        color: var(--studio);
+        border-color: var(--studio);
+    }
+    
+    .btn-outline-info:focus {
+        color: var(--studio);
+        border-color: var(--studio);
+        background: var(--studio)
+    }
+    
+    .btn-outline-info:hover {
+        color: white;
+        border-color: var(--studio);
+        background: var(--studio)
+    }
+    
+    .btn-info:focus {
+        color: white;
+        border-color: var(--studio);
+        background: var(--studio)
+    }
+    
+    button.btn.btn-outline-info.draggable-event:focus {
+        color: white !important;
+        border-color: var(--studio) !important;
+        outline: none;
+    }
