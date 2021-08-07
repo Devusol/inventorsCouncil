@@ -7,6 +7,7 @@
   * Desktop Navigation 
   */
 
+
 /* .navbar ul {
     margin: 0;
     padding-right: 5%;
@@ -249,4 +250,46 @@
 
 .sub-navbar {
     background-color: rgba(18, 102, 138, 0.3);
+}
+
+
+/* #btn-login {
+    background-image: url(/assets/img/loginButton.png);
+    background-size: cover;
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+#btn-logout {
+    background-image: url(/assets/img/logoutButton.png);
+    background-size: cover;
+    border: none;
+    height: 40px;
+    width: 40px;
+} */
+
+.nav-item button {
+    background: none;
+}
+
+.btn-outline-info {
+    cursor: pointer !important;
+    color: white !important;
+    margin-bottom: 8px;
+    width: 50%;
+}
+
+.nav-mobile:hover>* {
+    color: var(--studio);
+    cursor: pointer !important;
+}
+
+.nav-mobile {
+    cursor: pointer !important;
+}
+
+.nav-mobile:active {
+    color: var(--studio);
 }
