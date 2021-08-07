@@ -381,25 +381,26 @@
     <div class="input-popup position-absolute btn-info gated-content-2 invisible" id="inputCard">
         <form id="inputForm" action="/action_page.php" class="form-container">
             <span class="close">&times;</span>
-            <h1>Add an Event</h1>
+            <h1>Create Event</h1>
 
-            <label for="inputTitle"><b>Event title</b></label><br>
+            <label for="inputTitle"><b></b></label><br>
             <input id="inputTitle" type="" placeholder="Event Title" name="inputTitle" required><br>
 
-            <label for="inputDescription"><b>Description: </b></label>
-            <textarea id="inputDescription" placeholder="Event details" name="inputDescription" required>
-        </textarea><br>
 
-            <label for="inputLocation"><b>Location: </b></label>
+            <label for="inputLocation"><b></b></label><br>
             <input id="inputLocation" type="text" placeholder="Location" name="inputLocation" required><br>
 
-            <label for="inputStartTime"><b>Start time: </b></label>
+            <label for="inputStartTime"><b>Start: </b></label><br>
             <input id="inputStart" type="time" placeholder="Start time" name="inputStartTime" required><br>
 
-            <label for="inputEndTime"><b>End Time: </b></label>
+            <label for="inputEndTime"><b>End: </b></label><br>
             <input id="inputEnd" type="time" placeholder="End Time" name="inputEndTime" required><br>
 
-            <button id="inputButton" type="button" class="btn">Submit Event</button>
+            <label for="inputDescription"><b></b></label><br>
+            <textarea id="inputDescription" type="text" placeholder="Event Details" name="inputDescription" required>
+        </textarea><br>
+
+            <button id="inputButton" type="button" class="btn btn-primary">Submit Event</button>
 
         </form>
     </div>

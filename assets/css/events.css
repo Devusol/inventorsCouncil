@@ -339,3 +339,17 @@
         border-color: var(--studio) !important;
         outline: none;
     }
+    
+    #inputTitle,
+    #inputLocation,
+    #inputStart,
+    #inputEnd,
+    #inputDescription {
+        width: 100%;
+        border-radius: 3px;
+        border-color: var(--studio);
+    }
+    
+    #inputForm h1 {
+        font-size: x-large;
+    }
