@@ -274,7 +274,8 @@
     background: none;
 }
 
-.btn-outline-info {
+#btn-login,
+#btn-logout {
     cursor: pointer !important;
     color: white !important;
     margin-bottom: 8px;
