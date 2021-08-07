@@ -8,7 +8,8 @@
 <body style="display: none;">
 
     <header class="fixed-top align-items-center header-transparent header-scrolled">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="/assets/js/partials.js"></script>
     </header>
 
@@ -49,14 +50,19 @@
                 <div class="row justify-content-center">
 
                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12" id="contactFill">
-                        <form>
+                        <form class="contact-form" method="POST" action="http://localhost:5000/api/v1/nodemail"> 
                             <div class="form-group">
-                                <input class="form-control form-field my-4 " type="text" name="contactFormFirstName" placeholder="First Name"></input>
-                                <input class="form-control form-field my-4" type="text" name="contactFormLastName" placeholder="Last Name"></input>
-                                <input class="form-control form-field my-4" type="email" name="contactFormEmail" aria-describedby="emailHelp" <input class="form-control form-field my-4" type="text" name="contactFormSubject" placeholder="Subject">
-                                <input class="form-control form-field my-4" type="email" name="contactFormEmail" aria-describedby="emailHelp" placeholder="Email">
-                                <textarea class="form-control form-field my-4" name="contactFormMessage" rows="3" placeholder="Message"></textarea>
-                                <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                                <input class="form-control form-field my-4 " type="text" name="firstName"
+                                    placeholder="First Name"></input>
+                                <input class="form-control form-field my-4" type="text" name="lastName"
+                                    placeholder="Last Name"></input>
+                                <input class="form-control form-field my-4" type="text" name="subject"
+                                    placeholder="Subject"></input>
+                                <input class="form-control form-field my-4" type="email" name="email"
+                                    aria-describedby="emailHelp" placeholder="Email"></input>
+                                <textarea class="form-control form-field my-4" name="message" rows="3"
+                                    placeholder="Message"></textarea>
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -66,11 +72,13 @@
                     </div>
 
                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12 align-self-end" id="slackDonate">
-                        <Button type="button" class="mb-4 btn btn-primary btn-lg" onclick="window.open('https://join.slack.com/t/inventcf/shared_invite/zt-4koe6vde-fCm1p2VDC6NQAGUPuGj1eQ')">JOIN
-            OUR SLACK GROUP <i class="bi bi-slack"></i>
-          </Button>
-                        <Button type="button" class="my-3 btn btn-outline-primary btn-lg" onclick="window.open('https://www.paypal.com/donate?token=BkjiZZQrXdY_HWPL7pORg8qGdv7r4W7ArdCJImIf3-4wyUPLoTLaqS9geuX0pZdHEwLKPuvtxRaN60BZ')">DONATE
-          </Button>
+                        <Button type="button" class="mb-4 btn btn-primary btn-lg"
+                            onclick="window.open('https://join.slack.com/t/inventcf/shared_invite/zt-4koe6vde-fCm1p2VDC6NQAGUPuGj1eQ')">JOIN
+                            OUR SLACK GROUP <i class="bi bi-slack"></i>
+                        </Button>
+                        <Button type="button" class="my-3 btn btn-outline-primary btn-lg"
+                            onclick="window.open('https://www.paypal.com/donate?token=BkjiZZQrXdY_HWPL7pORg8qGdv7r4W7ArdCJImIf3-4wyUPLoTLaqS9geuX0pZdHEwLKPuvtxRaN60BZ')">DONATE
+                        </Button>
 
                     </div>
                 </div>
